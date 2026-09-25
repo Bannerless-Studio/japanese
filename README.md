@@ -8,6 +8,13 @@ the trainer speaks every word and sentence with the browser's `ja-JP` voice.
 
 **Live:** https://ishmum123.github.io/japanese/
 
+**Script primer.** A "かな" stage before A1 teaches hiragana (108 units),
+then katakana (121 units), with symbol-to-sound, recognition and
+word-reading items. It's skippable ("I can read it") and reversible from
+Progress. Reading passages now show the reading above every kanji until
+that kanji is mastered in the kanji stage below, so a learner who has not
+finished it yet can still read a passage.
+
 **Kanji stage.** `pack/characters.json` teaches 1590 kanji units, ordered
 after the A1-A2 words and before B1 (per `pack.characters` in
 `pack/pack.json`). Until a word's kanji are marked mastered in this stage,

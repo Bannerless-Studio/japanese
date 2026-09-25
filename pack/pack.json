@@ -249,5 +249,36 @@
       "charSound"
     ]
   },
-  "pronFirst": true
+  "pronFirst": true,
+  "script": {
+    "stages": [
+      {
+        "key": "hira",
+        "label": "ひらがな"
+      },
+      {
+        "key": "kata",
+        "label": "カタカナ"
+      }
+    ],
+    "setsPerSession": 2,
+    "mastered": 3,
+    "tts": true,
+    "learnKinds": [
+      "symSound",
+      "soundSym"
+    ],
+    "reviewKinds": [
+      "symSound",
+      "soundSym",
+      "compose",
+      "wordRead"
+    ],
+    "testKinds": {
+      "symSound": 35,
+      "soundSym": 25,
+      "wordRead": 25,
+      "symType": 15
+    }
+  }
 }

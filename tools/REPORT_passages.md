@@ -94,6 +94,23 @@ the budget rule above is unchanged):
 - p0044: title '作り方': out of pack
 - p0058: title 'ホスト': out of pack; title 'ファミリー': out of pack
 
+## Readings
+
+Reading tokens (`ruby`, langs/ja.py passage_ruby): every kanji of every passage sentence, title, question and option is inside a token; readings from Sudachi through the sentences.json kana rules (kana_line) plus the passage counter rule.
+
+| | texts | tokens | wordId null |
+|---|---:|---:|---:|
+| sentences | 570 (566 with a kanji) | 2575 | 134 |
+| titles, questions, options | 60 + 297 + 708 | 2274 | 97 |
+
+Kanji outside every token: 0.
+Readings not kana: 0.
+Fallback readings (Sudachi's reading of the token's own text, the segment reading failing): 0.
+Kana segments cut at a tap-span edge: 61 (0 by each side's own Sudachi reading, the fallback).
+Readings replaced by the linked word's own (_agree_word): 6: 下 もと→した x1, 外 がい→そと x1, 家 や→いえ x2, 箱 ばこ→はこ x1, 間 かん→あいだ x1.
+Kana rules applied (count over all texts): passage kana: native count before つ (四つ よっつ) x1, passage kana: number + counter read whole (4日 よっか) x1, passage kana: number + counter sound change (一杯 いっぱい) x22, passage kana: 来 / 言 by the kana after it x2, sentence kana: context fixes x59, sentence kana: day counts re-read (みっか, とおか) x20, sentence kana: minutes re-read (ふん / ぷん) x42, sentence kana: number read with its counter (１人 ひとり) x6.
+Sentences in sentences.json get their ruby by the same token rule (sentence_ruby over the sentence's kana line), so both cover every kanji.
+
 <!-- manual section: kept across runs -->
 
 ## Manual QA (2026-09-26, round-3 rules build)
