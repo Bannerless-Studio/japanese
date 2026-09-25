@@ -1,0 +1,19 @@
+# A1 core list: everyday words forced into A1 (the closed sets - numbers, days,
+# months, pronouns, demonstratives, question words, particles, auxiliaries,
+# greetings, time words, counters - are in engine/tools/packbuilder/langs/ja.py).
+# Spellings are the pack headwords: the spelling Tatoeba uses most.
+[NOUN]
+人 男 女 子供 友達 家族 父 母 お父さん お母さん 兄 姉 弟 妹 先生 学生 名前
+家 部屋 学校 会社 仕事 店 駅 病院 銀行 図書館 道 町 国 外国 日本語 英語
+水 お茶 ご飯 パン 肉 魚 野菜 卵 牛乳 コーヒー 料理 食べ物 飲み物 朝ごはん 昼ご飯 晩ご飯
+車 電車 バス 自転車 飛行機 電話 本 新聞 手紙 写真 映画 音楽 テレビ 時計 傘 服 靴 かばん 机 椅子 窓 ドア
+お金 天気 雨 雪 山 川 海 花 木 犬 猫 赤 白 黒 青 緑 黄色 茶色 夫 妻 祖父 祖母 目 手 足 頭 顔 体 病気 質問 言葉 字 宿題 旅行 休み 誕生日 勉強 掃除 散歩
+[VERB]
+行く 来る 帰る 着く 食べる 飲む 見る 聞く 読む 書く 話す 買う 売る 会う 待つ 住む する いる ある なる
+わかる 知る 思う 言う 作る 使う 働く 休む 寝る 起きる 出る 入る 持つ 開ける 閉める 始まる 終わる
+教える 習う 遊ぶ 歩く 走る 泳ぐ 乗る 降りる 着る 洗う 立つ 座る 見せる 貸す 借りる 呼ぶ 出かける 撮る 歌う
+[ADJ]
+大きい 小さい 新しい 古い いい 悪い 高い 安い 暑い 寒い 熱い 冷たい 楽しい 難しい 易しい 忙しい
+早い 遅い 近い 遠い 多い 少ない 長い 短い 白い 黒い 赤い 青い おいしい 静か 元気 好き 嫌い 上手 下手 大丈夫 きれい 有名 便利 暖かい 広い 狭い 若い 面白い 黄色い あんな
+[ADV]
+とても よく もう まだ ちょっと 少し たくさん いつも また すぐ 一緒に 全部 どうぞ どうも ゆっくり 時々 もっと よろしく こう ああ

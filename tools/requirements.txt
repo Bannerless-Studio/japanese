@@ -1,0 +1,11 @@
+# Build-time dependencies of the Japanese pack (python3 tools/build_pack.py).
+# The shared builder's pins (engine/tools/packbuilder/requirements.txt) without
+# spaCy: Japanese uses its own tagger, so spaCy is never imported.
+wordfreq==3.1.1
+simplemma==2.0.0
+# SudachiPy tagger + its core dictionary (both Apache-2.0; build time only)
+SudachiPy==0.7.0
+SudachiDict-core==20260723.1
+# MeCab + ipadic: wordfreq tokenises Japanese with them (zipf lookups, ranking)
+mecab-python3==1.0.12
+ipadic==1.0.0
