@@ -1,0 +1,10 @@
+{
+ "_comment": "Display-only glosses, 'lemma|pos' (the shipped words.json lemma and pos) -> the en shown to the learner. Merged into words.json en after ranking, example choice and linking (packbuilder core/words.apply_gloss_display), so sentences.json and links never change. Use gloss_overrides.json instead when the gloss should steer examples or links.",
+ "高い|adj": "high, tall; expensive",
+ "〜キロ|counter": "kilo (kg / km)",
+ "〜年間|counter": "year(s) (a period of N years)",
+ "〜秒|counter": "second(s) (of time)",
+ "〜名|counter": "people (formal counter)",
+ "〜組|counter": "pair, set; class, group",
+ "〜点|counter": "points (score); items"
+}

@@ -14,7 +14,13 @@ README.
   `note_words(words)` hook `core/sentences.py` calls before linking, used
   here to find kanji spellings that are another word, 寄る under よる). The
   `PACKBUILDER_PATH=../vocab-engine/tools` workaround is no longer needed.
-- Reading passages: to be authored.
+- Reading passages: 60 authored (`tools/passages_src.json` -> `pack/passages.json`,
+  see `tools/REPORT_passages.md`). They need the passage-only hooks in
+  `langs/ja.py` and `passages.py`, not yet ported to vocab-engine. Until they
+  are ported, `packbuilder passages --lang ja` on the live copy fails at the
+  context cache. Once the cache works, it also overwrites
+  `.cache/derived/ja_groups_*.json.gz` with passage-only groups, which breaks
+  the next context rebuild.
 
 ## Engine
 - Unspaced text has no spans. `sentences.json` carries no token spans, and
@@ -79,6 +85,16 @@ README.
   なし), and the merged key then no longer exists.
 - A few する-nouns read "to order (+ suru)" where Wiktionary has no short
   noun sense.
+- Fragment glosses (2026-09-25 audit): 箱 read "small" because its 4th
+  Wiktionary sense is "small ライブハウス (music venue)". The build kept the
+  English before the Japanese word. An audit of all 2000 glosses found only
+  that one. The fix is the override 箱 "box". A rule should reject a sense
+  whose English is only a modifier of a Japanese word.
+- Neighbouring-word gloss: おっ (A1 noun, "man") is Sudachi's split of
+  おっさん and おっと, glossed from おっさん. It is not a word. Dropping it
+  changes sentences, so it waits for the next rules round.
+- `tools/gloss_display.json` holds display-only glosses: 高い, and counters
+  whose gloss hid the unit (〜キロ kg/km, 〜年間, 〜秒, 〜名, 〜組, 〜点).
 
 ## Sentences
 - Known wrong-link residuals from the seed-52 sample: 一杯 "one cup" links
