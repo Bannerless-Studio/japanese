@@ -219,5 +219,35 @@
     "番は",
     "米国",
     "要であ"
-  ]
+  ],
+  "characters": {
+    "label": "漢字",
+    "stages": [
+      {
+        "after": "A2",
+        "levels": [
+          "A1",
+          "A2"
+        ]
+      },
+      {
+        "after": "B1",
+        "levels": [
+          "B1"
+        ]
+      }
+    ],
+    "setSize": 10,
+    "mastered": 3,
+    "bare": 6,
+    "learnKinds": [
+      "charSound",
+      "charRead"
+    ],
+    "reviewKinds": [
+      "charRead",
+      "charSound"
+    ]
+  },
+  "pronFirst": true
 }

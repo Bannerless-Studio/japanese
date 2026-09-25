@@ -15,12 +15,13 @@ README.
   here to find kanji spellings that are another word, 寄る under よる). The
   `PACKBUILDER_PATH=../vocab-engine/tools` workaround is no longer needed.
 - Reading passages: 60 authored (`tools/passages_src.json` -> `pack/passages.json`,
-  see `tools/REPORT_passages.md`). They need the passage-only hooks in
-  `langs/ja.py` and `passages.py`, not yet ported to vocab-engine. Until they
-  are ported, `packbuilder passages --lang ja` on the live copy fails at the
-  context cache. Once the cache works, it also overwrites
-  `.cache/derived/ja_groups_*.json.gz` with passage-only groups, which breaks
-  the next context rebuild.
+  see `tools/REPORT_passages.md`). The passage hooks are in vocab-engine
+  `langs/ja.py`. Round-3 linking rules (2026-09-26, vocab-engine branch
+  ja-passage-rules) cover てほしい, quotative という, 前 "ago", 後 read ご,
+  numeral + つ, Xに and その後/一番 fragments, conjunction ただ, たった and
+  位 read くらい; the report's Manual QA has the before/after table.
+  `packbuilder passages --lang ja` leaves `.cache/derived/ja_groups_*.json.gz`
+  untouched. Rebuild passages after the engine submodule moves past that branch.
 
 ## Engine
 - Unspaced text has no spans. `sentences.json` carries no token spans, and
@@ -149,3 +150,16 @@ README.
   spellings are other words' headwords (中, 君) and are pruned; without them
   those links could not be bolded. The suffix guard runs first, so these are
   real uses.
+
+## Passage rules round 3 (2026-09-26) follow-ups
+- The rules are passage-only (`passage_post_resolve`, `passage_retag`). The
+  sentence build still links conjunction ただ to ただ "ordinary" (cross-POS
+  link to the noun), 一つ as 一 (いち) + つ, 1ヶ月後 to 後 (あと), and
+  quotative という to 言う. Porting them to `post_resolve` changes
+  `sentences.json` and needs its own QA round.
+- ただ has no "but, however" sense in its gloss; conjunction ただ、 links the
+  adverb "only, simply". A gloss override would fix the display.
+- 前 after a time amount links the noun 前 ("front; before, ago"). Its gloss
+  leads with "front"; a display gloss could lead with the time sense.
+- The mc verbatim self-check no longer exempts 一つ keys (飲み物を一つ, p0007
+  q3): 一つ is now one 〜つ token, not a NUM token.

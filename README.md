@@ -1,12 +1,25 @@
 # Japanese A1-B1 vocab pack
 
 Static data pack for a language-agnostic vocab trainer (`key: "ja"`). It has
-2000 words spanning A1-B1. Each word has a short English gloss and a kana
-reading. Example sentences come with English translations and a kana line.
-There is no recorded audio: the trainer speaks every word and sentence with
-the browser's `ja-JP` voice.
+2000 words spanning A1-B1, 1590 kanji units, and 60 graded reading passages.
+Each word has a short English gloss and a kana reading. Example sentences
+come with English translations and a kana line. There is no recorded audio:
+the trainer speaks every word and sentence with the browser's `ja-JP` voice.
 
 **Live:** https://ishmum123.github.io/japanese/
+
+**Kanji stage.** `pack/characters.json` teaches 1590 kanji units, ordered
+after the A1-A2 words and before B1 (per `pack.characters` in
+`pack/pack.json`). Until a word's kanji are marked mastered in this stage,
+the trainer shows and drills it in kana (`pronFirst: true`); a "show
+written" tap reveals the kanji form early for anyone who wants it. Once a
+word's kanji are mastered, the word switches to its normal written form.
+
+**Reading passages.** 60 passages (20 per level, A1-B1) with tap-to-gloss on
+every word, built from `tools/passages_src.json` into `pack/passages.json`
+(see `tools/REPORT_passages.md`). Their comprehension questions are
+machine-authored and went through two QA rounds, but have not been reviewed
+by a native Japanese speaker.
 
 This repo holds the Japanese data pack and the Japanese data files its build
 reads. It includes [`vocab-engine`](https://github.com/ishmum123/vocab-engine)
