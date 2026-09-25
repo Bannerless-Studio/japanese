@@ -1,0 +1,7379 @@
+{
+ "rules": {
+  "coverage": {
+   "A1": 0.95,
+   "A2": 0.95,
+   "B1": 0.93
+  },
+  "budget": {
+   "A1": [
+    "A2",
+    3
+   ],
+   "A2": [
+    "B1",
+    3
+   ],
+   "B1": [
+    null,
+    0
+   ]
+  },
+  "words_per_passage": {
+   "A1": [
+    60,
+    90
+   ],
+   "A2": [
+    90,
+    120
+   ],
+   "B1": [
+    110,
+    150
+   ]
+  },
+  "questions": [
+   4,
+   5
+  ]
+ },
+ "passages": [
+  {
+   "id": "p0001",
+   "lv": "A1",
+   "title": "田中さんの一日",
+   "oop": {
+    "田中": "name (Japanese has no capitals: declared so it is not counted)",
+    "東京": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "田中",
+    "東京"
+   ],
+   "sentences": [
+    [
+     "田中さんは東京の会社で働いています。",
+     "Mr Tanaka works at a company in Tokyo."
+    ],
+    [
+     "毎日、朝6時に起きます。",
+     "Every day he gets up at six in the morning."
+    ],
+    [
+     "朝ごはんはパンと卵です。",
+     "Breakfast is bread and eggs."
+    ],
+    [
+     "コーヒーも一杯飲みます。",
+     "He also drinks a cup of coffee."
+    ],
+    [
+     "7時に家を出て、電車で会社に行きます。",
+     "He leaves home at seven and goes to the company by train."
+    ],
+    [
+     "仕事は9時から6時までです。",
+     "Work is from nine to six."
+    ],
+    [
+     "昼ご飯は会社の近くの店で食べます。",
+     "He eats lunch at a shop near the company."
+    ],
+    [
+     "夜は家で晩ご飯を作ります。",
+     "In the evening he makes dinner at home."
+    ],
+    [
+     "それから、テレビを見たり、本を読んだりします。",
+     "Then he watches TV or reads books."
+    ],
+    [
+     "11時ごろ寝ます。",
+     "He goes to bed around eleven."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "田中さんは何時に起きますか。",
+     "en": "What time does Mr Tanaka get up?",
+     "type": "mc",
+     "options": [
+      "6時",
+      "7時",
+      "9時",
+      "11時"
+     ],
+     "answer": 0,
+     "words": [
+      "起きる"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "田中さんは朝ごはんにご飯を食べます。",
+     "en": "Mr Tanaka eats rice for breakfast.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "朝ごはん"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "田中さんは何で会社に行きますか。",
+     "en": "How does Mr Tanaka go to the company?",
+     "type": "mc",
+     "options": [
+      "バスで",
+      "電車で",
+      "自転車で",
+      "車で"
+     ],
+     "answer": 1,
+     "words": [
+      "電車"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "田中さんは昼ご飯を会社の近くで食べます。",
+     "en": "Mr Tanaka eats lunch near the company.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "昼ご飯"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "田中さんは夜、何をしますか。",
+     "en": "What does Mr Tanaka do in the evening?",
+     "type": "mc",
+     "options": [
+      "友達に会います",
+      "学校に行きます",
+      "晩ご飯を作ります",
+      "店で働きます"
+     ],
+     "answer": 2,
+     "words": [
+      "作る"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0002",
+   "lv": "A1",
+   "title": "私の家族",
+   "oop": {
+    "木村": "name (Japanese has no capitals: declared so it is not counted)",
+    "あや": "name (Japanese has no capitals: declared so it is not counted)",
+    "日本": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "木村",
+    "あや",
+    "日本"
+   ],
+   "sentences": [
+    [
+     "はじめまして。",
+     "Nice to meet you."
+    ],
+    [
+     "私の名前は木村あやです。",
+     "My name is Aya Kimura."
+    ],
+    [
+     "20歳で、大学で勉強しています。",
+     "I am twenty and I study at university."
+    ],
+    [
+     "私の家族は5人です。",
+     "There are five people in my family."
+    ],
+    [
+     "父と母と兄と妹がいます。",
+     "I have a father, a mother, an elder brother and a younger sister."
+    ],
+    [
+     "父は銀行で働いています。",
+     "My father works at a bank."
+    ],
+    [
+     "母は料理がとても上手です。",
+     "My mother is very good at cooking."
+    ],
+    [
+     "兄は25歳で、外国に住んでいます。",
+     "My brother is twenty-five and lives abroad."
+    ],
+    [
+     "妹はまだ12歳で、家の近くの学校に行っています。",
+     "My sister is still twelve and goes to a school near our house."
+    ],
+    [
+     "家には白い猫もいます。",
+     "We also have a white cat at home."
+    ],
+    [
+     "家族はみんな、その猫が大好きです。",
+     "Everyone in the family loves that cat."
+    ],
+    [
+     "よろしくお願いします。",
+     "Pleased to meet you."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "あやさんはいくつですか。",
+     "en": "How old is Aya?",
+     "type": "mc",
+     "options": [
+      "12歳",
+      "25歳",
+      "15歳",
+      "20歳"
+     ],
+     "answer": 3,
+     "words": [
+      "〜歳"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "あやさんのお父さんは学校で働いています。",
+     "en": "Aya's father works at a school.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "銀行"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "料理が上手なのは誰ですか。",
+     "en": "Who is good at cooking?",
+     "type": "mc",
+     "options": [
+      "お母さん",
+      "お父さん",
+      "あやさん",
+      "妹"
+     ],
+     "answer": 0,
+     "words": [
+      "料理"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "あやさんの兄は今、日本に住んでいません。",
+     "en": "Aya's elder brother does not live in Japan now.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "外国"
+     ],
+     "sentence": 7
+    },
+    {
+     "q": "家にはどんな猫がいますか。",
+     "en": "What kind of cat is there at the home?",
+     "type": "mc",
+     "options": [
+      "黒い猫",
+      "白い猫",
+      "大きい猫",
+      "小さい猫"
+     ],
+     "answer": 1,
+     "words": [
+      "猫"
+     ],
+     "sentence": 9
+    }
+   ]
+  },
+  {
+   "id": "p0003",
+   "lv": "A1",
+   "title": "土曜日の約束",
+   "oop": {
+    "ゆい": "name (Japanese has no capitals: declared so it is not counted)",
+    "けん": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "ゆい",
+    "けん"
+   ],
+   "sentences": [
+    [
+     "ゆい：けんさん、今週の土曜日は忙しいですか。",
+     "Yui: Ken, are you busy this Saturday?"
+    ],
+    [
+     "けん：午前は仕事がありますが、午後は大丈夫です。",
+     "Ken: I have work in the morning, but the afternoon is fine."
+    ],
+    [
+     "ゆい：では、一緒に映画を見に行きませんか。",
+     "Yui: Then would you like to go and see a film together?"
+    ],
+    [
+     "ゆい：駅の近くで、新しい映画が始まりました。",
+     "Yui: A new film has started near the station."
+    ],
+    [
+     "けん：いいですね。何時からですか。",
+     "Ken: Sounds good. What time does it start?"
+    ],
+    [
+     "ゆい：2時と5時です。2時はどうですか。",
+     "Yui: Two and five. How about two?"
+    ],
+    [
+     "けん：2時はちょっと早いです。5時がいいです。",
+     "Ken: Two is a little early. Five would be good."
+    ],
+    [
+     "ゆい：わかりました。映画の後で、晩ご飯も一緒に食べましょう。",
+     "Yui: OK. Let's have dinner together after the film too."
+    ],
+    [
+     "けん：はい、楽しみです。では、4時に駅で会いましょう。",
+     "Ken: Yes, I'm looking forward to it. Then let's meet at the station at four."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "けんさんは土曜日の午前に何がありますか。",
+     "en": "What does Ken have on Saturday morning?",
+     "type": "mc",
+     "options": [
+      "学校",
+      "映画",
+      "仕事",
+      "勉強"
+     ],
+     "answer": 2,
+     "words": [
+      "仕事"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "新しい映画は、駅の近くで見ることができます。",
+     "en": "The new film can be seen near the station.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "駅"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "けんさんとゆいさんは何時の映画を見ますか。",
+     "en": "What time is the film Ken and Yui will see?",
+     "type": "mc",
+     "options": [
+      "2時",
+      "3時",
+      "4時",
+      "5時"
+     ],
+     "answer": 3,
+     "words": [
+      "〜時"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "映画の後で、けんさんとゆいさんはご飯を食べます。",
+     "en": "After the film, Ken and Yui will eat a meal.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "晩ご飯"
+     ],
+     "sentence": 7
+    },
+    {
+     "q": "けんさんとゆいさんは、どこで会いますか。",
+     "en": "Where will Ken and Yui meet?",
+     "type": "mc",
+     "options": [
+      "駅で",
+      "学校で",
+      "店の前で",
+      "ゆいさんの家で"
+     ],
+     "answer": 0,
+     "words": [
+      "会う"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0004",
+   "lv": "A1",
+   "title": "市の図書館から",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "市の図書館は、午前9時から午後7時までです。",
+     "The city library is open from 9 a.m. to 7 p.m."
+    ],
+    [
+     "でも、月曜日は休みです。",
+     "But it is closed on Mondays."
+    ],
+    [
+     "本は5冊まで借りることができます。",
+     "You can borrow up to five books."
+    ],
+    [
+     "借りられる期間は2週間です。",
+     "The loan period is two weeks."
+    ],
+    [
+     "図書館の中では、静かにしてください。",
+     "Please be quiet inside the library."
+    ],
+    [
+     "中で食べ物を食べないでください。",
+     "Please do not eat food inside."
+    ],
+    [
+     "でも、水は飲んでもいいです。",
+     "But you may drink water."
+    ],
+    [
+     "電話は外でしてください。",
+     "Please make phone calls outside."
+    ],
+    [
+     "わからないことは、何でも聞いてください。",
+     "Please ask about anything you don't understand."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "図書館はいつ休みですか。",
+     "en": "When is the library closed?",
+     "type": "mc",
+     "options": [
+      "日曜日",
+      "月曜日",
+      "土曜日",
+      "金曜日"
+     ],
+     "answer": 1,
+     "words": [
+      "月曜日"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "借りることができる本の数は、いくつまでですか。",
+     "en": "Up to how many books can you borrow?",
+     "type": "mc",
+     "options": [
+      "2冊",
+      "3冊",
+      "5冊",
+      "7冊"
+     ],
+     "answer": 2,
+     "words": [
+      "借りる"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "借りた本は、2週間で返します。",
+     "en": "Borrowed books are returned within two weeks.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "〜週間"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "図書館の中で水を飲んでもいいです。",
+     "en": "You may drink water inside the library.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "水"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "電話はどこでしますか。",
+     "en": "Where do you make phone calls?",
+     "type": "mc",
+     "options": [
+      "中で",
+      "本の前で",
+      "2階で",
+      "外で"
+     ],
+     "answer": 3,
+     "words": [
+      "電話"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0005",
+   "lv": "A1",
+   "title": "私の新しい部屋",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "先月、新しい部屋に住み始めました。",
+     "Last month I started living in a new room."
+    ],
+    [
+     "部屋は駅から歩いて10分です。",
+     "The room is a ten-minute walk from the station."
+    ],
+    [
+     "あまり広くないですが、とてもきれいです。",
+     "It is not very big, but it is very clean."
+    ],
+    [
+     "窓から小さい川と木が見えます。",
+     "From the window I can see a small river and trees."
+    ],
+    [
+     "部屋には机と椅子とベッドがあります。",
+     "In the room there is a desk, a chair and a bed."
+    ],
+    [
+     "机の上には家族の写真があります。",
+     "On the desk there is a photo of my family."
+    ],
+    [
+     "近くに安い店や銀行があって、便利です。",
+     "There are cheap shops and a bank nearby, so it is convenient."
+    ],
+    [
+     "でも、夜は電車の音が少し大きいです。",
+     "But at night the sound of the trains is a little loud."
+    ],
+    [
+     "私はこの部屋がとても好きです。",
+     "I like this room very much."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "駅から部屋まで、歩いてどのくらいですか。",
+     "en": "How long is the walk from the station to the room?",
+     "type": "mc",
+     "options": [
+      "10分",
+      "5分",
+      "15分",
+      "20分"
+     ],
+     "answer": 0,
+     "words": [
+      "〜分"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "部屋はとても広いです。",
+     "en": "The room is very big.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "広い"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "窓から何が見えますか。",
+     "en": "What can be seen from the window?",
+     "type": "mc",
+     "options": [
+      "山と海",
+      "川と木",
+      "駅と店",
+      "学校と車"
+     ],
+     "answer": 1,
+     "words": [
+      "見える"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "部屋の近くに銀行があります。",
+     "en": "There is a bank near the room.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "銀行"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "夜、何が少し大きいですか。",
+     "en": "What is a little loud at night?",
+     "type": "mc",
+     "options": [
+      "テレビの音",
+      "犬の声",
+      "電車の音",
+      "車の音"
+     ],
+     "answer": 2,
+     "words": [
+      "音"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0006",
+   "lv": "A1",
+   "title": "駅で",
+   "oop": {
+    "田中": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "田中"
+   ],
+   "sentences": [
+    [
+     "田中：すみません、市の病院はどこですか。",
+     "Tanaka: Excuse me, where is the city hospital?"
+    ],
+    [
+     "駅の人：この道を5分くらい歩いてください。",
+     "Station staff: Please walk along this road for about five minutes."
+    ],
+    [
+     "駅の人：大きい銀行があります。病院はその銀行の右です。",
+     "Station staff: There is a big bank. The hospital is to the right of that bank."
+    ],
+    [
+     "田中：近くにバスはありますか。",
+     "Tanaka: Is there a bus nearby?"
+    ],
+    [
+     "駅の人：はい。でも、歩いた方が早いですよ。",
+     "Station staff: Yes. But walking is quicker."
+    ],
+    [
+     "駅の人：それから、今日は日曜日ですから、病院は休みですよ。",
+     "Station staff: Also, today is Sunday, so the hospital is closed."
+    ],
+    [
+     "田中：そうですか。では、明日行きます。",
+     "Tanaka: I see. Then I'll go tomorrow."
+    ],
+    [
+     "田中：どうもありがとうございました。",
+     "Tanaka: Thank you very much."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "田中さんはどこに行きたいですか。",
+     "en": "Where does Mr Tanaka want to go?",
+     "type": "mc",
+     "options": [
+      "銀行",
+      "駅",
+      "図書館",
+      "病院"
+     ],
+     "answer": 3,
+     "words": [
+      "病院"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "駅から病院まで、歩いてどのくらいですか。",
+     "en": "How long is the walk from the station to the hospital?",
+     "type": "mc",
+     "options": [
+      "5分くらい",
+      "10分くらい",
+      "15分くらい",
+      "20分くらい"
+     ],
+     "answer": 0,
+     "words": [
+      "歩く"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "病院は銀行の前にあります。",
+     "en": "The hospital is in front of the bank.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "銀行"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "駅の人は、バスより歩いた方が早いと言いました。",
+     "en": "The station staff said walking is quicker than the bus.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "早い"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "田中さんはいつ病院に行きますか。",
+     "en": "When will Mr Tanaka go to the hospital?",
+     "type": "mc",
+     "options": [
+      "今日",
+      "明日",
+      "来週",
+      "日曜日"
+     ],
+     "answer": 1,
+     "words": [
+      "明日"
+     ],
+     "sentence": 6
+    }
+   ]
+  },
+  {
+   "id": "p0007",
+   "lv": "A1",
+   "title": "誕生日のパーティー",
+   "oop": {
+    "リサ": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "リサ"
+   ],
+   "sentences": [
+    [
+     "みなさん、こんにちは。",
+     "Hello, everyone."
+    ],
+    [
+     "来週の土曜日は私の誕生日です。",
+     "Next Saturday is my birthday."
+    ],
+    [
+     "それで、家で小さいパーティーをします。",
+     "So I am having a small party at home."
+    ],
+    [
+     "時間は午後3時から6時までです。",
+     "It is from 3 p.m. to 6 p.m."
+    ],
+    [
+     "私はケーキを作ります。",
+     "I will make a cake."
+    ],
+    [
+     "みなさんは、飲み物を一つ持って来てください。",
+     "Please each bring one drink."
+    ],
+    [
+     "私の家は駅から近いです。",
+     "My house is close to the station."
+    ],
+    [
+     "駅の前の花の店の隣です。",
+     "It is next to the flower shop in front of the station."
+    ],
+    [
+     "来ることができる人は、金曜日までに電話をください。",
+     "If you can come, please call me by Friday."
+    ],
+    [
+     "楽しい一日にしましょう！リサ",
+     "Let's make it a fun day! Lisa"
+    ]
+   ],
+   "questions": [
+    {
+     "q": "パーティーはいつですか。",
+     "en": "When is the party?",
+     "type": "mc",
+     "options": [
+      "来週の日曜日",
+      "今週の土曜日",
+      "来週の土曜日",
+      "来週の金曜日"
+     ],
+     "answer": 2,
+     "words": [
+      "土曜日"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "パーティーは3時間です。",
+     "en": "The party lasts three hours.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "時間"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "リサさんは何を作りますか。",
+     "en": "What will Lisa make?",
+     "type": "mc",
+     "options": [
+      "パン",
+      "晩ご飯",
+      "料理",
+      "ケーキ"
+     ],
+     "answer": 3,
+     "words": [
+      "作る"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "みなさんは何を持って来ますか。",
+     "en": "What will everyone bring?",
+     "type": "mc",
+     "options": [
+      "飲み物を一つ",
+      "花を一つ",
+      "ケーキを一つ",
+      "本を一冊"
+     ],
+     "answer": 0,
+     "words": [
+      "飲み物"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "リサさんの家は駅から遠いです。",
+     "en": "Lisa's house is far from the station.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "近い"
+     ],
+     "sentence": 6
+    }
+   ]
+  },
+  {
+   "id": "p0008",
+   "lv": "A1",
+   "title": "雨の日",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "今日は朝から雨が降っています。",
+     "It has been raining since this morning."
+    ],
+    [
+     "私は今日、友達と海に行く予定でした。",
+     "I was going to go to the sea with a friend today."
+    ],
+    [
+     "でも、雨なので、行きませんでした。",
+     "But because of the rain, we didn't go."
+    ],
+    [
+     "友達に電話をして、来週行くことにしました。",
+     "I called my friend and we decided to go next week."
+    ],
+    [
+     "午前は部屋で本を読みました。",
+     "In the morning I read a book in my room."
+    ],
+    [
+     "午後は、母と料理を作りました。",
+     "In the afternoon I cooked with my mother."
+    ],
+    [
+     "魚と野菜の料理で、とてもおいしかったです。",
+     "It was a fish and vegetable dish, and it was very good."
+    ],
+    [
+     "夜になって、雨はもう降っていません。",
+     "Now it is night, and it is no longer raining."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "今日の天気はどうですか。",
+     "en": "What is the weather like today?",
+     "type": "mc",
+     "options": [
+      "雪です",
+      "雨です",
+      "とても寒いです",
+      "とても暑いです"
+     ],
+     "answer": 1,
+     "words": [
+      "雨"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "今日、私は友達と海に行くつもりでした。",
+     "en": "Today I was planning to go to the sea with a friend.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "海"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "友達とはいつ海に行きますか。",
+     "en": "When will I go to the sea with my friend?",
+     "type": "mc",
+     "options": [
+      "明日",
+      "今晩",
+      "来月",
+      "来週"
+     ],
+     "answer": 3,
+     "words": [
+      "来週"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "午後、何をしましたか。",
+     "en": "What did I do in the afternoon?",
+     "type": "mc",
+     "options": [
+      "友達に会いました",
+      "本を読みました",
+      "母と料理を作りました",
+      "海に行きました"
+     ],
+     "answer": 2,
+     "words": [
+      "午後"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "母と作った料理には魚がありました。",
+     "en": "The dish I made with my mother had fish in it.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "魚"
+     ],
+     "sentence": 6
+    }
+   ]
+  },
+  {
+   "id": "p0009",
+   "lv": "A1",
+   "title": "私の好きな食べ物",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "朝はいつもご飯と魚を食べます。",
+     "In the morning I always eat rice and fish."
+    ],
+    [
+     "パンはあまり好きではありません。",
+     "I don't like bread very much."
+    ],
+    [
+     "昼は、よく会社の近くの店で肉を食べます。",
+     "At lunchtime I often eat meat at a shop near my company."
+    ],
+    [
+     "野菜は少し嫌いですが、体のために毎日食べます。",
+     "I dislike vegetables a little, but I eat them every day for my health."
+    ],
+    [
+     "コーヒーが好きですが、1日に1杯だけ飲みます。",
+     "I like coffee, but I drink only one cup a day."
+    ],
+    [
+     "先週、妻と駅の近くで古い店を見つけました。",
+     "Last week my wife and I found an old shop near the station."
+    ],
+    [
+     "その店の卵の料理は、本当においしかったです。",
+     "The egg dish at that shop was really delicious."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "朝、何を食べますか。",
+     "en": "What do I eat in the morning?",
+     "type": "mc",
+     "options": [
+      "ご飯と魚",
+      "パンと卵",
+      "パンとコーヒー",
+      "肉と野菜"
+     ],
+     "answer": 0,
+     "words": [
+      "朝"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "私はパンが大好きです。",
+     "en": "I love bread.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "パン"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "どうして野菜を食べますか。",
+     "en": "Why do I eat vegetables?",
+     "type": "mc",
+     "options": [
+      "好きだから",
+      "体のため",
+      "安いから",
+      "妻が作るから"
+     ],
+     "answer": 1,
+     "words": [
+      "野菜"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "私がコーヒーを飲むのは、1日に1杯だけです。",
+     "en": "I drink only one cup of coffee a day.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "コーヒー"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "先週、どこで店を見つけましたか。",
+     "en": "Where did we find a shop last week?",
+     "type": "mc",
+     "options": [
+      "会社の近く",
+      "家の近く",
+      "駅の近く",
+      "銀行の近く"
+     ],
+     "answer": 2,
+     "words": [
+      "見つける"
+     ],
+     "sentence": 5
+    }
+   ]
+  },
+  {
+   "id": "p0010",
+   "lv": "A1",
+   "title": "日本語の勉強",
+   "oop": {
+    "ジョン": "name (Japanese has no capitals: declared so it is not counted)",
+    "アメリカ": "name (Japanese has no capitals: declared so it is not counted)",
+    "日本": "name (Japanese has no capitals: declared so it is not counted)",
+    "大阪": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "ジョン",
+    "アメリカ",
+    "日本",
+    "大阪"
+   ],
+   "sentences": [
+    [
+     "私の名前はジョンです。アメリカから来ました。",
+     "My name is John. I come from America."
+    ],
+    [
+     "今、日本語を勉強しています。",
+     "I am studying Japanese now."
+    ],
+    [
+     "月曜日と木曜日に、日本語の学校に行きます。",
+     "I go to a Japanese school on Mondays and Thursdays."
+    ],
+    [
+     "先生は大阪の人で、話がとても面白いです。",
+     "The teacher is from Osaka, and her talk is very interesting."
+    ],
+    [
+     "学生は8人で、みんな違う国から来ました。",
+     "There are eight students, and they all come from different countries."
+    ],
+    [
+     "日本語は難しいですが、楽しいです。",
+     "Japanese is difficult, but fun."
+    ],
+    [
+     "私は字を書くのが一番難しいです。",
+     "For me, writing characters is the hardest."
+    ],
+    [
+     "家では、日本のテレビをよく見ます。",
+     "At home I often watch Japanese TV."
+    ],
+    [
+     "来年、日本に旅行に行きたいです。",
+     "Next year I want to travel to Japan."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "ジョンさんはいつ学校に行きますか。",
+     "en": "When does John go to school?",
+     "type": "mc",
+     "options": [
+      "月曜日と金曜日",
+      "火曜日と木曜日",
+      "土曜日と日曜日",
+      "月曜日と木曜日"
+     ],
+     "answer": 3,
+     "words": [
+      "学校"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "学生の国は、みんな同じではありません。",
+     "en": "The students do not all come from the same country.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "違う"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "ジョンさんにとって、何が一番難しいですか。",
+     "en": "What is hardest for John?",
+     "type": "mc",
+     "options": [
+      "字を書くこと",
+      "話すこと",
+      "聞くこと",
+      "テレビを見ること"
+     ],
+     "answer": 0,
+     "words": [
+      "字"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "ジョンさんは家で日本のテレビを見ます。",
+     "en": "John watches Japanese TV at home.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "テレビ"
+     ],
+     "sentence": 7
+    },
+    {
+     "q": "ジョンさんはいつ日本に行きたいですか。",
+     "en": "When does John want to go to Japan?",
+     "type": "mc",
+     "options": [
+      "今年",
+      "来年",
+      "来月",
+      "来週"
+     ],
+     "answer": 1,
+     "words": [
+      "来年"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0011",
+   "lv": "A1",
+   "title": "うちの犬",
+   "oop": {
+    "ポチ": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "ポチ"
+   ],
+   "sentences": [
+    [
+     "私の家には犬が1匹います。",
+     "We have one dog at home."
+    ],
+    [
+     "名前はポチです。3歳で、体は小さいです。",
+     "Its name is Pochi. It is three years old and small."
+    ],
+    [
+     "色は白と黒です。",
+     "It is white and black."
+    ],
+    [
+     "ポチは散歩が大好きです。",
+     "Pochi loves walks."
+    ],
+    [
+     "朝は父が、夜は私が散歩に行きます。",
+     "My father takes it for a walk in the morning, and I do at night."
+    ],
+    [
+     "ポチは外でたくさん走ります。",
+     "Pochi runs a lot outside."
+    ],
+    [
+     "でも、ポチは猫があまり好きではありません。",
+     "But Pochi doesn't like cats very much."
+    ],
+    [
+     "猫を見ると、大きい声を出します。",
+     "When it sees a cat, it barks loudly."
+    ],
+    [
+     "家族には、とてもやさしい犬です。",
+     "It is a very gentle dog with the family."
+    ],
+    [
+     "夜は私の部屋で寝ます。",
+     "At night it sleeps in my room."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "ポチはいくつですか。",
+     "en": "How old is Pochi?",
+     "type": "mc",
+     "options": [
+      "2歳",
+      "4歳",
+      "3歳",
+      "5歳"
+     ],
+     "answer": 2,
+     "words": [
+      "〜歳"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "ポチは小さい犬です。",
+     "en": "Pochi is a small dog.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "小さい"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "ポチはどんな色ですか。",
+     "en": "What colour is Pochi?",
+     "type": "mc",
+     "options": [
+      "白だけ",
+      "黒と茶色",
+      "茶色だけ",
+      "白と黒"
+     ],
+     "answer": 3,
+     "words": [
+      "色"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "ポチは猫が大好きです。",
+     "en": "Pochi loves cats.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "猫"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "夜、ポチはどこで寝ますか。",
+     "en": "Where does Pochi sleep at night?",
+     "type": "mc",
+     "options": [
+      "私の部屋で",
+      "父の部屋で",
+      "外で",
+      "家の前で"
+     ],
+     "answer": 0,
+     "words": [
+      "寝る"
+     ],
+     "sentence": 9
+    }
+   ]
+  },
+  {
+   "id": "p0012",
+   "lv": "A1",
+   "title": "靴の店で",
+   "oop": {
+    "マリア": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "マリア"
+   ],
+   "sentences": [
+    [
+     "店の人：こんにちは。何を探していますか。",
+     "Shop assistant: Hello. What are you looking for?"
+    ],
+    [
+     "マリア：黒い靴が欲しいです。",
+     "Maria: I want black shoes."
+    ],
+    [
+     "店の人：黒い靴は、こちらです。",
+     "Shop assistant: The black shoes are over here."
+    ],
+    [
+     "マリア：この靴はいくらですか。",
+     "Maria: How much are these shoes?"
+    ],
+    [
+     "店の人：8000円です。",
+     "Shop assistant: 8,000 yen."
+    ],
+    [
+     "マリア：ちょっと高いですね。もう少し安い靴はありますか。",
+     "Maria: That's a bit expensive. Do you have slightly cheaper shoes?"
+    ],
+    [
+     "店の人：こちらはどうですか。5000円です。",
+     "Shop assistant: How about these? They are 5,000 yen."
+    ],
+    [
+     "マリア：いいですね。でも、少し小さいです。",
+     "Maria: They're nice. But they are a little small."
+    ],
+    [
+     "マリア：大きいのはありますか。",
+     "Maria: Do you have a bigger pair?"
+    ],
+    [
+     "店の人：はい、ありますよ。どうぞ。",
+     "Shop assistant: Yes, we do. Here you are."
+    ],
+    [
+     "マリア：これはいいです。これをください。",
+     "Maria: These are good. I'll take these."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "マリアさんは何を買いに来ましたか。",
+     "en": "What did Maria come to buy?",
+     "type": "mc",
+     "options": [
+      "白い靴",
+      "黒い靴",
+      "黒いかばん",
+      "赤い傘"
+     ],
+     "answer": 1,
+     "words": [
+      "靴"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "最初の靴は5000円でした。",
+     "en": "The first shoes were 5,000 yen.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "〜円"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "マリアさんが買った靴はいくらですか。",
+     "en": "How much were the shoes Maria bought?",
+     "type": "mc",
+     "options": [
+      "8000円",
+      "3000円",
+      "5000円",
+      "1000円"
+     ],
+     "answer": 2,
+     "words": [
+      "〜円"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "5000円の靴は、マリアさんの足に少し小さかったです。",
+     "en": "The 5,000-yen shoes were a little small for Maria's feet.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "小さい"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0013",
+   "lv": "A1",
+   "title": "夏の旅行",
+   "oop": {
+    "沖縄": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "沖縄"
+   ],
+   "sentences": [
+    [
+     "去年の夏、家族と沖縄に旅行しました。",
+     "Last summer I travelled to Okinawa with my family."
+    ],
+    [
+     "飛行機で3時間くらいでした。",
+     "It was about three hours by plane."
+    ],
+    [
+     "沖縄はとても暑くて、海がきれいでした。",
+     "Okinawa was very hot, and the sea was beautiful."
+    ],
+    [
+     "私と弟は毎日、海で泳ぎました。",
+     "My younger brother and I swam in the sea every day."
+    ],
+    [
+     "父は写真をたくさん撮りました。",
+     "My father took a lot of photos."
+    ],
+    [
+     "母は海の近くの店で服を買いました。",
+     "My mother bought clothes at a shop near the sea."
+    ],
+    [
+     "夜はホテルで魚の料理を食べました。",
+     "In the evening we ate fish dishes at the hotel."
+    ],
+    [
+     "沖縄の人はみんな親切でした。",
+     "The people in Okinawa were all kind."
+    ],
+    [
+     "旅行は4日だけでしたが、とても楽しかったです。",
+     "The trip was only four days, but it was great fun."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "誰と旅行しましたか。",
+     "en": "Who did I travel with?",
+     "type": "mc",
+     "options": [
+      "友達と",
+      "会社の人と",
+      "学校の先生と",
+      "家族と"
+     ],
+     "answer": 3,
+     "words": [
+      "家族"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "飛行機に乗っていた時間は、3時間くらいでした。",
+     "en": "The time on the plane was about three hours.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "飛行機"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "海で泳いだのは誰ですか。",
+     "en": "Who swam in the sea?",
+     "type": "mc",
+     "options": [
+      "私と弟",
+      "父と母",
+      "父と私",
+      "母と弟"
+     ],
+     "answer": 0,
+     "words": [
+      "泳ぐ"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "父は海の近くで服を買いました。",
+     "en": "My father bought clothes near the sea.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "服"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "夜、ホテルで何を食べましたか。",
+     "en": "What did we eat at the hotel in the evening?",
+     "type": "mc",
+     "options": [
+      "肉の料理",
+      "魚の料理",
+      "野菜の料理",
+      "パンと卵"
+     ],
+     "answer": 1,
+     "words": [
+      "魚"
+     ],
+     "sentence": 6
+    }
+   ]
+  },
+  {
+   "id": "p0014",
+   "lv": "A1",
+   "title": "病院へ",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "昨日の夜から頭が痛いです。熱もあります。",
+     "I have had a headache since last night. I have a fever too."
+    ],
+    [
+     "それで、今日は会社を休んで、病院に行きました。",
+     "So today I took the day off work and went to the hospital."
+    ],
+    [
+     "病院は家から近いので、歩いて行きました。",
+     "The hospital is near my house, so I walked there."
+    ],
+    [
+     "病院には人がたくさんいて、1時間待ちました。",
+     "There were a lot of people at the hospital, and I waited an hour."
+    ],
+    [
+     "先生は「風邪ですね。家でゆっくり休んでください。」と言いました。",
+     "The doctor said, \"It's a cold. Please rest at home.\""
+    ],
+    [
+     "家に帰って、すぐに寝ました。",
+     "I went home and went to bed straight away."
+    ],
+    [
+     "夜、母が電話をくれました。",
+     "In the evening my mother phoned me."
+    ],
+    [
+     "明日は元気になりたいです。",
+     "I want to be well by tomorrow."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "いつから頭が痛いですか。",
+     "en": "Since when has my head hurt?",
+     "type": "mc",
+     "options": [
+      "今朝から",
+      "昨日の朝から",
+      "昨日の夜から",
+      "先週から"
+     ],
+     "answer": 2,
+     "words": [
+      "頭"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "私は歩いて病院まで行きました。",
+     "en": "I walked to the hospital.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "歩く"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "病院で、どのくらい待ちましたか。",
+     "en": "How long did I wait at the hospital?",
+     "type": "mc",
+     "options": [
+      "2時間",
+      "3時間",
+      "10分",
+      "1時間"
+     ],
+     "answer": 3,
+     "words": [
+      "待つ"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "先生は、会社に行ってもいいと言いました。",
+     "en": "The doctor said I could go to work.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "休む"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "夜、誰が電話をくれましたか。",
+     "en": "Who phoned me in the evening?",
+     "type": "mc",
+     "options": [
+      "母",
+      "父",
+      "先生",
+      "友達"
+     ],
+     "answer": 0,
+     "words": [
+      "電話"
+     ],
+     "sentence": 6
+    }
+   ]
+  },
+  {
+   "id": "p0015",
+   "lv": "A1",
+   "title": "友達への手紙",
+   "oop": {
+    "けいこ": "name (Japanese has no capitals: declared so it is not counted)",
+    "イギリス": "name (Japanese has no capitals: declared so it is not counted)",
+    "ロンドン": "name (Japanese has no capitals: declared so it is not counted)",
+    "フランス": "name (Japanese has no capitals: declared so it is not counted)",
+    "ブラジル": "name (Japanese has no capitals: declared so it is not counted)",
+    "日本": "name (Japanese has no capitals: declared so it is not counted)",
+    "みき": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "けいこ",
+    "イギリス",
+    "ロンドン",
+    "フランス",
+    "ブラジル",
+    "日本",
+    "みき"
+   ],
+   "sentences": [
+    [
+     "けいこさん、元気ですか。",
+     "Keiko, how are you?"
+    ],
+    [
+     "私は今、イギリスのロンドンに住んでいます。",
+     "I am living in London in England now."
+    ],
+    [
+     "ここは6月ですが、まだ少し寒いです。",
+     "It's June here, but it is still a little cold."
+    ],
+    [
+     "毎日、大学で英語を勉強しています。",
+     "Every day I study English at university."
+    ],
+    [
+     "友達は、フランスとブラジルから来た学生です。",
+     "My friends are students from France and Brazil."
+    ],
+    [
+     "週末は、よく友達と町を歩きます。",
+     "At weekends I often walk around the city with friends."
+    ],
+    [
+     "ロンドンには古くて大きい建物がたくさんあります。",
+     "London has many old, big buildings."
+    ],
+    [
+     "でも、時々日本の食べ物が欲しくなります。",
+     "But sometimes I miss Japanese food."
+    ],
+    [
+     "来年の3月に日本に帰ります。その時、一緒にご飯を食べましょう。",
+     "I will go back to Japan next March. Let's have a meal together then."
+    ],
+    [
+     "みき",
+     "Miki"
+    ]
+   ],
+   "questions": [
+    {
+     "q": "みきさんは今どこに住んでいますか。",
+     "en": "Where does Miki live now?",
+     "type": "mc",
+     "options": [
+      "フランス",
+      "イギリス",
+      "ブラジル",
+      "日本"
+     ],
+     "answer": 1,
+     "words": [
+      "住む"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "ロンドンは6月にとても暑いです。",
+     "en": "London is very hot in June.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "寒い"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "みきさんは大学で何を勉強していますか。",
+     "en": "What does Miki study at university?",
+     "type": "mc",
+     "options": [
+      "日本語",
+      "音楽",
+      "英語",
+      "絵"
+     ],
+     "answer": 2,
+     "words": [
+      "英語"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "みきさんは週末、友達とよく出かけます。",
+     "en": "Miki often goes out with friends at weekends.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "週末"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "みきさんはいつ日本に帰りますか。",
+     "en": "When will Miki go back to Japan?",
+     "type": "mc",
+     "options": [
+      "今年の3月",
+      "来年の6月",
+      "今年の6月",
+      "来年の3月"
+     ],
+     "answer": 3,
+     "words": [
+      "来年"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0016",
+   "lv": "A1",
+   "title": "私の町",
+   "oop": {
+    "東京": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "東京"
+   ],
+   "sentences": [
+    [
+     "私の町は小さいですが、静かできれいです。",
+     "My town is small, but it is quiet and beautiful."
+    ],
+    [
+     "町の近くに山と川があります。",
+     "There are mountains and a river near the town."
+    ],
+    [
+     "駅の前には、店や銀行があります。",
+     "In front of the station there are shops and a bank."
+    ],
+    [
+     "町の図書館は古いですが、本がたくさんあります。",
+     "The town library is old, but it has a lot of books."
+    ],
+    [
+     "夏は友達と山に行って、たくさん歩きます。",
+     "In summer I go to the mountains with friends and walk a lot."
+    ],
+    [
+     "冬は雪がたくさん降って、子供は外で遊びます。",
+     "In winter a lot of snow falls, and children play outside."
+    ],
+    [
+     "東京まで電車で2時間かかります。",
+     "It takes two hours by train to Tokyo."
+    ],
+    [
+     "少し遠いですが、私はこの町が大好きです。",
+     "It is a little far, but I love this town."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "町の近くに何がありますか。",
+     "en": "What is near the town?",
+     "type": "mc",
+     "options": [
+      "山と川",
+      "山と海",
+      "海と川",
+      "海と駅"
+     ],
+     "answer": 0,
+     "words": [
+      "川"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "町の図書館は新しいです。",
+     "en": "The town library is new.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "古い"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "冬の町はどうですか。",
+     "en": "What is the town like in winter?",
+     "type": "mc",
+     "options": [
+      "雨がたくさん降ります",
+      "雪がたくさん降ります",
+      "とても暑いです",
+      "人がたくさん来ます"
+     ],
+     "answer": 1,
+     "words": [
+      "冬"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "東京までは、電車で行くと2時間です。",
+     "en": "It is two hours to Tokyo by train.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "電車"
+     ],
+     "sentence": 6
+    }
+   ]
+  },
+  {
+   "id": "p0017",
+   "lv": "A1",
+   "title": "来週の学校の旅行",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "みなさん、来週の金曜日は学校の旅行です。",
+     "Everyone, next Friday is the school trip."
+    ],
+    [
+     "朝8時に学校の前に来てください。",
+     "Please come to the front of the school at 8 in the morning."
+    ],
+    [
+     "バスで山の公園に行きます。2時間くらいかかります。",
+     "We will go by bus to a park in the mountains. It takes about two hours."
+    ],
+    [
+     "公園では、みんなで山の上まで歩きます。",
+     "At the park we will all walk up to the top of the mountain."
+    ],
+    [
+     "お金は1000円まで持って来てもいいです。",
+     "You may bring up to 1,000 yen."
+    ],
+    [
+     "山の上は寒いですから、暖かい服も持って来てください。",
+     "It is cold at the top of the mountain, so please also bring warm clothes."
+    ],
+    [
+     "雨の日は、旅行はありません。いつもの時間に学校に来てください。",
+     "If it rains, there is no trip. Please come to school at the usual time."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "旅行はいつですか。",
+     "en": "When is the trip?",
+     "type": "mc",
+     "options": [
+      "来週の月曜日",
+      "今週の金曜日",
+      "来週の金曜日",
+      "来週の土曜日"
+     ],
+     "answer": 2,
+     "words": [
+      "金曜日"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "旅行の日は、朝9時に学校に来ます。",
+     "en": "On the day of the trip, you come to school at 9 in the morning.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "来る"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "何で公園に行きますか。",
+     "en": "How will they go to the park?",
+     "type": "mc",
+     "options": [
+      "電車で",
+      "車で",
+      "自転車で",
+      "バスで"
+     ],
+     "answer": 3,
+     "words": [
+      "バス"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "持って来ていいお金は、1000円までです。",
+     "en": "The money you may bring is up to 1,000 yen.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "お金"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "雨の日はどうしますか。",
+     "en": "What happens on a rainy day?",
+     "type": "mc",
+     "options": [
+      "いつもの時間に学校に来ます",
+      "家で勉強します",
+      "公園に行きます",
+      "山の上まで歩きます"
+     ],
+     "answer": 0,
+     "words": [
+      "雨"
+     ],
+     "sentence": 6
+    }
+   ]
+  },
+  {
+   "id": "p0018",
+   "lv": "A1",
+   "title": "冬の北海道",
+   "oop": {
+    "北海道": "name (Japanese has no capitals: declared so it is not counted)",
+    "東京": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "北海道",
+    "東京"
+   ],
+   "sentences": [
+    [
+     "去年の12月に、兄と北海道に行きました。",
+     "Last December I went to Hokkaido with my elder brother."
+    ],
+    [
+     "北海道はとても寒くて、雪がたくさんありました。",
+     "Hokkaido was very cold, and there was a lot of snow."
+    ],
+    [
+     "私たちは毎日、雪の中で遊びました。",
+     "We played in the snow every day."
+    ],
+    [
+     "兄と雪で小さい家を作りました。",
+     "My brother and I made a small house out of snow."
+    ],
+    [
+     "町の店で食べた魚は、安くておいしかったです。",
+     "The fish we ate at a restaurant in town was cheap and delicious."
+    ],
+    [
+     "夜はとても静かで、星がたくさん見えました。",
+     "At night it was very quiet, and we could see lots of stars."
+    ],
+    [
+     "東京とは、とても違います。",
+     "It is very different from Tokyo."
+    ],
+    [
+     "また兄と行きたいです。",
+     "I want to go with my brother again."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "誰と北海道に行きましたか。",
+     "en": "Who did I go to Hokkaido with?",
+     "type": "mc",
+     "options": [
+      "姉と",
+      "兄と",
+      "父と",
+      "友達と"
+     ],
+     "answer": 1,
+     "words": [
+      "兄"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "北海道は暖かかったです。",
+     "en": "Hokkaido was warm.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "寒い"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "兄と何を作りましたか。",
+     "en": "What did I make with my brother?",
+     "type": "mc",
+     "options": [
+      "雪の犬",
+      "魚の料理",
+      "雪の家",
+      "小さい机"
+     ],
+     "answer": 2,
+     "words": [
+      "作る"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "北海道の魚は安かったです。",
+     "en": "The fish in Hokkaido was cheap.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "安い"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "夜、何がたくさん見えましたか。",
+     "en": "What could be seen in large numbers at night?",
+     "type": "mc",
+     "options": [
+      "車",
+      "人",
+      "店",
+      "星"
+     ],
+     "answer": 3,
+     "words": [
+      "星"
+     ],
+     "sentence": 5
+    }
+   ]
+  },
+  {
+   "id": "p0019",
+   "lv": "A1",
+   "title": "山本先生",
+   "oop": {
+    "山本": "name (Japanese has no capitals: declared so it is not counted)",
+    "アメリカ": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "山本",
+    "アメリカ"
+   ],
+   "sentences": [
+    [
+     "私の学校に、山本先生という先生がいます。",
+     "At my school there is a teacher called Mr Yamamoto."
+    ],
+    [
+     "山本先生は英語の先生です。",
+     "Mr Yamamoto is an English teacher."
+    ],
+    [
+     "先生は40歳くらいで、とても背が高いです。",
+     "He is about forty and very tall."
+    ],
+    [
+     "先生は若い時、アメリカに5年住んでいました。",
+     "When he was young, he lived in America for five years."
+    ],
+    [
+     "それで、よく外国の話をします。",
+     "So he often talks about foreign countries."
+    ],
+    [
+     "先生の授業は少し難しいですが、楽しいです。",
+     "His classes are a little difficult, but fun."
+    ],
+    [
+     "宿題はたくさんありますが、みんな頑張っています。",
+     "There is a lot of homework, but everyone is working hard."
+    ],
+    [
+     "私も先生と同じくらい、英語が上手になりたいです。",
+     "I want to become as good at English as he is."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "山本先生は何の先生ですか。",
+     "en": "What does Mr Yamamoto teach?",
+     "type": "mc",
+     "options": [
+      "英語",
+      "日本語",
+      "音楽",
+      "絵"
+     ],
+     "answer": 0,
+     "words": [
+      "英語"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "山本先生は背が高い人です。",
+     "en": "Mr Yamamoto is a tall person.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "高い"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "先生はアメリカに何年住んでいましたか。",
+     "en": "How many years did the teacher live in America?",
+     "type": "mc",
+     "options": [
+      "4年",
+      "5年",
+      "3年",
+      "10年"
+     ],
+     "answer": 1,
+     "words": [
+      "住む"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "先生の授業はとても易しいです。",
+     "en": "His classes are very easy.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "難しい"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "宿題はどうですか。",
+     "en": "What is the homework like?",
+     "type": "mc",
+     "options": [
+      "あまりありません",
+      "とても易しいです",
+      "たくさんあります",
+      "少しだけです"
+     ],
+     "answer": 2,
+     "words": [
+      "宿題"
+     ],
+     "sentence": 6
+    }
+   ]
+  },
+  {
+   "id": "p0020",
+   "lv": "A1",
+   "title": "明日の約束",
+   "oop": {
+    "佐藤": "name (Japanese has no capitals: declared so it is not counted)",
+    "まり": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "佐藤",
+    "まり"
+   ],
+   "sentences": [
+    [
+     "佐藤：まりさん、こんにちは。佐藤です。",
+     "Sato: Hello, Mari. It's Sato."
+    ],
+    [
+     "まり：佐藤さん、こんにちは。",
+     "Mari: Hello, Mr Sato."
+    ],
+    [
+     "佐藤：今、ちょっといいですか。",
+     "Sato: Do you have a moment now?"
+    ],
+    [
+     "まり：はい、大丈夫です。",
+     "Mari: Yes, that's fine."
+    ],
+    [
+     "佐藤：明日の午後、時間がありますか。",
+     "Sato: Do you have time tomorrow afternoon?"
+    ],
+    [
+     "まり：明日は仕事ですが、4時に終わります。",
+     "Mari: I'm working tomorrow, but I finish at four."
+    ],
+    [
+     "佐藤：では、5時に駅で会いませんか。",
+     "Sato: Then shall we meet at the station at five?"
+    ],
+    [
+     "まり：いいですよ。何をしますか。",
+     "Mari: Sure. What shall we do?"
+    ],
+    [
+     "佐藤：新しいカメラを買いたいです。一緒に店に行きませんか。",
+     "Sato: I want to buy a new camera. Would you come to the shop with me?"
+    ],
+    [
+     "まり：いいですね。私も新しい靴が欲しいです。",
+     "Mari: Good idea. I want new shoes too."
+    ],
+    [
+     "佐藤：店の後で、晩ご飯を食べましょう。",
+     "Sato: After the shop, let's have dinner."
+    ],
+    [
+     "まり：はい。では、明日5時に。",
+     "Mari: OK. See you tomorrow at five, then."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "まりさんは明日、仕事がありません。",
+     "en": "Mari has no work tomorrow.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "仕事"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "まりさんの仕事は何時に終わりますか。",
+     "en": "What time does Mari's work finish?",
+     "type": "mc",
+     "options": [
+      "4時",
+      "5時",
+      "3時",
+      "6時"
+     ],
+     "answer": 0,
+     "words": [
+      "終わる"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "佐藤さんとまりさんは明日、駅で会います。",
+     "en": "Mr Sato and Mari will meet at the station tomorrow.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "駅"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "佐藤さんは何を買いたいですか。",
+     "en": "What does Mr Sato want to buy?",
+     "type": "mc",
+     "options": [
+      "靴",
+      "服",
+      "時計",
+      "カメラ"
+     ],
+     "answer": 3,
+     "words": [
+      "買う"
+     ],
+     "sentence": 8
+    },
+    {
+     "q": "まりさんは何が欲しいですか。",
+     "en": "What does Mari want?",
+     "type": "mc",
+     "options": [
+      "新しいカメラ",
+      "新しい靴",
+      "新しい服",
+      "新しいかばん"
+     ],
+     "answer": 1,
+     "words": [
+      "欲しい"
+     ],
+     "sentence": 9
+    }
+   ]
+  },
+  {
+   "id": "p0021",
+   "lv": "A2",
+   "title": "新しい仕事",
+   "oop": {
+    "中村": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "中村"
+   ],
+   "sentences": [
+    [
+     "中村さんは先月から、新しい会社で働いています。",
+     "Ms Nakamura has been working at a new company since last month."
+    ],
+    [
+     "会社は駅の前の大きいビルの中にあります。",
+     "The company is in a big building in front of the station."
+    ],
+    [
+     "前の会社より家から遠いですが、電車で40分くらいです。",
+     "It is farther from her home than her old company, but it is about forty minutes by train."
+    ],
+    [
+     "仕事は、客からのメールに答えることです。",
+     "Her job is answering emails from customers."
+    ],
+    [
+     "最初は仕事に慣れなくて、とても大変でした。",
+     "At first she couldn't get used to the work, and it was very hard."
+    ],
+    [
+     "間違いも多くて、よく上司に質問しました。",
+     "She made many mistakes and often asked her boss questions."
+    ],
+    [
+     "でも、会社の人たちはみんな親切で、いろいろ教えてくれました。",
+     "But everyone at the company was kind and taught her many things."
+    ],
+    [
+     "今はもう仕事に慣れて、毎日楽しく働いています。",
+     "Now she is used to the work and enjoys it every day."
+    ],
+    [
+     "来月は、初めて大きい会議で発表をします。",
+     "Next month she will give a presentation at a big meeting for the first time."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "中村さんはいつから新しい会社で働いていますか。",
+     "en": "Since when has Ms Nakamura worked at the new company?",
+     "type": "mc",
+     "options": [
+      "先週から",
+      "去年から",
+      "先月から",
+      "今月から"
+     ],
+     "answer": 2,
+     "words": [
+      "先月"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "新しい会社は、前の会社より家から近いです。",
+     "en": "The new company is closer to her home than the old one.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "遠い"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "中村さんの仕事は何ですか。",
+     "en": "What is Ms Nakamura's job?",
+     "type": "mc",
+     "options": [
+      "電話で客と長い時間話すこと",
+      "店でパソコンを売ること",
+      "会議の準備をすること",
+      "メールで客に返事をすること"
+     ],
+     "answer": 3,
+     "words": [
+      "客"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "最初、中村さんは仕事が大変だと思いました。",
+     "en": "At first Ms Nakamura found the work hard.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "大変"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "来月、中村さんは何をしますか。",
+     "en": "What will Ms Nakamura do next month?",
+     "type": "mc",
+     "options": [
+      "みんなの前で話します",
+      "上司と旅行します",
+      "新しい店で働きます",
+      "客に会いに行きます"
+     ],
+     "answer": 0,
+     "words": [
+      "発表"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0022",
+   "lv": "A2",
+   "title": "レストランの予約",
+   "oop": {
+    "山田": "name (Japanese has no capitals: declared so it is not counted)",
+    "アルマ": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "山田",
+    "アルマ"
+   ],
+   "sentences": [
+    [
+     "店の人：はい、レストラン「アルマ」です。",
+     "Staff: Hello, this is Restaurant Alma."
+    ],
+    [
+     "山田：すみません、土曜日の夜7時に、4人で予約をしたいです。",
+     "Yamada: Excuse me, I'd like to book a table for four at 7 p.m. on Saturday."
+    ],
+    [
+     "店の人：申し訳ありません。7時は、もう席がいっぱいです。",
+     "Staff: I'm sorry. At seven all the tables are already taken."
+    ],
+    [
+     "店の人：8時はいかがですか。",
+     "Staff: How about eight?"
+    ],
+    [
+     "山田：8時は少し遅いですね。6時はどうですか。",
+     "Yamada: Eight is a little late. How about six?"
+    ],
+    [
+     "店の人：6時なら大丈夫です。",
+     "Staff: Six is fine."
+    ],
+    [
+     "山田：では、6時でお願いします。",
+     "Yamada: Then six, please."
+    ],
+    [
+     "店の人：名前と電話の番号を教えてください。",
+     "Staff: Please tell me your name and phone number."
+    ],
+    [
+     "山田：山田です。番号は090-1234-5678です。",
+     "Yamada: It's Yamada. The number is 090-1234-5678."
+    ],
+    [
+     "山田：それから、一人は小さい子供です。子供の椅子はありますか。",
+     "Yamada: Also, one of us is a small child. Do you have a child's chair?"
+    ],
+    [
+     "店の人：はい、ございます。では、土曜日の6時にお待ちしています。",
+     "Staff: Yes, we do. We look forward to seeing you at six on Saturday."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "山田さんは、最初は何時に予約をしたかったですか。",
+     "en": "What time did Mr Yamada first want to book?",
+     "type": "mc",
+     "options": [
+      "6時",
+      "7時",
+      "8時",
+      "9時"
+     ],
+     "answer": 1,
+     "words": [
+      "予約"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "土曜日の7時は、もう席がありません。",
+     "en": "There are no free tables at seven on Saturday.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "席"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "予約は何時になりましたか。",
+     "en": "What time did the booking end up being?",
+     "type": "mc",
+     "options": [
+      "7時",
+      "8時",
+      "6時",
+      "5時"
+     ],
+     "answer": 2,
+     "words": [
+      "大丈夫"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "4人はみんな大人です。",
+     "en": "All four people are adults.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "子供"
+     ],
+     "sentence": 9
+    },
+    {
+     "q": "山田さんは店の人に何を聞きましたか。",
+     "en": "What did Mr Yamada ask the staff?",
+     "type": "mc",
+     "options": [
+      "料理の値段のこと",
+      "店までの道のこと",
+      "席の場所のこと",
+      "子供が座る椅子のこと"
+     ],
+     "answer": 3,
+     "words": [
+      "椅子"
+     ],
+     "sentence": 9
+    }
+   ]
+  },
+  {
+   "id": "p0023",
+   "lv": "A2",
+   "title": "スポーツ・センターのお知らせ",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "市のスポーツ・センターは、4月から新しくなりました。",
+     "The city sports centre has been renewed since April."
+    ],
+    [
+     "新しい機械が入って、部屋も広くなりました。",
+     "New machines have come in, and the rooms are bigger."
+    ],
+    [
+     "利用できる時間は、朝9時から夜9時までです。月曜日は休みです。",
+     "You can use it from 9 a.m. to 9 p.m. It is closed on Mondays."
+    ],
+    [
+     "市に住んでいる人は、1回300円で利用できます。",
+     "People who live in the city can use it for 300 yen per visit."
+    ],
+    [
+     "65歳以上の人と子供は、無料です。",
+     "People aged 65 and over and children are free."
+    ],
+    [
+     "テニスとサッカーの場所は、予約が必要です。",
+     "You need to book the tennis and football areas."
+    ],
+    [
+     "予約は電話か、センターのサイトでできます。",
+     "You can book by phone or on the centre's website."
+    ],
+    [
+     "中では、必ずきれいな靴を履いてください。",
+     "Inside, please be sure to wear clean shoes."
+    ],
+    [
+     "タバコは、建物の中でも外でも禁止です。",
+     "Smoking is forbidden both inside and outside the building."
+    ],
+    [
+     "わからないことは、センターの人に聞いてください。",
+     "If there is anything you don't understand, please ask the centre staff."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "センターは何時まで利用できますか。",
+     "en": "Until what time can you use the centre?",
+     "type": "mc",
+     "options": [
+      "夜9時まで",
+      "夜8時まで",
+      "夜10時まで",
+      "午後6時まで"
+     ],
+     "answer": 0,
+     "words": [
+      "時間"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "センターはいつ休みですか。",
+     "en": "When is the centre closed?",
+     "type": "mc",
+     "options": [
+      "日曜日",
+      "土曜日",
+      "月曜日",
+      "金曜日"
+     ],
+     "answer": 2,
+     "words": [
+      "休み"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "子供は1回いくらですか。",
+     "en": "How much does it cost for a child per visit?",
+     "type": "mc",
+     "options": [
+      "100円",
+      "無料",
+      "300円",
+      "500円"
+     ],
+     "answer": 1,
+     "words": [
+      "無料"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "予約はサイトでもできます。",
+     "en": "You can also book on the website.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "予約"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "建物の外なら、タバコを吸ってもいいです。",
+     "en": "You may smoke if you are outside the building.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "タバコ"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0024",
+   "lv": "A2",
+   "title": "京都の旅",
+   "oop": {
+    "京都": "name (Japanese has no capitals: declared so it is not counted)",
+    "奈良": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "京都",
+    "奈良"
+   ],
+   "sentences": [
+    [
+     "先週の週末、友人と京都に行きました。",
+     "Last weekend I went to Kyoto with a friend."
+    ],
+    [
+     "京都には古い建物がたくさんあって、歩くだけで楽しかったです。",
+     "Kyoto has many old buildings, and just walking around was fun."
+    ],
+    [
+     "最初の日は、有名な庭を見に行きました。",
+     "On the first day we went to see a famous garden."
+    ],
+    [
+     "秋の木の色がとてもきれいでしたが、人が多くて大変でした。",
+     "The autumn colours of the trees were beautiful, but it was hard because there were so many people."
+    ],
+    [
+     "夜は、京都の料理を食べました。",
+     "In the evening we ate Kyoto food."
+    ],
+    [
+     "値段は少し高かったですが、味は最高でした。",
+     "The price was a little high, but the taste was superb."
+    ],
+    [
+     "次の朝、電車で奈良まで行きました。",
+     "The next morning we went to Nara by train."
+    ],
+    [
+     "帰る時、友人と「また来たいね」と話しました。",
+     "When we went home, my friend and I said, \"We want to come again.\""
+    ],
+    [
+     "今度は、春の桜の季節に行きたいです。",
+     "Next time I want to go in cherry-blossom season in spring."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "誰と京都に行きましたか。",
+     "en": "Who did I go to Kyoto with?",
+     "type": "mc",
+     "options": [
+      "家族と",
+      "会社の人と",
+      "学校の先生と",
+      "友人と"
+     ],
+     "answer": 3,
+     "words": [
+      "友人"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "庭には人が少なかったです。",
+     "en": "There were few people in the garden.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "多い"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "京都の料理は安くなかったですが、とてもおいしかったです。",
+     "en": "Kyoto's food was not cheap, but it was very good.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "値段"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "次の朝、どこに行きましたか。",
+     "en": "Where did we go the next morning?",
+     "type": "mc",
+     "options": [
+      "奈良",
+      "京都の庭",
+      "京都の店",
+      "海"
+     ],
+     "answer": 0,
+     "words": [
+      "次"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "今度はいつ行きたいですか。",
+     "en": "When do I want to go next time?",
+     "type": "mc",
+     "options": [
+      "夏",
+      "春",
+      "秋",
+      "冬"
+     ],
+     "answer": 1,
+     "words": [
+      "季節"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0025",
+   "lv": "A2",
+   "title": "健康のために",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "最近、健康のために運動をする人が増えています。",
+     "Recently more and more people exercise for their health."
+    ],
+    [
+     "週に2回以上運動をする人は、10年前の1.5倍になりました。",
+     "The number of people who exercise twice a week or more is 1.5 times what it was ten years ago."
+    ],
+    [
+     "特に人気があるのは、歩くことです。",
+     "Walking is especially popular."
+    ],
+    [
+     "特別なものが必要ないので、誰でも簡単に始められます。",
+     "It needs nothing special, so anyone can start easily."
+    ],
+    [
+     "医者は、1日に30分くらい歩くのがいいと言っています。",
+     "Doctors say walking for about thirty minutes a day is good."
+    ],
+    [
+     "でも、急に激しい運動を始めるのは危険です。",
+     "But suddenly starting hard exercise is dangerous."
+    ],
+    [
+     "また、運動だけでなく、毎日の食事も大事です。",
+     "Also, not only exercise but everyday meals are important too."
+    ],
+    [
+     "野菜をたくさん食べて、甘いものは少しにしましょう。",
+     "Eat lots of vegetables and keep sweet things to a small amount."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "運動をする人は、10年前と比べてどうなりましたか。",
+     "en": "How has the number of people who exercise changed compared with ten years ago?",
+     "type": "mc",
+     "options": [
+      "2倍に増えました",
+      "半分に減りました",
+      "1.5倍に増えました",
+      "同じくらいです"
+     ],
+     "answer": 2,
+     "words": [
+      "〜倍"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "歩くことを始めるには、特別なものが必要です。",
+     "en": "You need something special to start walking.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "必要"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "医者は、1日にどのくらい歩くのがいいと言っていますか。",
+     "en": "How long do doctors say it is good to walk a day?",
+     "type": "mc",
+     "options": [
+      "10分くらい",
+      "1時間くらい",
+      "15分くらい",
+      "30分くらい"
+     ],
+     "answer": 3,
+     "words": [
+      "医者"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "運動は、急に激しく始めない方がいいです。",
+     "en": "It is better not to start exercise suddenly and hard.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "危険"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "甘いものについて、何と書いてありますか。",
+     "en": "What does the text say about sweet things?",
+     "type": "mc",
+     "options": [
+      "量を少なくした方がいい",
+      "毎日食べた方がいい",
+      "全然食べない方がいい",
+      "夜だけ食べるといい"
+     ],
+     "answer": 0,
+     "words": [
+      "甘い"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0026",
+   "lv": "A2",
+   "title": "スーパーマルヤの広告",
+   "oop": {
+    "マルヤ": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "マルヤ"
+   ],
+   "sentences": [
+    [
+     "今週の土曜日と日曜日、マルヤでは多くの商品が安くなります。",
+     "This Saturday and Sunday, many items at Maruya will be cheaper."
+    ],
+    [
+     "野菜はすべて、いつもの値段の半分です。",
+     "All vegetables are half the usual price."
+    ],
+    [
+     "肉と魚は、3000円以上買うと、1000円安くなります。",
+     "For meat and fish, if you buy 3,000 yen or more, you get 1,000 yen off."
+    ],
+    [
+     "卵は10個で100円です。",
+     "Eggs are 100 yen for ten."
+    ],
+    [
+     "でも、卵は一人1回だけ買うことができます。",
+     "But each person can buy eggs only once."
+    ],
+    [
+     "店の中で焼いたパンも人気です。",
+     "The bread baked in the shop is also popular."
+    ],
+    [
+     "朝9時から10時までに来た人には、小さいプレゼントがあります。",
+     "People who come between 9 and 10 a.m. will get a small present."
+    ],
+    [
+     "土曜日の午後は、人がとても多いと思います。",
+     "We expect a lot of people on Saturday afternoon."
+    ],
+    [
+     "車で来る人は、店の後ろに車を止めてください。",
+     "People coming by car, please park behind the shop."
+    ],
+    [
+     "ぜひ、家族と一緒に来てください。",
+     "Please do come with your family."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "野菜はいくらになりますか。",
+     "en": "How much will the vegetables be?",
+     "type": "mc",
+     "options": [
+      "普段と同じ値段",
+      "普段の半分の値段",
+      "普段の2倍の値段",
+      "普段より100円安い値段"
+     ],
+     "answer": 1,
+     "words": [
+      "半分"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "肉と魚は、たくさん買うと安くなります。",
+     "en": "Meat and fish get cheaper if you buy a lot.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "以上"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "卵は10個でいくらですか。",
+     "en": "How much are ten eggs?",
+     "type": "mc",
+     "options": [
+      "300円",
+      "1000円",
+      "100円",
+      "3000円"
+     ],
+     "answer": 2,
+     "words": [
+      "卵"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "朝早く来た人は、何がありますか。",
+     "en": "What is there for people who come early in the morning?",
+     "type": "mc",
+     "options": [
+      "焼いたパン",
+      "卵が10個",
+      "1000円",
+      "小さいプレゼント"
+     ],
+     "answer": 3,
+     "words": [
+      "プレゼント"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "車で来る人は、店の前に車を止めます。",
+     "en": "People who come by car park in front of the shop.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "後ろ"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0027",
+   "lv": "A2",
+   "title": "父へのプレゼント",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "来週の日曜日は父の誕生日です。",
+     "Next Sunday is my father's birthday."
+    ],
+    [
+     "父は今年60歳になるので、兄と特別なプレゼントを考えました。",
+     "My father turns sixty this year, so my brother and I thought about a special present."
+    ],
+    [
+     "最初は、時計をあげようと思いました。",
+     "At first we thought about giving him a watch."
+    ],
+    [
+     "でも、父はもう古い時計を大事に使っています。",
+     "But my father already uses an old watch with care."
+    ],
+    [
+     "それで、兄が「家族で旅行に行くのはどう？」と言いました。",
+     "So my brother said, \"How about a family trip?\""
+    ],
+    [
+     "父は山が好きなので、山の近くのホテルを予約しました。",
+     "My father likes mountains, so we booked a hotel near the mountains."
+    ],
+    [
+     "ホテルの部屋から、きれいな湖が見えるそうです。",
+     "They say you can see a beautiful lake from the hotel room."
+    ],
+    [
+     "父には、まだ秘密です。",
+     "It is still a secret from my father."
+    ],
+    [
+     "誕生日の朝に、旅行のことを話すつもりです。",
+     "We plan to tell him about the trip on the morning of his birthday."
+    ],
+    [
+     "父はきっと驚くでしょう。",
+     "My father will surely be surprised."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "父は今年いくつになりますか。",
+     "en": "How old will my father be this year?",
+     "type": "mc",
+     "options": [
+      "60歳",
+      "50歳",
+      "65歳",
+      "70歳"
+     ],
+     "answer": 0,
+     "words": [
+      "〜歳"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "父は新しい時計が欲しいと言っています。",
+     "en": "My father says he wants a new watch.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "時計"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "旅行のことを最初に言ったのは誰ですか。",
+     "en": "Who first suggested the trip?",
+     "type": "mc",
+     "options": [
+      "私",
+      "兄",
+      "母",
+      "父"
+     ],
+     "answer": 1,
+     "words": [
+      "旅行"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "ホテルの部屋から何が見えますか。",
+     "en": "What can be seen from the hotel room?",
+     "type": "mc",
+     "options": [
+      "海",
+      "町",
+      "湖",
+      "川"
+     ],
+     "answer": 2,
+     "words": [
+      "見える"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "父は、もう旅行のことを知っています。",
+     "en": "My father already knows about the trip.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "秘密"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0028",
+   "lv": "A2",
+   "title": "会議の時間の変更",
+   "oop": {
+    "高田": "name (Japanese has no capitals: declared so it is not counted)",
+    "小林": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "高田",
+    "小林"
+   ],
+   "sentences": [
+    [
+     "高田さん",
+     "Mr Takada,"
+    ],
+    [
+     "小林です。明日の会議の時間が変わりましたので、連絡します。",
+     "This is Kobayashi. The time of tomorrow's meeting has changed, so I am letting you know."
+    ],
+    [
+     "会議は、午後2時からではなく、4時からになりました。",
+     "The meeting will now start at four instead of 2 p.m."
+    ],
+    [
+     "社長が、午後に急に出かけることになったからです。",
+     "This is because the company president suddenly has to go out in the afternoon."
+    ],
+    [
+     "場所は前と同じで、3階の大きい部屋です。",
+     "The place is the same as before, the big room on the third floor."
+    ],
+    [
+     "会議で使う書類は、今日の夜までにメールで送ります。",
+     "I will send the documents for the meeting by email by this evening."
+    ],
+    [
+     "先に読んで、質問があったら、明日の昼までに教えてください。",
+     "Please read them first, and if you have questions, let me know by tomorrow noon."
+    ],
+    [
+     "もし4時が難しかったら、すぐに連絡をください。",
+     "If four o'clock is difficult, please contact me at once."
+    ],
+    [
+     "会議の後で、新しい商品の話も少ししたいと思います。",
+     "After the meeting I would also like to talk a little about the new product."
+    ],
+    [
+     "よろしくお願いします。",
+     "Thank you."
+    ],
+    [
+     "小林",
+     "Kobayashi"
+    ]
+   ],
+   "questions": [
+    {
+     "q": "会議は何時からになりましたか。",
+     "en": "What time does the meeting start now?",
+     "type": "mc",
+     "options": [
+      "2時",
+      "3時",
+      "5時",
+      "4時"
+     ],
+     "answer": 3,
+     "words": [
+      "会議"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "どうして会議の時間が変わりましたか。",
+     "en": "Why did the meeting time change?",
+     "type": "mc",
+     "options": [
+      "社長の予定が変わったから",
+      "部屋が使えないから",
+      "高田さんが午後はとても忙しいから",
+      "書類ができていないから"
+     ],
+     "answer": 0,
+     "words": [
+      "社長"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "会議の場所も変わりました。",
+     "en": "The meeting place has changed too.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "場所"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "書類は、会議の日より前に届きます。",
+     "en": "The documents arrive the day before the meeting.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "送る"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "質問は、いつまでに教えますか。",
+     "en": "By when should questions be sent?",
+     "type": "mc",
+     "options": [
+      "今日の夜まで",
+      "明日の昼まで",
+      "明日の夜まで",
+      "会議の後まで"
+     ],
+     "answer": 1,
+     "words": [
+      "質問"
+     ],
+     "sentence": 6
+    }
+   ]
+  },
+  {
+   "id": "p0029",
+   "lv": "A2",
+   "title": "図書館のパソコンの使い方",
+   "oop": {
+    "印刷": "to print; the pack has no word for printing (紙に出す is unnatural)"
+   },
+   "names": [],
+   "sentences": [
+    [
+     "図書館のパソコンを使いたい人は、次の方法で使ってください。",
+     "If you want to use the library computers, please follow the steps below."
+    ],
+    [
+     "まず、1階で図書館のカードを見せてください。",
+     "First, show your library card on the first floor."
+    ],
+    [
+     "次に、パソコンの番号が書いてある紙をもらいます。",
+     "Next, you receive a piece of paper with a computer number on it."
+    ],
+    [
+     "その番号のパソコンに座って、カードの番号を入れてください。",
+     "Sit at the computer with that number and enter your card number."
+    ],
+    [
+     "パソコンは、1回1時間まで使うことができます。",
+     "You can use a computer for up to one hour at a time."
+    ],
+    [
+     "印刷したい時は、1枚10円かかります。",
+     "If you want to print, it costs 10 yen per sheet."
+    ],
+    [
+     "パソコンで音楽を聞いたり、ゲームをしたりしないでください。",
+     "Please do not listen to music or play games on the computers."
+    ],
+    [
+     "使った後は、必ずパソコンを消してください。",
+     "After use, please be sure to turn the computer off."
+    ],
+    [
+     "わからない時は、近くの図書館の人に聞いてください。",
+     "If you are not sure, please ask a library staff member nearby."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "最初に何をしますか。",
+     "en": "What do you do first?",
+     "type": "mc",
+     "options": [
+      "番号を書きます",
+      "パソコンを消します",
+      "カードを見せます",
+      "お金を払います"
+     ],
+     "answer": 2,
+     "words": [
+      "まず"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "パソコンを1回で使うことができるのは、1時間までです。",
+     "en": "You can use a computer for up to one hour each time.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "〜時間"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "印刷する時は、いくらかかりますか。",
+     "en": "How much does printing cost?",
+     "type": "mc",
+     "options": [
+      "1枚100円",
+      "無料",
+      "1枚50円",
+      "1枚10円"
+     ],
+     "answer": 3,
+     "words": [
+      "〜枚"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "パソコンを使った後は、そのままにしてもいいです。",
+     "en": "After using the computer, you can leave it as it is.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "消す"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0030",
+   "lv": "A2",
+   "title": "地震の時のために",
+   "oop": {
+    "揺れ": "the shaking of an earthquake; the pack has no word for it",
+    "日本": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "日本"
+   ],
+   "sentences": [
+    [
+     "日本は地震が多い国です。",
+     "Japan is a country with many earthquakes."
+    ],
+    [
+     "地震はいつ起こるかわかりません。",
+     "No one knows when an earthquake will happen."
+    ],
+    [
+     "だから、普段から準備が大切です。",
+     "So everyday preparation is important."
+    ],
+    [
+     "まず、高い所に重い物を置かないでください。",
+     "First, please don't put heavy things in high places."
+    ],
+    [
+     "水と食べ物も、いつも家に用意しましょう。",
+     "Also always keep water and food ready at home."
+    ],
+    [
+     "地震が起きたら、まず机の下に入って、頭を守ってください。",
+     "When an earthquake happens, first get under a desk and protect your head."
+    ],
+    [
+     "揺れが止まってから、外に出ましょう。",
+     "Go outside after the shaking stops."
+    ],
+    [
+     "地震の後は、携帯が使えない時もあります。",
+     "After an earthquake, sometimes mobile phones cannot be used."
+    ],
+    [
+     "だから、家族と会う場所を前に決めましょう。",
+     "So decide on a place to meet your family in advance."
+    ],
+    [
+     "近くの学校や公園に、みんなが集まる場所があります。",
+     "There are places where everyone gathers at nearby schools and parks."
+    ],
+    [
+     "町の地図で、その場所を確認しましょう。",
+     "Check those places on a map of your town."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "重い物は、高い所に置かない方がいいです。",
+     "en": "It is better not to put heavy things in high places.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "置く"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "地震の後、家族と連絡ができないことがあるのはなぜですか。",
+     "en": "Why may you be unable to contact your family after an earthquake?",
+     "type": "mc",
+     "options": [
+      "家族がみんな遠くの町に住んでいるから",
+      "電話がつながらないことがあるから",
+      "地震の音が大きいから",
+      "家に電気がないから"
+     ],
+     "answer": 1,
+     "words": [
+      "携帯"
+     ],
+     "sentence": 7
+    },
+    {
+     "q": "家族と前に決めておくといいのは、何ですか。",
+     "en": "What is it good to decide with your family in advance?",
+     "type": "mc",
+     "options": [
+      "どこで会うか",
+      "誰に電話するか",
+      "何を買うか",
+      "いつ家を出るか"
+     ],
+     "answer": 0,
+     "words": [
+      "決める"
+     ],
+     "sentence": 8
+    },
+    {
+     "q": "みんなが集まる場所は、どこにありますか。",
+     "en": "Where are the places where everyone gathers?",
+     "type": "mc",
+     "options": [
+      "駅の中",
+      "病院の中",
+      "近くの学校や公園",
+      "家の前"
+     ],
+     "answer": 2,
+     "words": [
+      "集まる"
+     ],
+     "sentence": 9
+    },
+    {
+     "q": "地図を見て、集まる所を知っておくといいです。",
+     "en": "It is good to look at a map and know where to gather.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "地図"
+     ],
+     "sentence": 10
+    }
+   ]
+  },
+  {
+   "id": "p0031",
+   "lv": "A2",
+   "title": "姉の結婚式",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "先月、姉の結婚式がありました。",
+     "Last month my elder sister had her wedding."
+    ],
+    [
+     "式は、海の近くの白い教会でありました。",
+     "The ceremony was at a white church near the sea."
+    ],
+    [
+     "姉は白いドレスを着て、とてもきれいでした。",
+     "My sister wore a white dress and looked very beautiful."
+    ],
+    [
+     "姉と夫は、大学の時に出会いました。",
+     "My sister and her husband met at university."
+    ],
+    [
+     "式の間、母はずっと泣いていました。",
+     "My mother cried all through the ceremony."
+    ],
+    [
+     "父は短い話をしましたが、とても緊張していました。",
+     "My father gave a short speech, but he was very nervous."
+    ],
+    [
+     "パーティーでは、姉の友人たちが歌を歌いました。",
+     "At the party, my sister's friends sang songs."
+    ],
+    [
+     "最後に、姉が両親に手紙を読みました。",
+     "At the end, my sister read a letter to our parents."
+    ],
+    [
+     "その手紙を聞いて、みんな泣いてしまいました。",
+     "Hearing that letter, everyone ended up crying."
+    ],
+    [
+     "姉には、ずっと幸せでいてほしいです。",
+     "I want my sister to be happy forever."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "式はどこでありましたか。",
+     "en": "Where was the ceremony?",
+     "type": "mc",
+     "options": [
+      "山のそばにある教会",
+      "町の中のホテル",
+      "家の庭",
+      "海のそばにある教会"
+     ],
+     "answer": 3,
+     "words": [
+      "教会"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "姉と夫は仕事で出会いました。",
+     "en": "My sister and her husband met through work.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "出会う"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "式の間、ずっと泣いていたのは誰ですか。",
+     "en": "Who cried all through the ceremony?",
+     "type": "mc",
+     "options": [
+      "母",
+      "父",
+      "姉",
+      "私"
+     ],
+     "answer": 0,
+     "words": [
+      "泣く"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "パーティーでは、歌を歌った人たちがいました。",
+     "en": "At the party there were people who sang songs.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "歌"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "最後に、姉は誰に手紙を読みましたか。",
+     "en": "To whom did my sister read a letter at the end?",
+     "type": "mc",
+     "options": [
+      "姉の友人たち",
+      "父と母",
+      "夫",
+      "私"
+     ],
+     "answer": 1,
+     "words": [
+      "手紙"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0032",
+   "lv": "A2",
+   "title": "野球の試合",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "昨日、弟と野球の試合を見に行きました。",
+     "Yesterday I went to see a baseball game with my younger brother."
+    ],
+    [
+     "弟は10歳で、野球が大好きです。",
+     "My brother is ten and loves baseball."
+    ],
+    [
+     "試合は夜6時に始まりました。3万人以上のファンが集まりました。",
+     "The game started at 6 in the evening. Over thirty thousand fans had gathered."
+    ],
+    [
+     "私たちのチームは、最初、3点負けていました。",
+     "At first our team was three points behind."
+    ],
+    [
+     "弟はとても残念そうな顔をしていました。",
+     "My brother looked very disappointed."
+    ],
+    [
+     "でも、7回に、若い選手がボールを遠くまで打ちました。",
+     "But in the seventh inning, a young player hit the ball a long way."
+    ],
+    [
+     "その後、チームは4点取って、最後に勝ちました。",
+     "After that, the team scored four points and won in the end."
+    ],
+    [
+     "帰る電車の中で、弟は「僕も選手になりたい」と言いました。",
+     "On the train home, my brother said, \"I want to be a player too.\""
+    ],
+    [
+     "とてもいい一日でした。",
+     "It was a very good day."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "誰と試合を見に行きましたか。",
+     "en": "Who did I go to see the game with?",
+     "type": "mc",
+     "options": [
+      "兄と",
+      "父と",
+      "弟と",
+      "友人と"
+     ],
+     "answer": 2,
+     "words": [
+      "弟"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "試合は何時に始まりましたか。",
+     "en": "What time did the game start?",
+     "type": "mc",
+     "options": [
+      "7時",
+      "5時",
+      "8時",
+      "6時"
+     ],
+     "answer": 3,
+     "words": [
+      "始まる"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "最初、私たちのチームは勝っていました。",
+     "en": "At first our team was winning.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "負ける"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "最後に勝ったのは、私たちのチームでした。",
+     "en": "It was our team that won in the end.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "勝つ"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "弟は何になりたいですか。",
+     "en": "What does my brother want to become?",
+     "type": "mc",
+     "options": [
+      "野球の選手",
+      "学校の先生",
+      "医者",
+      "テレビの人"
+     ],
+     "answer": 0,
+     "words": [
+      "選手"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0033",
+   "lv": "A2",
+   "title": "桜の季節",
+   "oop": {
+    "花見": "topic word (cherry-blossom viewing), no pack paraphrase",
+    "日本": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "日本"
+   ],
+   "sentences": [
+    [
+     "日本では、春になると、多くの人が桜を見に行きます。",
+     "In Japan, when spring comes, many people go to see the cherry blossoms."
+    ],
+    [
+     "これを「花見」と言います。",
+     "This is called hanami."
+    ],
+    [
+     "桜は、3月の終わりから4月の初めに咲きます。",
+     "Cherry trees bloom from the end of March to the beginning of April."
+    ],
+    [
+     "でも、花は1週間くらいで終わってしまいます。",
+     "But the flowers are over in about a week."
+    ],
+    [
+     "週末になると、公園は人でいっぱいになります。",
+     "At weekends the parks are full of people."
+    ],
+    [
+     "友達や会社の仲間と、木の下で食事をします。",
+     "People have meals under the trees with friends and colleagues."
+    ],
+    [
+     "夜の桜も人気があります。",
+     "Cherry blossoms at night are popular too."
+    ],
+    [
+     "でも、最近は問題もあります。",
+     "But recently there have been problems too."
+    ],
+    [
+     "公園にゴミを捨てて帰る人がいるのです。",
+     "Some people leave their rubbish in the park and go home."
+    ],
+    [
+     "自分のゴミは、必ず家に持って帰りましょう。",
+     "Always take your own rubbish home."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "桜の花は、1ヶ月くらい見ることができます。",
+     "en": "You can see the cherry blossoms for about a month.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "〜週間"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "週末の公園はどうなりますか。",
+     "en": "What happens to the parks at weekends?",
+     "type": "mc",
+     "options": [
+      "とても静かになります",
+      "ゴミがなくなります",
+      "人がとても多くなります",
+      "休みになります"
+     ],
+     "answer": 2,
+     "words": [
+      "週末"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "花見では、みんな何をしますか。",
+     "en": "What do people do at hanami?",
+     "type": "mc",
+     "options": [
+      "公園のゴミを集めます",
+      "桜を見ながらご飯を食べます",
+      "桜の花を買って帰ります",
+      "山の上まで歩きます"
+     ],
+     "answer": 1,
+     "words": [
+      "食事"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "夜に桜を見に行く人も多いです。",
+     "en": "Many people also go to see the cherry blossoms at night.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "人気"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "最近の問題は何ですか。",
+     "en": "What is the recent problem?",
+     "type": "mc",
+     "options": [
+      "桜が少ないこと",
+      "夜の公園が暗いこと",
+      "夜になると桜を見に来る人が少ないこと",
+      "公園にゴミを残して帰る人がいること"
+     ],
+     "answer": 3,
+     "words": [
+      "ゴミ"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0034",
+   "lv": "A2",
+   "title": "ホテル・ミナトに泊まって",
+   "oop": {
+    "ミナト": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "ミナト"
+   ],
+   "sentences": [
+    [
+     "先月、家族3人でホテル・ミナトに泊まりました。",
+     "Last month the three of us in my family stayed at the Hotel Minato."
+    ],
+    [
+     "駅から歩いて5分で、とても便利です。",
+     "It is five minutes' walk from the station and very convenient."
+    ],
+    [
+     "部屋は広くて、窓から海が見えました。",
+     "The room was big, and we could see the sea from the window."
+    ],
+    [
+     "ホテルの人はみんな親切で、子供にもやさしかったです。",
+     "The hotel staff were all friendly and kind to our child too."
+    ],
+    [
+     "朝ごはんは料理がたくさんあって、どれもおいしかったです。",
+     "Breakfast had lots of dishes, and everything was delicious."
+    ],
+    [
+     "特に、焼いた魚が最高でした。",
+     "The grilled fish was especially superb."
+    ],
+    [
+     "ただ、部屋のシャワーの水が、なかなか熱くなりませんでした。",
+     "However, the water in the room's shower took a long time to get hot."
+    ],
+    [
+     "でも、ホテルの人に言うと、すぐに直してくれました。",
+     "But when we told the staff, they fixed it right away."
+    ],
+    [
+     "値段は少し高いですが、サービスは最高です。",
+     "The price is a little high, but the service is excellent."
+    ],
+    [
+     "私の評価は、5点のうち4点です。",
+     "My rating is four out of five."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "駅からホテルまで、歩いてどのくらいですか。",
+     "en": "How long is the walk from the station to the hotel?",
+     "type": "mc",
+     "options": [
+      "5分",
+      "10分",
+      "15分",
+      "3分"
+     ],
+     "answer": 0,
+     "words": [
+      "駅"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "部屋の窓から山が見えました。",
+     "en": "We could see mountains from the room's window.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "窓"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "朝ごはんで、特においしかったのは何ですか。",
+     "en": "What was especially good at breakfast?",
+     "type": "mc",
+     "options": [
+      "野菜の料理",
+      "焼いた魚",
+      "パン",
+      "卵の料理"
+     ],
+     "answer": 1,
+     "words": [
+      "焼く"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "ホテルの人は、シャワーの問題にすぐ対応しました。",
+     "en": "The hotel staff dealt with the shower problem at once.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "直す"
+     ],
+     "sentence": 7
+    },
+    {
+     "q": "このホテルは何点ですか。",
+     "en": "How many points does this hotel get?",
+     "type": "mc",
+     "options": [
+      "5点",
+      "3点",
+      "4点",
+      "2点"
+     ],
+     "answer": 2,
+     "words": [
+      "評価"
+     ],
+     "sentence": 9
+    }
+   ]
+  },
+  {
+   "id": "p0035",
+   "lv": "A2",
+   "title": "先生へのメール",
+   "oop": {
+    "山田": "name (Japanese has no capitals: declared so it is not counted)",
+    "大野": "name (Japanese has no capitals: declared so it is not counted)",
+    "中村": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "山田",
+    "大野",
+    "中村"
+   ],
+   "sentences": [
+    [
+     "山田先生、おはようございます。",
+     "Good morning, Ms Yamada."
+    ],
+    [
+     "3年2組の大野です。",
+     "This is Ono from class 3-2."
+    ],
+    [
+     "今朝から熱があって、喉が痛いです。",
+     "I have had a fever since this morning, and my throat hurts."
+    ],
+    [
+     "病院に行ったら、風邪だと言われました。",
+     "When I went to the hospital, they said it was a cold."
+    ],
+    [
+     "医者に「今日と明日は、家でゆっくり休んでください」と言われました。",
+     "The doctor told me, \"Please rest at home today and tomorrow.\""
+    ],
+    [
+     "それで、今日と明日の授業を休みます。本当にすみません。",
+     "So I will miss classes today and tomorrow. I am really sorry."
+    ],
+    [
+     "今日は数学のテストがあると聞きました。",
+     "I heard there is a maths test today."
+    ],
+    [
+     "テストは、別の日に受けることができますか。",
+     "Can I take the test on another day?"
+    ],
+    [
+     "宿題は、友達の中村さんに頼んで、先生に出してもらいます。",
+     "I will ask my friend Nakamura to hand in my homework to you."
+    ],
+    [
+     "元気になったら、すぐに学校に行きます。",
+     "I will come to school as soon as I am better."
+    ],
+    [
+     "よろしくお願いします。大野",
+     "Thank you. Ono"
+    ]
+   ],
+   "questions": [
+    {
+     "q": "大野さんは、いつから熱がありますか。",
+     "en": "Since when has Ono had a fever?",
+     "type": "mc",
+     "options": [
+      "昨日の夜から",
+      "昨日の朝から",
+      "先週から",
+      "今朝から"
+     ],
+     "answer": 3,
+     "words": [
+      "熱"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "医者は、明日は学校に行ってもいいと言いました。",
+     "en": "The doctor said Ono could go to school tomorrow.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "休む"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "今日は何がありますか。",
+     "en": "What is there today?",
+     "type": "mc",
+     "options": [
+      "数学のテスト",
+      "英語のテスト",
+      "クラスの会議",
+      "歌の練習"
+     ],
+     "answer": 0,
+     "words": [
+      "テスト"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "大野さんは先生に何を聞きましたか。",
+     "en": "What did Ono ask the teacher?",
+     "type": "mc",
+     "options": [
+      "宿題をいつ出すか",
+      "違う日にテストを受けられるか",
+      "病院はどこか",
+      "明日も学校で数学の授業があるか"
+     ],
+     "answer": 1,
+     "words": [
+      "別"
+     ],
+     "sentence": 7
+    },
+    {
+     "q": "大野さんは、宿題を自分で先生の所に持って行きます。",
+     "en": "Ono will take the homework to the teacher personally.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "頼む"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0036",
+   "lv": "A2",
+   "title": "猫のモモ",
+   "oop": {
+    "モモ": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "モモ"
+   ],
+   "sentences": [
+    [
+     "3ヶ月前、私は初めて猫を飼い始めました。",
+     "Three months ago I started keeping a cat for the first time."
+    ],
+    [
+     "その猫は、町で動物を保護している所にいました。",
+     "The cat was at a place in town that looks after animals."
+    ],
+    [
+     "名前はモモです。2歳の女の子で、体は小さくて白いです。",
+     "Her name is Momo. She is a two-year-old female, small and white."
+    ],
+    [
+     "最初、モモはいつもベッドの下に隠れていました。",
+     "At first Momo always hid under the bed."
+    ],
+    [
+     "私は毎日、モモの近くに座って、やさしい声で話をしました。",
+     "Every day I sat near Momo and talked to her in a gentle voice."
+    ],
+    [
+     "1ヶ月後には、モモは私の横で寝ました。",
+     "After a month, Momo slept beside me."
+    ],
+    [
+     "今は、私が仕事から帰ると、ドアの前で待っています。",
+     "Now, when I come home from work, she is waiting by the door."
+    ],
+    [
+     "一人で暮らしていますが、モモのおかげで、毎日がとても楽しいです。",
+     "I live alone, but thanks to Momo every day is great fun."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "モモは、どこにいましたか。",
+     "en": "Where was Momo before?",
+     "type": "mc",
+     "options": [
+      "友達の家",
+      "公園",
+      "動物を助ける場所",
+      "駅の近くの動物の病院"
+     ],
+     "answer": 2,
+     "words": [
+      "保護"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "モモはいくつですか。",
+     "en": "How old is Momo?",
+     "type": "mc",
+     "options": [
+      "3歳",
+      "1歳",
+      "5歳",
+      "2歳"
+     ],
+     "answer": 3,
+     "words": [
+      "〜歳"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "モモは、最初から私の横で寝ていました。",
+     "en": "Momo slept beside me from the start.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "隠れる"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "今、モモは私が家に帰る時間に、ドアの前にいます。",
+     "en": "Now Momo is by the door when I come home.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "ドア"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "モモのおかげで、毎日はどうですか。",
+     "en": "Thanks to Momo, what is every day like?",
+     "type": "mc",
+     "options": [
+      "楽しい毎日です",
+      "忙しい毎日です",
+      "大変な毎日です",
+      "静かな毎日です"
+     ],
+     "answer": 0,
+     "words": [
+      "おかげ"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0037",
+   "lv": "A2",
+   "title": "新しい携帯",
+   "oop": {
+    "充電": "battery charge; the pack has no word for it (電気 reads as electricity)",
+    "木村": "name (Japanese has no capitals: declared so it is not counted)",
+    "高田": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "木村",
+    "高田"
+   ],
+   "sentences": [
+    [
+     "木村：高田さん、その携帯、新しいですか。",
+     "Kimura: Mr Takada, is that phone new?"
+    ],
+    [
+     "高田：はい、先週買いました。",
+     "Takada: Yes, I bought it last week."
+    ],
+    [
+     "木村：前の携帯は、どうしましたか。",
+     "Kimura: What happened to your old phone?"
+    ],
+    [
+     "高田：落として、壊れてしまいました。",
+     "Takada: I dropped it, and it broke."
+    ],
+    [
+     "木村：それは大変でしたね。新しいのはどうですか。",
+     "Kimura: That's too bad. How is the new one?"
+    ],
+    [
+     "高田：カメラがとてもいいです。暗い所でも、きれいな写真を撮ることができます。",
+     "Takada: The camera is very good. I can take nice photos even in dark places."
+    ],
+    [
+     "高田：値段は少し高かったですが、古い携帯を店に売ったので、2万円安くなりました。",
+     "Takada: The price was a bit high, but I sold my old phone to the shop, so it was 20,000 yen cheaper."
+    ],
+    [
+     "木村：そうですか。私の携帯は、もう5年使っています。",
+     "Kimura: I see. I've been using my phone for five years already."
+    ],
+    [
+     "木村：最近、充電がすぐになくなって、困っています。",
+     "Kimura: Recently the battery runs out quickly, and it's a problem."
+    ],
+    [
+     "高田：では、今度一緒に店に行きませんか。",
+     "Takada: Then shall we go to the shop together next time?"
+    ],
+    [
+     "木村：ぜひお願いします。",
+     "Kimura: Yes, please."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "高田さんは、いつ携帯を買いましたか。",
+     "en": "When did Mr Takada buy his phone?",
+     "type": "mc",
+     "options": [
+      "昨日",
+      "先週",
+      "先月",
+      "去年"
+     ],
+     "answer": 1,
+     "words": [
+      "先週"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "高田さんは、前の携帯をなくしてしまいました。",
+     "en": "Mr Takada lost his old phone.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "壊れる"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "新しい携帯は、何がいいですか。",
+     "en": "What is good about the new phone?",
+     "type": "mc",
+     "options": [
+      "値段",
+      "色",
+      "カメラ",
+      "電気"
+     ],
+     "answer": 2,
+     "words": [
+      "カメラ"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "高田さんは、前の携帯を店に売りました。",
+     "en": "Mr Takada sold his old phone to a shop.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "売る"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "木村さんは、携帯をどのくらい使っていますか。",
+     "en": "How long has Ms Kimura been using her phone?",
+     "type": "mc",
+     "options": [
+      "2年",
+      "3年",
+      "10年",
+      "5年"
+     ],
+     "answer": 3,
+     "words": [
+      "〜年"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0038",
+   "lv": "A2",
+   "title": "日本語の試験",
+   "oop": {
+    "マイ": "name (Japanese has no capitals: declared so it is not counted)",
+    "ベトナム": "name (Japanese has no capitals: declared so it is not counted)",
+    "日本": "name (Japanese has no capitals: declared so it is not counted)",
+    "東京": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "マイ",
+    "ベトナム",
+    "日本",
+    "東京"
+   ],
+   "sentences": [
+    [
+     "私はベトナムから来たマイです。日本に来て2年になります。",
+     "I am Mai from Vietnam. It has been two years since I came to Japan."
+    ],
+    [
+     "先月、日本語の試験を受けました。",
+     "Last month I took a Japanese exam."
+    ],
+    [
+     "この試験に合格すると、大学に入ることができます。",
+     "If I pass this exam, I can enter university."
+    ],
+    [
+     "試験の前の3ヶ月は、毎日5時間くらい勉強しました。",
+     "For three months before the exam, I studied for about five hours every day."
+    ],
+    [
+     "特に、聞く問題が苦手でした。",
+     "I was especially weak at the listening questions."
+    ],
+    [
+     "それで、毎日日本のニュースを聞いて、練習しました。",
+     "So I practised by listening to the Japanese news every day."
+    ],
+    [
+     "試験の日は、とても緊張しました。",
+     "On the day of the exam I was very nervous."
+    ],
+    [
+     "昨日、結果が届きました。合格でした！",
+     "Yesterday the result arrived. I passed!"
+    ],
+    [
+     "すぐに国の両親に電話をしました。",
+     "I phoned my parents back home straight away."
+    ],
+    [
+     "来年の4月から、東京の大学で経済を勉強します。",
+     "From next April I will study economics at a university in Tokyo."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "マイさんは、日本に来て何年ですか。",
+     "en": "How many years has Mai been in Japan?",
+     "type": "mc",
+     "options": [
+      "2年",
+      "1年",
+      "3年",
+      "5年"
+     ],
+     "answer": 0,
+     "words": [
+      "来る"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "試験の前、1日にどのくらい勉強しましたか。",
+     "en": "How long did Mai study a day before the exam?",
+     "type": "mc",
+     "options": [
+      "2時間くらい",
+      "5時間くらい",
+      "3時間くらい",
+      "8時間くらい"
+     ],
+     "answer": 1,
+     "words": [
+      "勉強"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "マイさんは、話す問題が苦手でした。",
+     "en": "Mai was weak at the speaking questions.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "苦手"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "マイさんは試験に合格しました。",
+     "en": "Mai passed the exam.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "合格"
+     ],
+     "sentence": 7
+    },
+    {
+     "q": "マイさんは、大学で何を勉強しますか。",
+     "en": "What will Mai study at university?",
+     "type": "mc",
+     "options": [
+      "日本語",
+      "数学",
+      "経済",
+      "歴史"
+     ],
+     "answer": 2,
+     "words": [
+      "経済"
+     ],
+     "sentence": 9
+    }
+   ]
+  },
+  {
+   "id": "p0039",
+   "lv": "A2",
+   "title": "あおば町の夏のイベント",
+   "oop": {
+    "あおば町": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "あおば町"
+   ],
+   "sentences": [
+    [
+     "8月3日の土曜日に、あおば町の夏のイベントを開きます。",
+     "On Saturday 3 August we will hold the Aoba Town summer event."
+    ],
+    [
+     "場所は、駅の前の大きい公園です。",
+     "The place is the big park in front of the station."
+    ],
+    [
+     "時間は、午後3時から夜9時までです。",
+     "It runs from 3 p.m. to 9 p.m."
+    ],
+    [
+     "町の人たちが作った料理の店が、20以上並びます。",
+     "More than twenty food stalls run by local people will line up."
+    ],
+    [
+     "6時からは、高校の生徒たちの歌と音楽があります。",
+     "From six there will be songs and music by high-school students."
+    ],
+    [
+     "参加は無料です。でも、食べ物や飲み物にはお金が必要です。",
+     "Taking part is free. But you need money for food and drinks."
+    ],
+    [
+     "雨の場合は、日曜日に変わります。",
+     "If it rains, the event moves to Sunday."
+    ],
+    [
+     "車を止める場所がないので、電車やバスで来てください。",
+     "There is no parking, so please come by train or bus."
+    ],
+    [
+     "ゴミは、自分で持って帰ってください。",
+     "Please take your rubbish home yourself."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "イベントは、どこでありますか。",
+     "en": "Where is the event held?",
+     "type": "mc",
+     "options": [
+      "町の学校",
+      "駅の中",
+      "町の図書館",
+      "駅の前の公園"
+     ],
+     "answer": 3,
+     "words": [
+      "場所"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "イベントは、朝から夜まであります。",
+     "en": "The event runs from morning to night.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "午後"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "何時から歌と音楽がありますか。",
+     "en": "From what time are there songs and music?",
+     "type": "mc",
+     "options": [
+      "6時",
+      "3時",
+      "8時",
+      "9時"
+     ],
+     "answer": 0,
+     "words": [
+      "音楽"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "食べ物にはお金を払います。",
+     "en": "You pay for food.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "無料"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "雨の場合は、どうなりますか。",
+     "en": "What happens if it rains?",
+     "type": "mc",
+     "options": [
+      "イベントはありません",
+      "日曜日になります",
+      "高校でします",
+      "時間が変わります"
+     ],
+     "answer": 1,
+     "words": [
+      "雨"
+     ],
+     "sentence": 6
+    }
+   ]
+  },
+  {
+   "id": "p0040",
+   "lv": "A2",
+   "title": "自転車で会社へ",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "最近、自転車で会社に通う人が増えています。",
+     "Recently more people are commuting to work by bicycle."
+    ],
+    [
+     "私も去年から、自転車で会社に通っています。",
+     "I have also been cycling to work since last year."
+    ],
+    [
+     "電車だと40分かかりますが、自転車でも40分くらいです。",
+     "It takes forty minutes by train, and about forty minutes by bike too."
+    ],
+    [
+     "朝の電車はいつも人がいっぱいで、とても疲れます。",
+     "The morning trains are always packed, and they are very tiring."
+    ],
+    [
+     "それに、自転車は毎日のいい運動にもなります。",
+     "Also, cycling is good daily exercise."
+    ],
+    [
+     "始めてから、体重が3キロ減りました。",
+     "Since I started, I have lost three kilos."
+    ],
+    [
+     "でも、問題もあります。",
+     "But there are problems too."
+    ],
+    [
+     "雨の日は危ないので、電車で行きます。",
+     "On rainy days it is dangerous, so I go by train."
+    ],
+    [
+     "それから、夏はとても暑くて大変です。",
+     "Also, summer is very hot and hard."
+    ],
+    [
+     "それでも、私はこれからも自転車で通いたいと思います。",
+     "Even so, I want to keep commuting by bike."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "電車だと、会社までどのくらいかかりますか。",
+     "en": "How long does it take to work by train?",
+     "type": "mc",
+     "options": [
+      "20分",
+      "30分",
+      "40分",
+      "60分"
+     ],
+     "answer": 2,
+     "words": [
+      "電車"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "自転車でも電車でも、時間はあまり変わりません。",
+     "en": "The time is about the same by bicycle or by train.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "自転車"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "自転車を始めてから、体はどうなりましたか。",
+     "en": "How has my body changed since I started cycling?",
+     "type": "mc",
+     "options": [
+      "体重が重くなりました",
+      "よく風邪を引きます",
+      "足が痛くなりました",
+      "体重が軽くなりました"
+     ],
+     "answer": 3,
+     "words": [
+      "体重"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "雨の日も、自転車で会社に行きます。",
+     "en": "I go to work by bicycle on rainy days too.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "雨"
+     ],
+     "sentence": 7
+    },
+    {
+     "q": "夏は、どうして大変ですか。",
+     "en": "Why is summer hard?",
+     "type": "mc",
+     "options": [
+      "とても暑いから",
+      "雨が多いから",
+      "人が多いから",
+      "道が危ないから"
+     ],
+     "answer": 0,
+     "words": [
+      "夏"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0041",
+   "lv": "B1",
+   "title": "一人で暮らして",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "大学に入った時、私は初めて一人で暮らし始めた。",
+     "When I entered university, I started living alone for the first time."
+    ],
+    [
+     "それまでは、料理も掃除も全部母がやってくれていた。",
+     "Until then, my mother had done all the cooking and cleaning for me."
+    ],
+    [
+     "だから、最初の一ヶ月は本当に大変だった。",
+     "So the first month was really hard."
+    ],
+    [
+     "毎日外で食べてばかりいたので、お金がすぐになくなった。",
+     "I ate out every day, so my money soon ran out."
+    ],
+    [
+     "ある日、母から電話があって、「ちゃんと食べてる？」と聞かれた。",
+     "One day my mother phoned and asked, \"Are you eating properly?\""
+    ],
+    [
+     "その週末、私は母に簡単な料理を教えてもらった。",
+     "That weekend my mother taught me some simple dishes."
+    ],
+    [
+     "最初は卵を焼くことしかできなかったが、少しずつ上手になった。",
+     "At first I could only fry eggs, but little by little I got better."
+    ],
+    [
+     "今では、友人を部屋に招いて、晩ご飯を作ることもある。",
+     "Now I sometimes invite friends to my room and make dinner."
+    ],
+    [
+     "次に家に帰る時は、母に料理を作ってあげようと思う。",
+     "Next time I go home, I plan to cook for my mother."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "一人で暮らす前、料理や掃除は誰がしていましたか。",
+     "en": "Before living alone, who did the cooking and cleaning?",
+     "type": "mc",
+     "options": [
+      "父",
+      "母",
+      "私",
+      "姉"
+     ],
+     "answer": 1,
+     "words": [
+      "掃除"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "最初の一ヶ月、私はお金をたくさん残すことができた。",
+     "en": "In the first month I managed to save a lot of money.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "なくなる"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "母は電話で何を聞きましたか。",
+     "en": "What did my mother ask on the phone?",
+     "type": "mc",
+     "options": [
+      "部屋を掃除しているか",
+      "勉強しているか",
+      "きちんと食べているか",
+      "次の休みにいつ家に帰るか"
+     ],
+     "answer": 2,
+     "words": [
+      "電話"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "料理を習い始めた時、私が作れたのは卵の料理だけだった。",
+     "en": "When I started learning to cook, the only dish I could make was eggs.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "卵"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "今、私は時々何をしますか。",
+     "en": "What do I sometimes do now?",
+     "type": "mc",
+     "options": [
+      "母に料理を習う",
+      "外で晩ご飯を食べる",
+      "母に電話をかける",
+      "友人を呼んで料理をする"
+     ],
+     "answer": 3,
+     "words": [
+      "招く"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0042",
+   "lv": "B1",
+   "title": "隣の部屋の音について",
+   "oop": {
+    "林": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "林"
+   ],
+   "sentences": [
+    [
+     "アパートを管理している会社のみなさんへ",
+     "To everyone at the company that manages the apartment building"
+    ],
+    [
+     "3階に住んでいる林です。",
+     "I am Hayashi, living on the third floor."
+    ],
+    [
+     "今日は、隣の部屋の音のことで相談があって、手紙を書きました。",
+     "I am writing today to consult you about the noise from the room next door."
+    ],
+    [
+     "先月から、夜の11時を過ぎても、大きい音楽が聞こえてきます。",
+     "Since last month, I have been hearing loud music even after 11 at night."
+    ],
+    [
+     "特に週末は、夜の2時ごろまで続くこともあります。",
+     "Especially at weekends, it sometimes goes on until around 2 a.m."
+    ],
+    [
+     "私は毎日、朝6時に起きて仕事に行くので、よく眠ることができず、とても困っています。",
+     "I get up at 6 every morning to go to work, so I can't sleep well and it is a real problem."
+    ],
+    [
+     "1回、直接隣の人に話しに行きました。",
+     "Once, I went to speak to the neighbour directly."
+    ],
+    [
+     "しかし、ドアを強くたたいても、誰も出てきませんでした。",
+     "But though I knocked hard, nobody came out."
+    ],
+    [
+     "申し訳ありませんが、会社から隣の人に、注意をしてくださいませんか。",
+     "I am sorry to trouble you, but could the company warn the neighbour?"
+    ],
+    [
+     "よろしくお願いします。",
+     "Thank you for your help."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "林さんは何について手紙を書きましたか。",
+     "en": "What did Hayashi write the letter about?",
+     "type": "mc",
+     "options": [
+      "隣から聞こえる音楽",
+      "部屋の値段",
+      "アパートの鍵",
+      "家の前の道"
+     ],
+     "answer": 0,
+     "words": [
+      "音"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "大きい音楽は、昼だけ聞こえます。",
+     "en": "The loud music can only be heard during the day.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "聞こえる"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "週末は、音が夜の何時まで続くことがありますか。",
+     "en": "Until what time at night does the noise sometimes go on at weekends?",
+     "type": "mc",
+     "options": [
+      "夜の11時ごろ",
+      "夜の2時ごろ",
+      "夜の12時ごろ",
+      "朝の6時ごろ"
+     ],
+     "answer": 1,
+     "words": [
+      "続く"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "林さんは、隣の人と直接話すことができた。",
+     "en": "Hayashi was able to talk to the neighbour directly.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "直接"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "林さんは、会社に何をしてほしいですか。",
+     "en": "What does Hayashi want the company to do?",
+     "type": "mc",
+     "options": [
+      "新しい部屋を探すこと",
+      "音楽を止めに来ること",
+      "隣の人に注意すること",
+      "警察に電話すること"
+     ],
+     "answer": 2,
+     "words": [
+      "注意"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0043",
+   "lv": "B1",
+   "title": "松本城の見学案内",
+   "oop": {
+    "松本": "name (Japanese has no capitals: declared so it is not counted)",
+    "日本": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "松本",
+    "日本"
+   ],
+   "sentences": [
+    [
+     "松本城は、400年以上前に建てられた、日本で最も古い城の一つです。",
+     "Matsumoto Castle, built over 400 years ago, is one of the oldest castles in Japan."
+    ],
+    [
+     "城の中は、当時の形のまま残されています。",
+     "The inside of the castle is preserved in its original form."
+    ],
+    [
+     "城に入ることができる時間は、午前9時から午後5時までです。",
+     "Opening hours are from 9 a.m. to 5 p.m."
+    ],
+    [
+     "中に入るためのチケットは、大人700円、子供300円です。",
+     "Tickets to go inside are 700 yen for adults and 300 yen for children."
+    ],
+    [
+     "チケットは、城の門の横で買うことができます。",
+     "Tickets can be bought beside the castle gate."
+    ],
+    [
+     "城の中の階段は、とても狭くて危ないです。",
+     "The stairs inside the castle are very narrow and dangerous."
+    ],
+    [
+     "中に入る時は、靴を脱いで、手に持って上がってください。",
+     "When you go in, please take off your shoes and carry them up with you."
+    ],
+    [
+     "城の中では、写真を撮ってもかまいません。",
+     "You may take photos inside the castle."
+    ],
+    [
+     "毎日11時と2時に、無料で城を案内するツアーがあります。",
+     "Every day at 11 and 2 there is a free guided tour of the castle."
+    ],
+    [
+     "ツアーは45分くらいで、予約は必要ありません。",
+     "The tour takes about 45 minutes, and no booking is needed."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "松本城は、どのくらい前に建てられましたか。",
+     "en": "How long ago was Matsumoto Castle built?",
+     "type": "mc",
+     "options": [
+      "100年くらい前",
+      "200年くらい前",
+      "1000年以上前",
+      "400年以上前"
+     ],
+     "answer": 3,
+     "words": [
+      "建てる"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "大人のチケットは子供より高いです。",
+     "en": "Adult tickets cost more than children's.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "チケット"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "城の中に入る時、何をしますか。",
+     "en": "What do you do when you go into the castle?",
+     "type": "mc",
+     "options": [
+      "靴を脱ぎます",
+      "チケットを買います",
+      "荷物を門の横に置きます",
+      "名前を書きます"
+     ],
+     "answer": 0,
+     "words": [
+      "脱ぐ"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "城の中で写真を撮ることはできない。",
+     "en": "You cannot take photos inside the castle.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "写真"
+     ],
+     "sentence": 7
+    },
+    {
+     "q": "無料のツアーは何時にありますか。",
+     "en": "At what times is the free tour?",
+     "type": "mc",
+     "options": [
+      "10時と3時",
+      "11時と2時",
+      "9時と5時",
+      "11時だけ"
+     ],
+     "answer": 1,
+     "words": [
+      "案内"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0044",
+   "lv": "B1",
+   "title": "野菜のスープの作り方",
+   "oop": {
+    "鍋": "recipe noun (pot), no pack paraphrase",
+    "煮る": "recipe verb (to simmer), no pack paraphrase"
+   },
+   "names": [],
+   "sentences": [
+    [
+     "寒い季節には、熱いスープが一番です。",
+     "In the cold season, a hot soup is the best thing."
+    ],
+    [
+     "今日は、家にある野菜で、簡単に作ることができるスープを紹介します。",
+     "Today I will introduce a soup you can make easily with vegetables you have at home."
+    ],
+    [
+     "好きな野菜を三つか四つ用意してください。",
+     "Prepare three or four vegetables you like."
+    ],
+    [
+     "まず、野菜を小さく切ります。",
+     "First, cut the vegetables into small pieces."
+    ],
+    [
+     "次に、鍋に水を入れて、火にかけます。",
+     "Next, put water in a pot and put it on the heat."
+    ],
+    [
+     "水が熱くなったら、切った野菜を入れます。",
+     "When the water is hot, add the chopped vegetables."
+    ],
+    [
+     "そのまま20分くらい煮ます。",
+     "Simmer like that for about 20 minutes."
+    ],
+    [
+     "最後に、塩を少し加えて、味を見ます。",
+     "Finally, add a little salt and taste it."
+    ],
+    [
+     "味が薄いと感じたら、塩をもう少し入れてください。",
+     "If it tastes weak, add a little more salt."
+    ],
+    [
+     "残りは冷蔵庫に入れれば、次の朝も食べることができます。",
+     "If you put the rest in the fridge, you can eat it the next morning too."
+    ],
+    [
+     "野菜が苦手な子供も、スープなら喜んで食べてくれるでしょう。",
+     "Even children who don't like vegetables will probably eat it happily as a soup."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "最初に何をしますか。",
+     "en": "What do you do first?",
+     "type": "mc",
+     "options": [
+      "鍋に水を入れて火にかける",
+      "塩を加える",
+      "野菜を切る",
+      "肉を焼く"
+     ],
+     "answer": 2,
+     "words": [
+      "切る"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "水が熱くなる前に、野菜を鍋に入れます。",
+     "en": "You put the vegetables in the pot before the water gets hot.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "熱い"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "野菜を何分くらい煮ますか。",
+     "en": "For about how many minutes do you simmer the vegetables?",
+     "type": "mc",
+     "options": [
+      "10分くらい",
+      "5分くらい",
+      "1時間くらい",
+      "20分くらい"
+     ],
+     "answer": 3,
+     "words": [
+      "〜分"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "味が薄い時は、砂糖を入れます。",
+     "en": "When it tastes weak, you add sugar.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "塩"
+     ],
+     "sentence": 8
+    },
+    {
+     "q": "残りのスープは、どうしますか。",
+     "en": "What do you do with the leftover soup?",
+     "type": "mc",
+     "options": [
+      "冷蔵庫の中に置く",
+      "すぐに捨てる",
+      "友人にあげる",
+      "友人の家に持って行ってあげる"
+     ],
+     "answer": 0,
+     "words": [
+      "冷蔵庫"
+     ],
+     "sentence": 9
+    }
+   ]
+  },
+  {
+   "id": "p0045",
+   "lv": "B1",
+   "title": "本を読まない若者",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "最近の調査で、若者があまり本を読まなくなっていることがわかった。",
+     "A recent survey found that young people are reading fewer books."
+    ],
+    [
+     "1ヶ月に1冊も本を読まない学生は、全体の半分くらいだという。",
+     "It says about half of all students do not read even one book a month."
+    ],
+    [
+     "10年前は、その数は3割くらいだった。",
+     "Ten years ago that figure was about 30 per cent."
+    ],
+    [
+     "本を読まない理由で一番多かったのは、「時間がない」という答えだ。",
+     "The most common reason for not reading was \"I have no time.\""
+    ],
+    [
+     "学生は授業や仕事で忙しく、スマホで動画を見る時間も長い。",
+     "Students are busy with classes and jobs, and they spend a long time watching videos on their phones."
+    ],
+    [
+     "また、スマホで小説を読む若者も増えている。",
+     "Also, more young people are reading novels on their phones."
+    ],
+    [
+     "紙の本は読まなくても、文章を読む時間は減っていない、という意見もある。",
+     "Some say that even if they don't read paper books, the time they spend reading text has not decreased."
+    ],
+    [
+     "大学の先生たちは、おすすめの本を紹介したり、図書館でイベントを開いたりしている。",
+     "University teachers are recommending books and holding events in libraries."
+    ],
+    [
+     "学生に、本を好きになってほしいからだ。",
+     "This is because they want students to come to love books."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "1ヶ月に1冊も本を読まない学生は、どのくらいいますか。",
+     "en": "How many students do not read even one book a month?",
+     "type": "mc",
+     "options": [
+      "3割くらい",
+      "半分くらい",
+      "1割くらい",
+      "ほとんどいない"
+     ],
+     "answer": 1,
+     "words": [
+      "半分"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "10年前は、本を読まない学生が今より多かった。",
+     "en": "Ten years ago there were more students who didn't read than now.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "割"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "本を読まない一番の理由は何ですか。",
+     "en": "What is the main reason for not reading?",
+     "type": "mc",
+     "options": [
+      "本が高いこと",
+      "本が面白くないこと",
+      "時間がないこと",
+      "図書館が遠いこと"
+     ],
+     "answer": 2,
+     "words": [
+      "理由"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "小説をスマホで読む若い人が増えている。",
+     "en": "More young people are reading novels on their phones.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "小説"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "大学の先生たちは、何をしていますか。",
+     "en": "What are university teachers doing?",
+     "type": "mc",
+     "options": [
+      "スマホを禁止している",
+      "本を安く売っている",
+      "学生がスマホを使う時間を少なくしている",
+      "学生に本を勧めている"
+     ],
+     "answer": 3,
+     "words": [
+      "紹介"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0046",
+   "lv": "B1",
+   "title": "祖母の庭",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "私の祖母は、田舎で一人で暮らしている。",
+     "My grandmother lives alone in the countryside."
+    ],
+    [
+     "今年85歳になるが、今でも毎日朝5時に起きて、庭の野菜の世話をする。",
+     "She turns 85 this year, but she still gets up at 5 every morning and tends the vegetables in her garden."
+    ],
+    [
+     "子供の頃、夏休みになると、私はいつも祖母の家に泊まりに行った。",
+     "When I was a child, I always went to stay at my grandmother's house in the summer holidays."
+    ],
+    [
+     "祖母と一緒に、朝から野菜をとったり、川で遊んだりした。",
+     "With my grandmother I picked vegetables from early morning and played in the river."
+    ],
+    [
+     "大人になってからは、仕事が忙しくて、会いに行く時間がなくなった。",
+     "After I grew up, I was busy with work and had no time to visit her."
+    ],
+    [
+     "先月、久しぶりに祖母を訪ねた。",
+     "Last month I visited my grandmother for the first time in a long while."
+    ],
+    [
+     "祖母は少し小さくなっていたが、笑顔は昔と同じだった。",
+     "She had become a little smaller, but her smile was the same as before."
+    ],
+    [
+     "帰る時、祖母は庭でとった野菜を箱いっぱいにくれた。",
+     "When I left, she gave me a box full of vegetables from her garden."
+    ],
+    [
+     "次の休みには、また必ず会いに行こうと思う。",
+     "I will be sure to visit her again on my next holiday."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "祖母は、今年いくつになりますか。",
+     "en": "How old will my grandmother be this year?",
+     "type": "mc",
+     "options": [
+      "85歳",
+      "80歳",
+      "75歳",
+      "90歳"
+     ],
+     "answer": 0,
+     "words": [
+      "〜歳"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "祖母は、今でも毎日5時に起きている。",
+     "en": "My grandmother still gets up at five every day.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "起きる"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "子供の頃、夏休みに私は何をしましたか。",
+     "en": "What did I do in the summer holidays as a child?",
+     "type": "mc",
+     "options": [
+      "町の店で働いた",
+      "祖母のところで長く過ごした",
+      "一人で旅行した",
+      "川で泳ぐ練習をした"
+     ],
+     "answer": 1,
+     "words": [
+      "泊まる"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "大人になってから、私はよく祖母に会いに行った。",
+     "en": "After growing up, I often went to visit my grandmother.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "忙しい"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "帰る時、祖母は何をくれましたか。",
+     "en": "What did my grandmother give me when I left?",
+     "type": "mc",
+     "options": [
+      "昔の家族の写真",
+      "長い手紙",
+      "たくさんの野菜",
+      "少しのお金"
+     ],
+     "answer": 2,
+     "words": [
+      "箱"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0047",
+   "lv": "B1",
+   "title": "休みの相談",
+   "oop": {
+    "吉田": "name (Japanese has no capitals: declared so it is not counted)",
+    "岡本": "name (Japanese has no capitals: declared so it is not counted)",
+    "田中": "name (Japanese has no capitals: declared so it is not counted)",
+    "オーストラリア": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "吉田",
+    "岡本",
+    "田中",
+    "オーストラリア"
+   ],
+   "sentences": [
+    [
+     "吉田：岡本さん、今、少しいいですか。",
+     "Yoshida: Ms Okamoto, do you have a moment?"
+    ],
+    [
+     "吉田：実は、来月の10日から一週間、休暇をいただきたいと思っています。",
+     "Yoshida: Actually, I would like to take a week off from the 10th of next month."
+    ],
+    [
+     "岡本：一週間ですか。何かあったんですか。",
+     "Okamoto: A week? Has something happened?"
+    ],
+    [
+     "吉田：妹がオーストラリアで結婚式をするので、家族みんなで行くことになりました。",
+     "Yoshida: My younger sister is having her wedding in Australia, so the whole family is going."
+    ],
+    [
+     "岡本：それはいいですね。でも、来月の12日は、新しい商品の発表がありますよね。",
+     "Okamoto: That's wonderful. But on the 12th of next month there is the new product presentation, isn't there?"
+    ],
+    [
+     "吉田：はい。発表の準備は、休む前に全部終わらせます。",
+     "Yoshida: Yes. I will finish all the preparation for the presentation before I go."
+    ],
+    [
+     "吉田：発表の日は、田中さんが代わりに説明してくれることになっています。",
+     "Yoshida: On the day, Mr Tanaka has agreed to explain it in my place."
+    ],
+    [
+     "岡本：田中さんとは、もう話したんですか。",
+     "Okamoto: Have you already talked to Mr Tanaka?"
+    ],
+    [
+     "吉田：はい、昨日相談して、大丈夫だと言ってくれました。",
+     "Yoshida: Yes, I asked him yesterday, and he said it was fine."
+    ],
+    [
+     "岡本：わかりました。それなら問題ありません。",
+     "Okamoto: I see. Then there's no problem."
+    ],
+    [
+     "岡本：休暇の書類を、今週の金曜日までに出してください。",
+     "Okamoto: Please submit the leave form by this Friday."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "吉田さんは、どのくらい休みたいですか。",
+     "en": "How long does Yoshida want to take off?",
+     "type": "mc",
+     "options": [
+      "三日",
+      "二週間",
+      "一ヶ月",
+      "一週間"
+     ],
+     "answer": 3,
+     "words": [
+      "休暇"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "吉田さんは、自分の結婚式のために休む。",
+     "en": "Yoshida is taking time off for his own wedding.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "結婚式"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "発表の日は、誰が説明しますか。",
+     "en": "Who will explain on the day of the presentation?",
+     "type": "mc",
+     "options": [
+      "田中さん",
+      "吉田さん",
+      "岡本さん",
+      "吉田さんの妹"
+     ],
+     "answer": 0,
+     "words": [
+      "説明"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "田中さんは、吉田さんの代わりに説明することを知っている。",
+     "en": "Mr Tanaka knows he will explain in Yoshida's place.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "相談"
+     ],
+     "sentence": 8
+    },
+    {
+     "q": "書類は、いつまでに出しますか。",
+     "en": "By when must the form be submitted?",
+     "type": "mc",
+     "options": [
+      "来月の10日まで",
+      "今週の金曜日まで",
+      "明日まで",
+      "来週の金曜日まで"
+     ],
+     "answer": 1,
+     "words": [
+      "書類"
+     ],
+     "sentence": 10
+    }
+   ]
+  },
+  {
+   "id": "p0048",
+   "lv": "B1",
+   "title": "映画「ハルカ」を見て",
+   "oop": {
+    "ハルカ": "name (Japanese has no capitals: declared so it is not counted)",
+    "東京": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "ハルカ",
+    "東京"
+   ],
+   "sentences": [
+    [
+     "話題の映画「ハルカ」を見た。",
+     "I saw the much-talked-about film Haruka."
+    ],
+    [
+     "ハルカは、東京で働く30歳の女性だ。",
+     "Haruka is a 30-year-old woman who works in Tokyo."
+    ],
+    [
+     "仕事で失敗が続いて、ある日、会社をやめて田舎の祖父の家に帰る。",
+     "After a series of failures at work, one day she quits her company and goes back to her grandfather's house in the countryside."
+    ],
+    [
+     "最初は何もすることがなく、毎日ただ海を見ているだけだった。",
+     "At first she had nothing to do and just looked at the sea every day."
+    ],
+    [
+     "しかし、村の人々と出会って、少しずつ元気になっていく。",
+     "But she meets the people of the village and gradually recovers her spirits."
+    ],
+    [
+     "特に、ハルカと祖父が一緒に古い船を直すところが、心に残った。",
+     "The part where Haruka and her grandfather repair an old boat together especially stayed with me."
+    ],
+    [
+     "二人ともあまり話さないが、顔を見るだけで気持ちがよくわかる。",
+     "Neither of them talks much, but you understand their feelings just from their faces."
+    ],
+    [
+     "映像も美しく、海や空の色が本当にきれいだった。",
+     "The images are beautiful too, and the colours of the sea and sky were really lovely."
+    ],
+    [
+     "ただ、話の最後は少し急いでいると感じた。",
+     "However, I felt the ending was a little rushed."
+    ],
+    [
+     "それでも、見た後に、やさしい気持ちになる映画だ。",
+     "Even so, it is a film that leaves you feeling gentle afterwards."
+    ],
+    [
+     "仕事に疲れている人に、ぜひ見てほしい。",
+     "I really want people who are tired of work to see it."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "ハルカは、どんな人ですか。",
+     "en": "What kind of person is Haruka?",
+     "type": "mc",
+     "options": [
+      "田舎に住む学生",
+      "船を作る仕事の人",
+      "東京で働く30歳の女性",
+      "田舎の祖父の家で働いている女性"
+     ],
+     "answer": 2,
+     "words": [
+      "女性"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "ハルカは、仕事がうまくいっていた。",
+     "en": "Things were going well for Haruka at work.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "失敗"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "心に残ったのは、どこですか。",
+     "en": "Which part stayed with the writer?",
+     "type": "mc",
+     "options": [
+      "ハルカが会社をやめるところ",
+      "村の人たちがハルカと初めて出会うところ",
+      "ハルカが東京に帰るところ",
+      "祖父と一緒に船を修理するところ"
+     ],
+     "answer": 3,
+     "words": [
+      "船"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "映画の最後について、私は少し早すぎると感じた。",
+     "en": "I felt the end of the film was a little too fast.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "最後"
+     ],
+     "sentence": 8
+    },
+    {
+     "q": "私は、この映画を誰に見てほしいですか。",
+     "en": "Who do I want to see this film?",
+     "type": "mc",
+     "options": [
+      "仕事で疲れた人",
+      "田舎に住んでいる人",
+      "船が好きな人",
+      "海の近くで働く人"
+     ],
+     "answer": 0,
+     "words": [
+      "疲れる"
+     ],
+     "sentence": 10
+    }
+   ]
+  },
+  {
+   "id": "p0049",
+   "lv": "B1",
+   "title": "ラーメンと映画",
+   "oop": {
+    "ゆうた": "name (Japanese has no capitals: declared so it is not counted)",
+    "あかり": "name (Japanese has no capitals: declared so it is not counted)",
+    "ハルカ": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "ゆうた",
+    "あかり",
+    "ハルカ"
+   ],
+   "sentences": [
+    [
+     "ゆうた：今週の土曜日、暇？",
+     "Yuta: Are you free this Saturday?"
+    ],
+    [
+     "あかり：午後なら大丈夫だよ。どうしたの？",
+     "Akari: The afternoon is fine. What's up?"
+    ],
+    [
+     "ゆうた：駅の近くに、新しいラーメンの店ができたんだって。一緒に行かない？",
+     "Yuta: Apparently a new ramen shop has opened near the station. Want to go together?"
+    ],
+    [
+     "あかり：いいね！でも、あそこはいつも人が並んでいるって聞いたよ。",
+     "Akari: Sounds good! But I heard people are always queuing there."
+    ],
+    [
+     "ゆうた：そうなんだ。それなら、店が始まる前に行こうか。",
+     "Yuta: Really? Then shall we go before it opens?"
+    ],
+    [
+     "ゆうた：11時からだから、10時40分に駅で会うのはどう？",
+     "Yuta: It opens at 11, so how about meeting at the station at 10:40?"
+    ],
+    [
+     "あかり：ちょっと早いけど、わかった。駅の前で待ってるね。",
+     "Akari: It's a bit early, but OK. I'll wait in front of the station, then."
+    ],
+    [
+     "あかり：その後で、映画も見たいな。「ハルカ」っていう映画、すごくいいらしいよ。",
+     "Akari: After that I'd like to see a film too. Apparently the film called Haruka is really good."
+    ],
+    [
+     "ゆうた：それ、俺も見たかったんだ。",
+     "Yuta: I wanted to see that too."
+    ],
+    [
+     "ゆうた：ラーメンの後で映画ね。チケットは俺がネットで買うよ。",
+     "Yuta: Then it's the film after ramen. I'll buy the tickets online."
+    ],
+    [
+     "あかり：ありがとう！楽しみにしてるね。",
+     "Akari: Thanks! I'm looking forward to it."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "二人は、土曜日に最初に何をしますか。",
+     "en": "What will the two do first on Saturday?",
+     "type": "mc",
+     "options": [
+      "映画を見る",
+      "ラーメンを食べに行く",
+      "駅で買い物をする",
+      "チケットを買いに行く"
+     ],
+     "answer": 1,
+     "words": [
+      "ラーメン"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "ラーメンの店は、いつも人が少ないそうだ。",
+     "en": "The ramen shop is said to always have few people.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "並ぶ"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "二人は、何時に駅で会いますか。",
+     "en": "What time will the two meet at the station?",
+     "type": "mc",
+     "options": [
+      "11時",
+      "10時",
+      "10時40分",
+      "11時20分"
+     ],
+     "answer": 2,
+     "words": [
+      "駅"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "映画の話をしたのは、あかりの方が先だ。",
+     "en": "It was Akari who first brought up the film.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "映画"
+     ],
+     "sentence": 7
+    },
+    {
+     "q": "チケットは、誰がどうやって買いますか。",
+     "en": "Who will buy the tickets, and how?",
+     "type": "mc",
+     "options": [
+      "あかりがネットで買う",
+      "ゆうたが劇場で買う",
+      "あかりが駅で買う",
+      "ゆうたがネットで買う"
+     ],
+     "answer": 3,
+     "words": [
+      "ネット"
+     ],
+     "sentence": 9
+    }
+   ]
+  },
+  {
+   "id": "p0050",
+   "lv": "B1",
+   "title": "台風が近づく",
+   "oop": {
+    "九州": "name (Japanese has no capitals: declared so it is not counted)",
+    "四国": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "九州",
+    "四国"
+   ],
+   "sentences": [
+    [
+     "大きい台風が、明日の朝、九州に近づくと考えられている。",
+     "A large typhoon is expected to approach Kyushu tomorrow morning."
+    ],
+    [
+     "台風は今、南の海の上を、ゆっくり北に進んでいる。",
+     "The typhoon is now moving slowly north over the southern sea."
+    ],
+    [
+     "九州では、今夜から強い雨と風が続き、明日の昼が最も危険だという。",
+     "In Kyushu, strong rain and wind will continue from tonight, and noon tomorrow will be the most dangerous time."
+    ],
+    [
+     "川の水が急に上がることもあるため、川の近くに住む人は注意が必要だ。",
+     "River levels may rise suddenly, so people living near rivers need to be careful."
+    ],
+    [
+     "すでに、九州の多くの学校が、明日を休みにすると決めた。",
+     "Many schools in Kyushu have already decided to close tomorrow."
+    ],
+    [
+     "国は、「できるだけ外に出ないで、安全な場所にいてほしい」と話している。",
+     "The government says, \"We want people to stay indoors in a safe place as much as possible.\""
+    ],
+    [
+     "台風は、明日の夜には四国の近くを通り、その後、少しずつ弱くなると考えられている。",
+     "The typhoon is expected to pass near Shikoku tomorrow night and then gradually weaken."
+    ],
+    [
+     "最新の情報は、テレビやインターネットで確認してほしい。",
+     "Please check the latest information on TV or the internet."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "台風は、いつ九州に近づきますか。",
+     "en": "When will the typhoon approach Kyushu?",
+     "type": "mc",
+     "options": [
+      "明日の朝",
+      "今夜",
+      "明日の夜",
+      "来週"
+     ],
+     "answer": 0,
+     "words": [
+      "近づく"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "九州では、今夜は雨も風も弱い。",
+     "en": "In Kyushu the rain and wind will be weak tonight.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "強い"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "明日のいつが、最も危険ですか。",
+     "en": "When tomorrow will be most dangerous?",
+     "type": "mc",
+     "options": [
+      "朝",
+      "昼",
+      "夕方",
+      "夜"
+     ],
+     "answer": 1,
+     "words": [
+      "危険"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "九州では、明日学校が休みになる所が多い。",
+     "en": "In Kyushu, many schools will be closed tomorrow.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "学校"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "最新の情報は、どこで確認できますか。",
+     "en": "Where can the latest information be checked?",
+     "type": "mc",
+     "options": [
+      "学校や駅",
+      "店や病院",
+      "ネットやテレビ",
+      "新聞だけ"
+     ],
+     "answer": 2,
+     "words": [
+      "最新"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0051",
+   "lv": "B1",
+   "title": "田舎で暮らす若者",
+   "oop": {
+    "東京": "name (Japanese has no capitals: declared so it is not counted)",
+    "長野": "name (Japanese has no capitals: declared so it is not counted)",
+    "佐藤": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "東京",
+    "長野",
+    "佐藤"
+   ],
+   "sentences": [
+    [
+     "最近、大きい都市を出て、田舎で暮らす若者が増えている。",
+     "Recently more young people are leaving big cities to live in the countryside."
+    ],
+    [
+     "理由の一つは、インターネットがあれば、どこでも仕事ができることだ。",
+     "One reason is that with the internet, you can now work anywhere."
+    ],
+    [
+     "3年前に東京から長野の小さな村に来た佐藤さんは、パソコンでデザインの仕事をしている。",
+     "Mr Sato, who moved from Tokyo to a small village in Nagano three years ago, does design work on his computer."
+    ],
+    [
+     "「今は窓から山を見ながら仕事ができます」と笑う。",
+     "\"Now I can work while looking at the mountains from my window,\" he laughs."
+    ],
+    [
+     "村の人たちも、若い人が来ることを歓迎している。",
+     "The villagers also welcome young people coming."
+    ],
+    [
+     "しかし、問題がないわけではない。",
+     "However, it is not without problems."
+    ],
+    [
+     "病院や店が遠く、車がないと生活できない。",
+     "Hospitals and shops are far away, and you cannot live without a car."
+    ],
+    [
+     "仕事が見つからずに、都市に戻る人もいる。",
+     "Some people cannot find work and go back to the city."
+    ],
+    [
+     "田舎で暮らしたい人は、まず短い期間暮らして、生活を体験するのがいいという。",
+     "It is said that people who want to live in the countryside should first live there for a short period to experience life there."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "若者が田舎に来る理由の一つは、何ですか。",
+     "en": "What is one reason young people move to the countryside?",
+     "type": "mc",
+     "options": [
+      "都市の仕事が減ったこと",
+      "田舎の会社の給料がとても高いこと",
+      "家族が田舎にいること",
+      "働く場所を選ばなくていいこと"
+     ],
+     "answer": 3,
+     "words": [
+      "理由"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "佐藤さんは、今も東京で暮らしている。",
+     "en": "Mr Sato still lives in Tokyo.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "村"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "村の人たちは、若い人が来ることをどう思っていますか。",
+     "en": "How do the villagers feel about young people coming?",
+     "type": "mc",
+     "options": [
+      "喜んでいる",
+      "困っている",
+      "反対している",
+      "あまり知らない"
+     ],
+     "answer": 0,
+     "words": [
+      "歓迎"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "田舎では、車がなくても問題なく生活できる。",
+     "en": "In the countryside you can live without problems even without a car.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "車"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "田舎で暮らしたい人は、まず何をするのがいいですか。",
+     "en": "What should people who want to live in the countryside do first?",
+     "type": "mc",
+     "options": [
+      "車を買うこと",
+      "少しの間、住んでみること",
+      "村の祭りに参加すること",
+      "家を建てること"
+     ],
+     "answer": 1,
+     "words": [
+      "期間"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0052",
+   "lv": "B1",
+   "title": "初めての海外の仕事",
+   "oop": {
+    "シンガポール": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "シンガポール"
+   ],
+   "sentences": [
+    [
+     "先週、仕事で初めてシンガポールに行った。",
+     "Last week I went to Singapore on business for the first time."
+    ],
+    [
+     "会社の新しい製品を、向こうの会社に紹介するためだ。",
+     "It was to introduce our company's new product to a company there."
+    ],
+    [
+     "飛行機の中では、ほとんど眠ることができなかった。",
+     "I could hardly sleep on the plane."
+    ],
+    [
+     "英語で説明するのは初めてで、とても緊張していた。",
+     "It was my first time explaining in English, and I was very nervous."
+    ],
+    [
+     "会議には、10人くらいが集まった。",
+     "About ten people came to the meeting."
+    ],
+    [
+     "最初は、なかなか言葉が出てこなかった。",
+     "At first the words just wouldn't come out."
+    ],
+    [
+     "しかし、一緒に来た上司が、横で「ゆっくりでいいよ」と言ってくれた。",
+     "But my boss, who had come with me, said beside me, \"Take it slowly.\""
+    ],
+    [
+     "その一言で落ち着いて、最後まで説明することができた。",
+     "Those few words calmed me down, and I was able to explain to the end."
+    ],
+    [
+     "会議の後、相手の会社の人たちから、たくさん質問があった。",
+     "After the meeting, the people from the other company asked many questions."
+    ],
+    [
+     "今回の経験で、少し自信がついた。",
+     "This experience gave me a little confidence."
+    ],
+    [
+     "次は一人で発表するために、もっと英語を勉強しようと思う。",
+     "I plan to study English more in order to present on my own next time."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "シンガポールには、何のために行きましたか。",
+     "en": "Why did I go to Singapore?",
+     "type": "mc",
+     "options": [
+      "英語を勉強するため",
+      "休暇を過ごすため",
+      "製品を知ってもらうため",
+      "向こうの新しい会社で働き始めるため"
+     ],
+     "answer": 2,
+     "words": [
+      "製品"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "飛行機の中では、よく眠ることができた。",
+     "en": "I was able to sleep well on the plane.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "眠る"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "会議には、どのくらいの人が集まりましたか。",
+     "en": "How many people came to the meeting?",
+     "type": "mc",
+     "options": [
+      "5人くらい",
+      "20人くらい",
+      "30人くらい",
+      "10人くらい"
+     ],
+     "answer": 3,
+     "words": [
+      "会議"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "上司の一言のおかげで、私は最後まで説明できた。",
+     "en": "Thanks to my boss's few words, I could explain to the end.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "一言"
+     ],
+     "sentence": 7
+    },
+    {
+     "q": "次の目標は、何ですか。",
+     "en": "What is the next goal?",
+     "type": "mc",
+     "options": [
+      "上司の助けなしで英語で話すこと",
+      "上司と一緒に働くこと",
+      "シンガポールの会社で長く働くこと",
+      "新しい製品を作ること"
+     ],
+     "answer": 0,
+     "words": [
+      "発表"
+     ],
+     "sentence": 10
+    }
+   ]
+  },
+  {
+   "id": "p0053",
+   "lv": "B1",
+   "title": "食べ物を捨てないために",
+   "oop": {
+    "日本": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "日本"
+   ],
+   "sentences": [
+    [
+     "日本では、まだ食べられる食べ物が、毎年たくさん捨てられている。",
+     "In Japan, a lot of food that could still be eaten is thrown away every year."
+    ],
+    [
+     "その量は、国民の一人が毎日、ご飯を1杯捨てているのと同じくらいだという。",
+     "The amount is said to be about the same as every person throwing away a bowl of rice every day."
+    ],
+    [
+     "食べ物を捨てる原因は、家庭と店の両方にある。",
+     "The causes of throwing food away lie in both households and shops."
+    ],
+    [
+     "家庭では、食べ物を買いすぎて、古くなってしまうことが多い。",
+     "In households, people often buy too much food and it goes off."
+    ],
+    [
+     "店では、売れなかった商品が、そのまま捨てられることがある。",
+     "In shops, products that did not sell are sometimes thrown away as they are."
+    ],
+    [
+     "ある店では、店を閉める1時間前になると、パンや料理の値段を半分にしている。",
+     "One shop halves the price of bread and prepared food an hour before closing."
+    ],
+    [
+     "家庭でできることは、買い物に行く前に冷蔵庫の中を確認し、必要な物だけを買うことだ。",
+     "What households can do is check inside the fridge before going shopping, and buy only what you need."
+    ],
+    [
+     "また、残った料理は、次の食事に使えばいい。",
+     "Also, leftover food can be used in the next meal."
+    ],
+    [
+     "一人の小さい努力が、大きい変化につながるだろう。",
+     "Each person's small efforts will lead to big change."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "捨てられている食べ物の量は、何と同じくらいですか。",
+     "en": "The amount of food thrown away is about the same as what?",
+     "type": "mc",
+     "options": [
+      "みんなが毎日パンを1個ずつ捨てること",
+      "みんなが毎日ご飯を1杯ずつ捨てること",
+      "家族が毎週ご飯を捨てること",
+      "みんなが毎週魚を1匹ずつ捨てること"
+     ],
+     "answer": 1,
+     "words": [
+      "量"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "食べ物が捨てられるのは、店だけの問題だ。",
+     "en": "Throwing food away is only a problem for shops.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "両方"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "家庭で食べ物が古くなってしまうのは、なぜですか。",
+     "en": "Why does food go off in households?",
+     "type": "mc",
+     "options": [
+      "冷蔵庫が小さいから",
+      "家で料理をする時間が全然ないから",
+      "店が遠いから",
+      "必要な量より多く買うから"
+     ],
+     "answer": 3,
+     "words": [
+      "家庭"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "ある店では、閉める前に何をしていますか。",
+     "en": "What does one shop do before closing?",
+     "type": "mc",
+     "options": [
+      "パンなどを無料にしている",
+      "店を早く閉めている",
+      "パンなどを安くして売っている",
+      "新しい料理を作っている"
+     ],
+     "answer": 2,
+     "words": [
+      "半分"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "買い物の前に、冷蔵庫に何があるか見るのがいい。",
+     "en": "It is good to look at what is in the fridge before shopping.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "冷蔵庫"
+     ],
+     "sentence": 6
+    }
+   ]
+  },
+  {
+   "id": "p0054",
+   "lv": "B1",
+   "title": "子供とスマホ",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "最近、小さい子供がスマホで動画を見ている姿をよく見かける。",
+     "Recently you often see small children watching videos on smartphones."
+    ],
+    [
+     "電車やレストランで子供が静かにしているのはスマホのおかげだ、と言う親も多い。",
+     "Many parents say it is thanks to smartphones that their children stay quiet on trains and in restaurants."
+    ],
+    [
+     "医者の中には、2歳までは画面を見せない方がいいと言う人もいる。",
+     "Some doctors say it is better not to show screens to children under two."
+    ],
+    [
+     "また、スマホばかり見ていると、家族との会話が減るという問題もある。",
+     "Also, if children only look at their phones, conversation with the family decreases."
+    ],
+    [
+     "大切なのは、使う時間と内容を親が決めることだろう。",
+     "What matters is probably that parents decide on the time and content."
+    ],
+    [
+     "例えば、「食事の時は使わない」「1日30分まで」などのルールを、家族で相談して決めるといい。",
+     "For example, a family can talk and decide on rules such as \"No phones at meals\" and \"Up to 30 minutes a day.\""
+    ],
+    [
+     "そして、親自身もスマホを使う時間を少なくする必要がある。",
+     "And parents themselves need to use their phones less."
+    ],
+    [
+     "子供は、親のすることをよく見ているからだ。",
+     "This is because children watch closely what their parents do."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "医者の中には、いくつまでは画面を見せない方がいいと言う人がいますか。",
+     "en": "Up to what age do some doctors say children should not be shown screens?",
+     "type": "mc",
+     "options": [
+      "2歳",
+      "5歳",
+      "10歳",
+      "1歳"
+     ],
+     "answer": 0,
+     "words": [
+      "医者"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "スマホを見る時間が長いと、家族と話す時間が増える。",
+     "en": "If children spend a long time on phones, time talking with the family increases.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "減る"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "大切なのは、何ですか。",
+     "en": "What is important?",
+     "type": "mc",
+     "options": [
+      "子供に新しいスマホを買うこと",
+      "親がルールを作ること",
+      "スマホを全部禁止すること",
+      "子供に自分で決めさせること"
+     ],
+     "answer": 1,
+     "words": [
+      "内容"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "ルールの例として、何が書いてありますか。",
+     "en": "What is given as an example of a rule?",
+     "type": "mc",
+     "options": [
+      "1日1時間まで",
+      "1日2時間まで",
+      "1日30分まで",
+      "夜9時まで"
+     ],
+     "answer": 2,
+     "words": [
+      "例えば"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "親も、スマホの時間を少なくした方がいいと書いてある。",
+     "en": "The text says parents should also reduce their phone time.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "自身"
+     ],
+     "sentence": 6
+    }
+   ]
+  },
+  {
+   "id": "p0055",
+   "lv": "B1",
+   "title": "秋の山と湖のバス・ツアー",
+   "oop": {
+    "富士山": "name (Japanese has no capitals: declared so it is not counted)",
+    "東京": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "富士山",
+    "東京"
+   ],
+   "sentences": [
+    [
+     "10月の毎週土曜日に、富士山の近くの湖を訪れるバス・ツアーを行います。",
+     "Every Saturday in October we run a bus tour to a lake near Mount Fuji."
+    ],
+    [
+     "朝8時に東京の駅を出発し、午後7時ごろに戻ります。",
+     "We leave a station in Tokyo at 8 a.m. and return at around 7 p.m."
+    ],
+    [
+     "午前は、湖の周りを歩きながら、秋の木の色を楽しみます。",
+     "In the morning we enjoy the autumn colours while walking around the lake."
+    ],
+    [
+     "昼は、湖の近くのレストランで、地元の野菜を使った料理を食べます。",
+     "At lunch we eat dishes made with local vegetables at a restaurant near the lake."
+    ],
+    [
+     "午後は、富士山がよく見える丘に登ります。",
+     "In the afternoon we climb a hill with a good view of Mount Fuji."
+    ],
+    [
+     "天気がいい日は、美しい富士山の写真が撮れます。",
+     "On fine days you can take beautiful photos of Mount Fuji."
+    ],
+    [
+     "値段は、一人9800円です。この値段には、昼ご飯も含まれています。",
+     "The price is 9,800 yen per person. Lunch is included in this price."
+    ],
+    [
+     "予約は、出発の3日前までに、電話かサイトでしてください。",
+     "Please book by phone or on the website at least three days before departure."
+    ],
+    [
+     "雨の場合も、ツアーは行います。",
+     "The tour will go ahead even if it rains."
+    ],
+    [
+     "ただ、台風などで危険な場合は、中止することがあります。",
+     "However, it may be cancelled if it is dangerous because of a typhoon or similar."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "ツアーは、いつありますか。",
+     "en": "When is the tour?",
+     "type": "mc",
+     "options": [
+      "10月の毎週日曜日",
+      "11月の毎週土曜日",
+      "10月の毎日",
+      "10月の毎週土曜日"
+     ],
+     "answer": 3,
+     "words": [
+      "毎週"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "ツアーは、夜の10時ごろに東京に戻る。",
+     "en": "The tour returns to Tokyo at around 10 p.m.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "戻る"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "昼ご飯は、どこで食べますか。",
+     "en": "Where is lunch eaten?",
+     "type": "mc",
+     "options": [
+      "湖のそばの店",
+      "丘の上",
+      "バスの中",
+      "東京の駅"
+     ],
+     "answer": 0,
+     "words": [
+      "昼"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "ツアーの値段には、昼ご飯の分も入っている。",
+     "en": "The tour price also covers lunch.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "含む"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "予約は、いつまでにしますか。",
+     "en": "By when must you book?",
+     "type": "mc",
+     "options": [
+      "出発の2日前まで",
+      "出発の3日前まで",
+      "出発の1週間前まで",
+      "出発の日の朝まで"
+     ],
+     "answer": 1,
+     "words": [
+      "予約"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0056",
+   "lv": "B1",
+   "title": "検査の結果",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "会社で毎年受ける検査で、血の検査の結果が悪かった。",
+     "In the check-up I have every year at work, my blood test result was bad."
+    ],
+    [
+     "医師に、もう一度病院で詳しい検査を受けてくださいと言われた。",
+     "The doctor told me to have a detailed test at a hospital again."
+    ],
+    [
+     "特に体の調子が悪いわけではなかったので、驚いた。",
+     "I didn't feel particularly unwell, so I was surprised."
+    ],
+    [
+     "詳しい検査の日まで、一週間待たなければならなかった。",
+     "I had to wait a week until the day of the detailed test."
+    ],
+    [
+     "その間、悪いことばかり考えて、仕事にも集中できなかった。",
+     "During that time I thought only about bad things and couldn't concentrate on work."
+    ],
+    [
+     "検査の日、病院には人がたくさんいて、2時間も待った。",
+     "On the day of the test, there were many people at the hospital, and I waited two whole hours."
+    ],
+    [
+     "医師は、「特に問題はありません。前の検査の時は、少し疲れていたのでしょう」と言った。",
+     "The doctor said, \"There is no particular problem. You were probably a little tired at the last test.\""
+    ],
+    [
+     "ただ、もう少し運動をして、甘いものを少なくした方がいいと言われた。",
+     "However, I was told I should exercise a bit more and eat fewer sweet things."
+    ],
+    [
+     "その日から、私は駅から家まで歩くことにした。",
+     "From that day I decided to walk from the station to my home."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "最初の検査で、何の結果が悪かったですか。",
+     "en": "Which result was bad in the first check-up?",
+     "type": "mc",
+     "options": [
+      "目を調べる検査",
+      "体重",
+      "血を調べる検査",
+      "歯を調べる検査"
+     ],
+     "answer": 2,
+     "words": [
+      "血"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "検査の前、私は体の調子が悪いと感じていた。",
+     "en": "Before the test, I felt unwell.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "調子"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "病院で、どのくらい待ちましたか。",
+     "en": "How long did I wait at the hospital?",
+     "type": "mc",
+     "options": [
+      "1時間",
+      "30分",
+      "3時間",
+      "2時間"
+     ],
+     "answer": 3,
+     "words": [
+      "待つ"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "詳しい検査では、問題は見つからなかった。",
+     "en": "No problem was found in the detailed test.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "問題"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "その日から、何をすることにしましたか。",
+     "en": "What did I decide to do from that day?",
+     "type": "mc",
+     "options": [
+      "毎日駅から家まで歩いて帰ること",
+      "甘いものをやめること",
+      "毎日朝に家の近くを走ること",
+      "会社を休むこと"
+     ],
+     "answer": 0,
+     "words": [
+      "歩く"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0057",
+   "lv": "B1",
+   "title": "落とした財布",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "先週の金曜日、仕事から帰る途中で、財布を落としてしまった。",
+     "Last Friday I dropped my wallet on my way home from work."
+    ],
+    [
+     "家に着いてから、かばんの中に財布がないことに気づいた。",
+     "After I got home, I noticed my wallet wasn't in my bag."
+    ],
+    [
+     "すぐに電車の会社に電話をしたが、財布はまだ見つかっていなかった。",
+     "I phoned the train company at once, but the wallet had not been found yet."
+    ],
+    [
+     "次に、駅の近くの警察に行って、財布の色や形、中に入っていた物を説明した。",
+     "Next, I went to the police near the station and described the wallet's colour and shape and what was inside."
+    ],
+    [
+     "土曜日の朝、警察から電話があった。",
+     "On Saturday morning the police phoned."
+    ],
+    [
+     "高校生が駅の階段で財布を拾って、警察に持って来てくれたそうだ。",
+     "Apparently a high-school student had picked up the wallet on the station stairs and brought it to the police."
+    ],
+    [
+     "財布の中のお金もカードも、全部そのまま残っていた。",
+     "The money and cards in the wallet were all still there."
+    ],
+    [
+     "私は感謝の気持ちを伝えたくて、警察の人に手紙を渡してもらった。",
+     "I wanted to express my thanks, so I asked the police to pass on a letter."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "財布がないことに、いつ気づきましたか。",
+     "en": "When did I notice the wallet was missing?",
+     "type": "mc",
+     "options": [
+      "電車の中で",
+      "家に帰った後",
+      "駅の階段で",
+      "会社を出てすぐ、駅の前で"
+     ],
+     "answer": 1,
+     "words": [
+      "気づく"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "電車の会社には、財布が届いていた。",
+     "en": "The wallet had been handed in to the train company.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "見つかる"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "警察で、何をしましたか。",
+     "en": "What did I do at the police?",
+     "type": "mc",
+     "options": [
+      "新しいカードを作った",
+      "高校生に会った",
+      "財布がどんな物か話した",
+      "手紙を書いた"
+     ],
+     "answer": 2,
+     "words": [
+      "説明"
+     ],
+     "sentence": 3
+    },
+    {
+     "q": "財布を拾ったのは、誰ですか。",
+     "en": "Who picked up the wallet?",
+     "type": "mc",
+     "options": [
+      "駅の人",
+      "警察の人",
+      "電車の会社の人",
+      "高校生"
+     ],
+     "answer": 3,
+     "words": [
+      "拾う"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "財布の中のお金は、全部あった。",
+     "en": "All the money in the wallet was there.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "残る"
+     ],
+     "sentence": 6
+    }
+   ]
+  },
+  {
+   "id": "p0058",
+   "lv": "B1",
+   "title": "ホストファミリーへの手紙",
+   "oop": {
+    "鈴木": "name (Japanese has no capitals: declared so it is not counted)",
+    "アナ": "name (Japanese has no capitals: declared so it is not counted)",
+    "スペイン": "name (Japanese has no capitals: declared so it is not counted)",
+    "日本": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "鈴木",
+    "アナ",
+    "スペイン",
+    "日本"
+   ],
+   "sentences": [
+    [
+     "鈴木さんの家族のみなさんへ",
+     "To everyone in the Suzuki family"
+    ],
+    [
+     "スペインに帰ってから、もう一ヶ月が経ちました。",
+     "It has already been a month since I went back to Spain."
+    ],
+    [
+     "日本で過ごした三ヶ月は、私の一生の思い出です。",
+     "The three months I spent in Japan are a memory for my whole life."
+    ],
+    [
+     "最初の日、駅まで迎えに来てくれたことを、今でもよく覚えています。",
+     "I still remember well how you came to meet me at the station on the first day."
+    ],
+    [
+     "その時、私は日本語をほとんど話すことができなくて、とても不安でした。",
+     "At that time I could hardly speak Japanese and was very anxious."
+    ],
+    [
+     "でも、お母さんがゆっくり話してくれたので、安心しました。",
+     "But your mother spoke slowly to me, so I felt relieved."
+    ],
+    [
+     "毎日、家族みんなで晩ご飯を食べた時間が、一番楽しかったです。",
+     "The time we all had dinner together every day was the most fun."
+    ],
+    [
+     "特に、一緒に作った魚の料理は、今でもスペインで時々作っています。",
+     "In particular, I still sometimes make the fish dish we cooked together here in Spain."
+    ],
+    [
+     "来年の夏、今度は私の家族と一緒に日本に行きたいと思っています。",
+     "Next summer I would like to come to Japan with my own family."
+    ],
+    [
+     "本当にありがとうございました。アナ",
+     "Thank you so much. Ana"
+    ]
+   ],
+   "questions": [
+    {
+     "q": "アナさんは、日本に何ヶ月いましたか。",
+     "en": "How many months was Ana in Japan?",
+     "type": "mc",
+     "options": [
+      "三ヶ月",
+      "一ヶ月",
+      "二ヶ月",
+      "六ヶ月"
+     ],
+     "answer": 0,
+     "words": [
+      "過ごす"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "最初の日、アナさんは日本語が上手に話せた。",
+     "en": "On the first day, Ana could speak Japanese well.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "話す"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "アナさんにとって、一番楽しかったのは何ですか。",
+     "en": "What was the most fun for Ana?",
+     "type": "mc",
+     "options": [
+      "海に行ったこと",
+      "家族と一緒にとった夕食",
+      "駅で会ったこと",
+      "車で出かけたこと"
+     ],
+     "answer": 1,
+     "words": [
+      "晩ご飯"
+     ],
+     "sentence": 6
+    },
+    {
+     "q": "アナさんは、今も時々魚の料理を作っている。",
+     "en": "Ana still sometimes makes the fish dish.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "魚"
+     ],
+     "sentence": 7
+    },
+    {
+     "q": "アナさんは来年、何をしたいですか。",
+     "en": "What does Ana want to do next year?",
+     "type": "mc",
+     "options": [
+      "一人で日本に住む",
+      "鈴木さんをスペインに呼ぶ",
+      "家族と日本に行く",
+      "日本の大学に入る"
+     ],
+     "answer": 2,
+     "words": [
+      "来年"
+     ],
+     "sentence": 8
+    }
+   ]
+  },
+  {
+   "id": "p0059",
+   "lv": "B1",
+   "title": "初めてのレース",
+   "oop": {},
+   "names": [],
+   "sentences": [
+    [
+     "去年の春、友人に誘われて、初めて市の10キロのレースに出た。",
+     "Last spring, invited by a friend, I entered the city's 10-kilometre race for the first time."
+    ],
+    [
+     "それまで、私は運動が苦手で、走るのも好きではなかった。",
+     "Until then I was bad at sport and didn't like running either."
+    ],
+    [
+     "レースの日は、朝から雨が降っていた。",
+     "On the day of the race it had been raining since morning."
+    ],
+    [
+     "最初の5キロは、周りの人と同じ速度で楽に走ることができた。",
+     "For the first five kilometres I could run easily at the same speed as the people around me."
+    ],
+    [
+     "しかし、7キロを過ぎた頃から、足が重くなってきた。",
+     "But after passing seven kilometres, my legs started to feel heavy."
+    ],
+    [
+     "その時、道の横で応援している人たちの声が聞こえた。",
+     "Then I heard the voices of people cheering by the roadside."
+    ],
+    [
+     "その声に助けられて、私は最後まで走ることができた。",
+     "Helped by those voices, I was able to run to the end."
+    ],
+    [
+     "記録は1時間5分で、決していい記録ではない。",
+     "My time was 1 hour 5 minutes, which is by no means a good time."
+    ],
+    [
+     "でも、最後まで走った時の喜びは、今でも忘れられない。",
+     "But I still cannot forget the joy of running to the end."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "誰に誘われて、レースに出ましたか。",
+     "en": "Who invited me to enter the race?",
+     "type": "mc",
+     "options": [
+      "会社の上司",
+      "家族",
+      "市の人",
+      "友人"
+     ],
+     "answer": 3,
+     "words": [
+      "誘う"
+     ],
+     "sentence": 0
+    },
+    {
+     "q": "私は昔から、走ることが大好きだった。",
+     "en": "I have always loved running.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "苦手"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "レースの日の天気は、どうでしたか。",
+     "en": "What was the weather like on race day?",
+     "type": "mc",
+     "options": [
+      "雨",
+      "雪",
+      "とても暑い",
+      "とても寒い"
+     ],
+     "answer": 0,
+     "words": [
+      "雨"
+     ],
+     "sentence": 2
+    },
+    {
+     "q": "7キロを過ぎた後、足が重く感じた。",
+     "en": "After passing seven kilometres, my legs felt heavy.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "重い"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "記録は、どのくらいでしたか。",
+     "en": "What was my time?",
+     "type": "mc",
+     "options": [
+      "50分",
+      "1時間5分",
+      "1時間15分",
+      "1時間半"
+     ],
+     "answer": 1,
+     "words": [
+      "記録"
+     ],
+     "sentence": 7
+    }
+   ]
+  },
+  {
+   "id": "p0060",
+   "lv": "B1",
+   "title": "パンの店を開いた人",
+   "oop": {
+    "岡田": "name (Japanese has no capitals: declared so it is not counted)",
+    "むぎ": "name (Japanese has no capitals: declared so it is not counted)"
+   },
+   "names": [
+    "岡田",
+    "むぎ"
+   ],
+   "sentences": [
+    [
+     "駅の近くにパンの店「むぎ」を開いた岡田さんに、話を聞いた。",
+     "We spoke to Mr Okada, who opened a bakery called Mugi near the station."
+    ],
+    [
+     "岡田さんは2年前に店を開いた。それまでは、10年間会社で働いていた。",
+     "Mr Okada opened the shop two years ago. Before that, he worked at a company for ten years."
+    ],
+    [
+     "記者：どうしてパンの店を始めたのですか。",
+     "Reporter: Why did you start a bakery?"
+    ],
+    [
+     "岡田：子供の頃から、パンを焼くのが好きだったんです。",
+     "Okada: I had loved baking bread since I was a child."
+    ],
+    [
+     "岡田：会社で働いていた時も、週末は家でパンを焼いていました。",
+     "Okada: Even when I worked at the company, I baked bread at home at weekends."
+    ],
+    [
+     "岡田：ある日、友人に「店を開いたらどう？」と言われて、挑戦することにしました。",
+     "Okada: One day a friend said, \"Why don't you open a shop?\" and I decided to give it a try."
+    ],
+    [
+     "記者：大変だったことは何ですか。",
+     "Reporter: What was difficult?"
+    ],
+    [
+     "岡田：最初の六ヶ月は、客がほとんど来なくて、とても不安でした。",
+     "Okada: For the first six months hardly any customers came, and I was very worried."
+    ],
+    [
+     "記者：一番人気のパンは何ですか。",
+     "Reporter: What is your most popular bread?"
+    ],
+    [
+     "岡田：一番人気は、チーズを入れたパンです。朝のうちに全部売れてしまうこともあります。",
+     "Okada: The most popular is bread with cheese in it. Sometimes it all sells out in the morning."
+    ]
+   ],
+   "questions": [
+    {
+     "q": "岡田さんが店を開いたのは、いつですか。",
+     "en": "When did Mr Okada open the shop?",
+     "type": "mc",
+     "options": [
+      "10年前",
+      "5年前",
+      "2年前",
+      "1年前"
+     ],
+     "answer": 2,
+     "words": [
+      "〜年"
+     ],
+     "sentence": 1
+    },
+    {
+     "q": "岡田さんは、会社で働いていた頃も、家でパンを焼いていた。",
+     "en": "Mr Okada baked bread at home even when he worked at a company.",
+     "type": "tf",
+     "options": null,
+     "answer": true,
+     "words": [
+      "焼く"
+     ],
+     "sentence": 4
+    },
+    {
+     "q": "店を開こうと思ったのは、誰の言葉からですか。",
+     "en": "Whose words made him decide to open the shop?",
+     "type": "mc",
+     "options": [
+      "家族",
+      "会社の上司",
+      "近所の人",
+      "友人"
+     ],
+     "answer": 3,
+     "words": [
+      "友人"
+     ],
+     "sentence": 5
+    },
+    {
+     "q": "最初から、店には客がたくさん来た。",
+     "en": "Lots of customers came to the shop from the start.",
+     "type": "tf",
+     "options": null,
+     "answer": false,
+     "words": [
+      "客"
+     ],
+     "sentence": 7
+    },
+    {
+     "q": "人気のパンは、何ですか。",
+     "en": "What is the popular bread?",
+     "type": "mc",
+     "options": [
+      "チーズが入ったパン",
+      "野菜が入ったパン",
+      "甘いパン",
+      "卵のパン"
+     ],
+     "answer": 0,
+     "words": [
+      "チーズ"
+     ],
+     "sentence": 9
+    }
+   ]
+  }
+ ]
+}
