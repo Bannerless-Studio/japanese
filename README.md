@@ -257,8 +257,17 @@ The builder's Japanese module handles what the shared pipeline cannot guess.
   white" shortened to "white", and trailing commas dropped. Katakana words
   are glossed from their own entries only, never from a homophone (ビル
   "building", ジム "gym").
-- **Typing:** the pack sets `typing: null` (no typing relaxation rules), as
-  the engine's language notes specify for Japanese.
+- **Typing:** the pack sets `typing: "pron"`. A word's production slot
+  alternates two typed items. "Type the reading" shows the meaning, plays
+  nothing, and takes the kana reading from the phone's kana keyboard.
+  Katakana and hiragana count as the same (テレビ may be typed てれび, and
+  the reverse), half-width kana count as full width, and spaces and the affix
+  mark 〜 are ignored. The long-vowel mark ー, small kana and voicing marks must
+  match: こうひい is not コーヒー, きやく is not きゃく. "Type the characters"
+  speaks the word (with a replay button) and takes its written form or any alt
+  (分かる or わかる); a suffix may be typed without its 〜 (年 for 〜年). A
+  word still shown by its kana (below its kanji tier) gets the reading item in
+  both slots, so its kanji are never asked before they were shown.
 
 ## Sources and licences
 
