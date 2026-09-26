@@ -267,7 +267,11 @@ The builder's Japanese module handles what the shared pipeline cannot guess.
   speaks the word (with a replay button) and takes its written form or any alt
   (分かる or わかる); a suffix may be typed without its 〜 (年 for 〜年). A
   word still shown by its kana (below its kanji tier) gets the reading item in
-  both slots, so its kanji are never asked before they were shown.
+  both slots, so its kanji are never asked before they were shown. As of
+  engine `122d88a`, "Type the characters" (`acceptTyped`) also carries the
+  collision guard added over every lenient letter fold; the fold itself
+  (Arabic-script hamza carriers, ة/ى/ھ, Devanagari nukta/chandrabindu) has
+  no target in kana/kanji, so the guard has no effect on this pack.
 
 ## Sources and licences
 
