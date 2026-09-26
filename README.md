@@ -6,7 +6,7 @@ Each word has a short English gloss and a kana reading. Example sentences
 come with English translations and a kana line. There is no recorded audio:
 the trainer speaks every word and sentence with the browser's `ja-JP` voice.
 
-**Live:** https://ishmum123.github.io/japanese/
+**Live:** https://bannerless-studio.github.io/japanese/
 
 **Script primer.** A "かな" stage before A1 teaches hiragana (108 units),
 then katakana (121 units), with symbol-to-sound, recognition and
@@ -29,7 +29,7 @@ machine-authored and went through two QA rounds, but have not been reviewed
 by a native Japanese speaker.
 
 This repo holds the Japanese data pack and the Japanese data files its build
-reads. It includes [`vocab-engine`](https://github.com/ishmum123/vocab-engine)
+reads. It includes [`vocab-engine`](https://github.com/Bannerless-Studio/vocab-engine)
 as a git submodule at `engine/`. The engine holds the shared UI, the drill
 logic and the shared pack builder, `engine/tools/packbuilder`. The builder's
 Japanese rules live in `engine/tools/packbuilder/langs/ja.py`.
