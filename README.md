@@ -26,7 +26,9 @@ word's kanji are mastered, the word switches to its normal written form.
 every word, built from `tools/passages_src.json` into `pack/passages.json`
 (see `tools/REPORT_passages.md`). Their comprehension questions are
 machine-authored and went through two QA rounds, but have not been reviewed
-by a native Japanese speaker.
+by a native Japanese speaker. On Today, a passage's spaced re-read (after 7
+days) becomes a listening pass when the device can play every sentence,
+with text hidden and some questions audio-only.
 
 This repo holds the Japanese data pack and the Japanese data files its build
 reads. It includes [`vocab-engine`](https://github.com/Bannerless-Studio/vocab-engine)
