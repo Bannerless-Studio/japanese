@@ -65,7 +65,7 @@ rules" for the full alt/forms distinction. `sentences.json` carries no token spa
 - Edit pack/*.json by hand; change tools/gloss_overrides.json, tools/gloss_display.json
   or tools/forced_a1.txt and rebuild instead.
 - Edit pack/*.js, index.html or sw.js by hand (generated).
-- Delete sw.js (use engine/sw.disable.js).
+- Delete sw.js (use engine/engine/sw.disable.js).
 - Add comments that say what the code does; only why, or an external reference.
 - Push to main without `git merge-base --is-ancestor origin/main HEAD`.
 
