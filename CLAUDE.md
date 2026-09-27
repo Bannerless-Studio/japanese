@@ -27,17 +27,6 @@ rules" for the full alt/forms distinction. `sentences.json` carries no token spa
 (`spaced: false`), so the engine clozes and highlights by substring match, and
 `pack.json`'s `compounds` list stops a short word matching inside a longer one.
 
-## IMPORTANT — in-flight work, do not disturb
-
-- `pack/words.json` and `pack/words.js` are currently uncommitted (rebuilt by another
-  worker mid-migration to the alt/forms schema split). **Never edit, stage, commit, or
-  run build.sh/check.sh against pack/** while this is in flight — check `git status`
-  first and leave any pending pack/ changes exactly as found.
-- The README's "Alts are spellings; forms are conjugations" bullet (and its `words.json`
-  field-list line in the layout diagram) reflect that in-progress schema change.
-  Preserve that bullet's wording byte-for-byte wherever it appears (README.md or, after
-  a docs restructure, tools/README.md) — don't paraphrase or "fix" it.
-
 ## Commands (pinned)
 
 - Rebuild pack: `python3 tools/build_pack.py` (equivalent to

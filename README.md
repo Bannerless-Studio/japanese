@@ -87,21 +87,7 @@ native Japanese speaker. Examples prefer the polite register (です/ます).
 Vulgar sentences and sentences with slurs are left out (mild words stay).
 Sexual content and violence are kept out of A1/A2 sentences.
 
-**Alts are spellings; forms are conjugations.** Every alt and form shares the headword's Sudachi
-normal form, so a transitive/intransitive partner is its own word (入る
-and 入れる, 売る and 売れる, 抜く and 抜ける, なる and 慣れる). A pure
-potential form counts as its verb (なれる after に is なる). A kanji
-spelling Sudachi normalises separately whose Wiktionary sense does not
-match the kana headword's gloss is another word: it is no alt and its
-sentences do not link the headword (よる "to depend on" is not 寄る "to
-drop by"; すく "to get hungry" is not 好く; なし is not 梨). `alt` holds
-only other spellings of the word (私/わたし, こと/事, いい/よい/良い,
-ある/有る/在る, ない/無い): the only surfaces "Type the word" accepts
-besides `w`. Every other surface the corpus links (conjugations, a counter
-with its number, a suffix's whole uses, おはようございます) is in `forms`:
-found in sentences for bolding, cloze and passages, never accepted as a
-typed answer (食べない is wrong for 食べる). Both come from the forms linked
-in the corpus, with no fixed cap.
+**Alts are spellings; forms are conjugations.** `alt` holds other spellings (the only extra typed answers); `forms` holds conjugations and other linked surfaces, found in text but never typed. Details: [tools/README.md](tools/README.md) "Japanese rules".
 
 The 60 reading passages (`pack/passages.json`) were built from
 `tools/passages_src.json` (see `tools/REPORT_passages.md`); their
