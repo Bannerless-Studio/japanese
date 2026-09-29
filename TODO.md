@@ -163,3 +163,5 @@ README.
   leads with "front"; a display gloss could lead with the time sense.
 - The mc verbatim self-check no longer exempts 一つ keys (飲み物を一つ, p0007
   q3): 一つ is now one 〜つ token, not a NUM token.
+
+Republish 09e90bc: sentence spans (23349/23349 linked words placed, 0 unspanned WARN); inflected forms now cloze targets. words.json unchanged: no word level or gloss moved by stab narrowing.
