@@ -165,3 +165,4 @@ README.
   q3): 一つ is now one 〜つ token, not a NUM token.
 
 Republish 09e90bc: sentence spans (23349/23349 linked words placed, 0 unspanned WARN); inflected forms now cloze targets. words.json unchanged: no word level or gloss moved by stab narrowing.
+Republish aa00571: no word/gloss moved, pack byte-identical; 0 dead override keys (無し|noun, ガン|noun kept); set-counter and no-voice planner fixes.
