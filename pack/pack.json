@@ -247,7 +247,17 @@
     "reviewKinds": [
       "charRead",
       "charSound"
-    ]
+    ],
+    "learn": "lag",
+    "start": 60,
+    "ramp": [
+      3,
+      5,
+      8
+    ],
+    "bareBy": "typed",
+    "bareWords": true,
+    "bareByPair": true
   },
   "pronFirst": true,
   "script": {
@@ -279,6 +289,256 @@
       "soundSym": 25,
       "wordRead": 25,
       "symType": 15
+    }
+  },
+  "dayAware": true,
+  "typedFrom": [
+    "written",
+    "pron"
+  ],
+  "glossFocus": true,
+  "glossStyle": "primary",
+  "helpClose": true,
+  "readAnswerBlock": true,
+  "optsMix": true,
+  "pauseNew": true,
+  "listenQuestions": "all",
+  "readRotation": true,
+  "wordsBy": "typed",
+  "progressMap": {
+    "goals": [
+      {
+        "upTo": "A1",
+        "label": "survive a trip: greet, order, count, buy"
+      },
+      {
+        "upTo": "A2",
+        "label": "daily life: directions, simple chat, short notices"
+      },
+      {
+        "upTo": "B1",
+        "label": "follow a slow drama with subtitles"
+      }
+    ]
+  },
+  "pairs": true,
+  "freqTiers": true,
+  "progressView": "v2",
+  "appView": "v2",
+  "levelGate": 0.7,
+  "levelExam": {
+    "A1": "pinyin",
+    "A2": "characters",
+    "B1": "characters"
+  },
+  "eta": {
+    "curve": [
+      [
+        [
+          0,
+          364
+        ],
+        [
+          0.05,
+          339.5
+        ],
+        [
+          0.1,
+          313
+        ],
+        [
+          0.15,
+          290
+        ],
+        [
+          0.2,
+          283.5
+        ],
+        [
+          0.25,
+          276
+        ],
+        [
+          0.3,
+          269
+        ],
+        [
+          0.35,
+          264.5
+        ],
+        [
+          0.4,
+          260
+        ],
+        [
+          0.45,
+          256
+        ],
+        [
+          0.5,
+          235
+        ],
+        [
+          0.55,
+          225.5
+        ],
+        [
+          0.6,
+          220.5
+        ],
+        [
+          0.65,
+          215
+        ],
+        [
+          0.7,
+          208.5
+        ],
+        [
+          0.75,
+          202.5
+        ],
+        [
+          0.8,
+          198
+        ],
+        [
+          0.85,
+          94
+        ],
+        [
+          0.9,
+          0
+        ]
+      ],
+      null,
+      null
+    ],
+    "knownCurve": {
+      "A1": [
+        [
+          0,
+          65.3
+        ],
+        [
+          0.05,
+          65.3
+        ],
+        [
+          0.1,
+          64.7
+        ],
+        [
+          0.15,
+          39.3
+        ],
+        [
+          0.2,
+          34.7
+        ],
+        [
+          0.25,
+          29.7
+        ],
+        [
+          0.3,
+          26.3
+        ],
+        [
+          0.35,
+          23.7
+        ],
+        [
+          0.4,
+          20
+        ],
+        [
+          0.45,
+          16
+        ],
+        [
+          0.5,
+          13
+        ],
+        [
+          0.55,
+          9.3
+        ],
+        [
+          0.6,
+          5.7
+        ],
+        [
+          0.65,
+          3.3
+        ],
+        [
+          0.7,
+          0
+        ]
+      ],
+      "A2": [
+        [
+          0,
+          37.7
+        ],
+        [
+          0.05,
+          37.7
+        ],
+        [
+          0.1,
+          37.7
+        ],
+        [
+          0.15,
+          37.7
+        ],
+        [
+          0.2,
+          37.7
+        ],
+        [
+          0.25,
+          37.7
+        ],
+        [
+          0.3,
+          37.7
+        ],
+        [
+          0.35,
+          37
+        ],
+        [
+          0.4,
+          31
+        ],
+        [
+          0.45,
+          26.3
+        ],
+        [
+          0.5,
+          20
+        ],
+        [
+          0.55,
+          15.3
+        ],
+        [
+          0.6,
+          10
+        ],
+        [
+          0.65,
+          5.7
+        ],
+        [
+          0.7,
+          0
+        ]
+      ]
     }
   }
 }
