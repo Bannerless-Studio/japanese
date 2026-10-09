@@ -291,20 +291,10 @@
       "symType": 15
     }
   },
-  "dayAware": true,
   "typedFrom": [
     "written",
     "pron"
   ],
-  "glossFocus": true,
-  "glossStyle": "primary",
-  "helpClose": true,
-  "readAnswerBlock": true,
-  "optsMix": true,
-  "pauseNew": true,
-  "listenQuestions": "all",
-  "readRotation": true,
-  "wordsBy": "typed",
   "progressMap": {
     "goals": [
       {
@@ -321,22 +311,11 @@
       }
     ]
   },
-  "pairs": true,
-  "freqTiers": true,
-  "progressView": "v2",
-  "appView": "v2",
-  "levelGate": 0.7,
   "levelExam": {
     "A1": "pinyin",
     "A2": "characters",
     "B1": "characters"
   },
-  "placementWhole": true,
-  "placementEarlyStop": true,
-  "placedRead": true,
-  "placedKnown": true,
-  "placementChars": true,
-  "pronUntilPrimer": true,
   "eta": {
     "curve": [
       null,
