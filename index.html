@@ -1429,6 +1429,14 @@ function placementWalk(B, probeFn, sweepFn){
   return { probes, passed, missed };
 }
 
+// A record a placement asserts (word or unit). Probation: s 0, so every pair boots at streak 0 (pairBoot) and one lucky
+// placement guess cannot hold the word at a known bar it never earned; the first miss in any kind drops prov (dropProv).
+// pl: 1 marks it placed for good: unlike prov it is never cleared, so position (posKnown) keeps counting the record when
+// prov lifts without a miss (docs/PACK_SCHEMA.md "placedKnown"). Not written by pinPrefixRecords: those are legacy counters, not assertions.
+const placedRec = () => ({ r:1, w:0, s:0, prov:1, pl:1 });
+// A miss ends provisional status in every kind and on every record map (word, gap-blank word, unit).
+// A miss of any kind also ends the placed-known position (placedProv reads pl with w 0 only): w rises to at least 1, pl stays.
+function dropProv(p, ok){ if(!ok && isObj(p) && p.prov){ delete p.prov; if(p.pl && !(p.w > 0)) p.w = 1; } return p; }
 // applyPlacement(prog, st, passed, words, pack, units, opts). Seeds the passed prefix: every word of buckets 0..passed-1 except the
 // buckets in opts.missed (a missed sweep item takes its bucket out, the landing stays). opts.right: ids answered right anywhere,
 // probes and sweep, seeded provisional even above the landing. A word answered wrong is never seeded above the landing, and inside a
@@ -1446,7 +1454,7 @@ function applyPlacement(prog, st, passed, words, pack, units, opts){
   // never a counter prefix a republish may have shifted.
   pinPrefixRecords(out, words, pack, undefined, prog.sets);
   const covered = new Set();
-  const seed = id => { covered.add(id); if(!out.w[id]) out.w[id] = {r:1,w:0,s:1,prov:1}; };
+  const seed = id => { covered.add(id); if(!out.w[id]) out.w[id] = placedRec(); };
   if(passed > 0 && firstIdx > 0) ids.slice(0, firstIdx).forEach(lv => (byLv[lv]||[]).forEach(w => seed(w.id)));
   // The bucket's words come from `words` (the pool this attempt writes records for), in the same strata cut as st.
   const bk = strata(words, pack.placement, size);
@@ -1514,7 +1522,7 @@ function placeCharUnits(out, pack, units, covered){
   if(!add.length) return 0;
   // out.chars is the input's object until cloned (applyPlacement is pure).
   out.chars = Object.assign({}, ensureChars(Object.assign({}, out)), { c: Object.assign({}, recs) });
-  add.forEach(id => { out.chars.c[id] = { r:1, w:0, s:1, prov:1 }; });
+  add.forEach(id => { out.chars.c[id] = placedRec(); });
   return add.length;
 }
 // "Characters: placed through <level>, set N" on the result screen: the last set of the recorded run, level-local number.
@@ -1565,7 +1573,7 @@ function validateRecMap(m, name, allowWordFlags){
     if(!isObj(p)) return `${name}.${k} must be an object`;
     for(const f of ["r","w","s","f"]) if(p[f] !== undefined && typeof p[f] !== "number") return `${name}.${k}.${f} must be a number`;
     if(allowWordFlags){
-      for(const f of ["prov","d"]) if(p[f] !== undefined && typeof p[f] !== "number" && typeof p[f] !== "boolean") return `${name}.${k}.${f} must be a number or boolean`;
+      for(const f of ["prov","d","pl"]) if(p[f] !== undefined && typeof p[f] !== "number" && typeof p[f] !== "boolean") return `${name}.${k}.${f} must be a number or boolean`;
     }
   }
   return null;
@@ -1638,7 +1646,7 @@ function dropUnknownSets(data, levelIdList){
 // An unusable stored value is returned as backupRaw so it is preserved before the defaults
 // replace it. readError: nothing is known about what is stored, so the session runs
 // read-only rather than risk a save clobbering real progress that merely failed to load.
-function bootProg(raw, pack, readError){
+function bootProg(raw, pack, readError, units){
   const out = { prog: defaultProg(pack), backupRaw: null, dropped: [], reason: null, readOnly: false };
   if(readError){ out.readOnly = true; out.reason = "storage read failed"; return out; }
   if(raw == null || raw === "") return out;
@@ -1649,10 +1657,11 @@ function bootProg(raw, pack, readError){
   if(!v.ok){ out.backupRaw = String(raw); out.reason = v.reason; return out; }
   out.dropped = d.dropped;
   out.prog = normalizeProg(d.data, pack);
+  dropRollbackShowPron(out.prog, pack, units);
   return out;
 }
 // theme and showPron survive an import that doesn't carry them.
-function applyImport(prev, text, pack){
+function applyImport(prev, text, pack, units){
   const p = parseStored(text);
   if(!p.ok) return p;
   // The file's v is its format version (PROG_VERSION); a newer file is refused whole, before any read.
@@ -1662,6 +1671,7 @@ function applyImport(prev, text, pack){
   const prog = normalizeProg(v.data, pack);
   if(v.data.theme === undefined) prog.theme = prev ? prev.theme : null;
   if(v.data.showPron === undefined && prev && prev.showPron !== undefined) prog.showPron = prev.showPron;
+  if(v.data.showPron === true) dropRollbackShowPron(prog, pack, units);
   // The characters mix preference survives an import that doesn't carry it, like theme.
   if(prog.chars && !(isObj(v.data.chars) && v.data.chars.mix !== undefined) && prev && isObj(prev.chars) && typeof prev.chars.mix === "boolean") prog.chars.mix = prev.chars.mix;
   return {ok:true, prog};
@@ -1672,7 +1682,8 @@ function applyImport(prev, text, pack){
 function markRec(map, key, ok, isWord, kind, reqKind){
   const p = map[key] || {r:0,w:0,s:0};
   if(ok){ p.r++; p.s++; } else { p.w++; p.s=0; }
-  if(isWord && p.prov && (p.s>=WORD_MASTERED || !ok)) delete p.prov;
+  if(isWord && p.prov && p.s>=WORD_MASTERED) delete p.prov;
+  if(isWord) dropProv(p, ok);
   if(isWord) setMissKind(p, ok, kind, reqKind);
   map[key] = p; return p;
 }
@@ -1688,10 +1699,11 @@ const WORD_HOLD = 2;
 function markWordRec(map, key, ok, kind, reqKind, pack, o){
   const p = map[key], x = o || {};
   if(!isObj(p) || x.typable === false) return markRec(map, key, ok, true, kind, reqKind);
-  if(x.retry){ if(ok) p.r++; else p.w++; setMissKind(p, ok, kind, reqKind); return p; }
+  if(x.retry){ if(ok) p.r++; else p.w++; dropProv(p, ok); setMissKind(p, ok, kind, reqKind); return p; }
   if((p.s || 0) < WORD_HOLD) return markRec(map, key, ok, true, kind, reqKind);
   if(ok){ p.r++; if(kind === "type") p.s++; } else { p.w++; p.s--; }
-  if(p.prov && (p.s>=WORD_MASTERED || !ok)) delete p.prov;
+  if(p.prov && p.s>=WORD_MASTERED) delete p.prov;
+  dropProv(p, ok);
   setMissKind(p, ok, kind, reqKind);
   return p;
 }
@@ -1704,7 +1716,9 @@ function setMissKind(p, ok, kind, reqKind){
 // Only the blanked word's k changes: the sentence record carries the answer.
 function markMissKind(map, key, ok, kind){
   const p = map[key];
-  return isObj(p) ? setMissKind(p, ok, kind) : false;
+  const had = isObj(p) && !!p.prov;
+  dropProv(p, ok);
+  return isObj(p) ? setMissKind(p, ok, kind) || (had && !p.prov) : false;
 }
 const weakScore = rec => { const p = rec || {r:0,w:0,s:0}; return (p.w||0)*3 - (p.s||0); };
 // Weakest first with jitter (ties and near-ties shuffle so reviews don't repeat).
@@ -1802,7 +1816,8 @@ function wordKnownX(rec, word, pack, prog, byWord){
 // applyPlacement / pinPrefixRecords / placeCharUnits; dropped by the first miss and at mastered / known) counts as known for
 // position only: the level gate and its sentence, the goal bars, the progress map and the ETA position. Review picks,
 // mastered counts (Progress rows, totals), typed tiers, Still shaky, Test pools and wordKnownX (levelExam) keep it provisional.
-const placedProv = rec => isObj(rec) && !!rec.prov;
+// pl (placedRec) keeps counting while the record was never missed (w 0) after prov lifts at known / mastered; a miss ends both.
+const placedProv = rec => isObj(rec) && (!!rec.prov || (!!rec.pl && !(rec.w > 0)));
 const posKnown = (pack, rec) => placedProv(rec);
 // On a levelExam "characters" level a word whose prov settled at known (settleProv) still waits on its unit's exam; while that
 // unit is itself placed-provisional the word keeps counting, so the gate does not close again between the two.
@@ -1901,7 +1916,7 @@ function pinPrefixRecords(prog, words, pack, lv, counters){
   (lv === undefined ? levelIds(pack) : [String(lv)]).forEach(id => {
     const list = byLv[id] || [];
     if(list.some(w => taughtRec(prog.w, w))) return;
-    counterOrder(list, pack).slice(0, (sets[id]||0)*size).forEach(w => { if(!prog.w[w.id]) prog.w[w.id] = {r:1,w:0,s:1,prov:1}; });
+    counterOrder(list, pack).slice(0, (sets[id]||0)*size).forEach(w => { if(!prog.w[w.id]) prog.w[w.id] = {r:1,w:0,s:1,prov:1}; /* legacy counter, no pl: pinned prefix records are not placement assertions (placed-fixes) */ });
   });
   return prog;
 }
@@ -3102,7 +3117,7 @@ function applyWeakWords(prog, entries, words, pack){
     if(!e || !(e.weight > 0)) return;
     const p = ensureWordRec(prog, words, pack, e.id);
     p.w = (p.w || 0) + e.weight; p.s = 0;
-    if(p.prov) delete p.prov;
+    dropProv(p, false);
     if(!learned.has(e.id)) p.d = 1;
   });
   return prog;
@@ -3519,8 +3534,8 @@ function markChar(prog, unitId, ok, pack, held){
 }
 // A placed unit (placeCharUnits) stays provisional until mastered or missed, as markRec does for a word.
 function settleUnitProv(p, ok, pack){
-  if(p.prov && (p.s >= (charsConfig(pack) || {}).mastered || !ok)) delete p.prov;
-  return p;
+  if(p.prov && p.s >= (charsConfig(pack) || {}).mastered) delete p.prov;
+  return dropProv(p, ok);
 }
 function typedBareOn(pack){ const c = charsConfig(pack); return !!(c && c.bareBy === "typed"); }
 const TYPED_WRITTEN_KINDS = ["written", "writtenMeaning", "writtenPron"];
@@ -4208,6 +4223,15 @@ function showPronOn(pack, units, prog){
   if(prog && prog.showPron !== undefined) return prog.showPron !== false;
   return !(pronUntilPrimerOn(pack) && scriptPrimerDone(pack, units, prog));
 }
+// A pre-fb45 build appends showPron: true on every save; on a script pack with the primer still
+// unfinished that value is the default (on), so dropping it changes nothing on screen until the primer
+// is done, when it stops keeping pronunciation on for a learner who never chose. A stored false is
+// always a choice (the old build never writes it), so it stays. Needs the script units to know the
+// primer state: without them nothing is dropped.
+function dropRollbackShowPron(prog, pack, units){
+  if(prog.showPron !== true || !scriptActive(pack, units) || scriptPrimerDone(pack, units, prog)) return;
+  delete prog.showPron;
+}
 function scriptStages(pack, units, prog){
   const cfg = scriptConfig(pack); if(!cfg || !scriptActive(pack, units) || scriptSkipped(prog)) return [];
   const recs = scriptRecs(prog);
@@ -4892,7 +4916,8 @@ function glossKey(s){
   let t = toks.filter(x => !GLOSS_DROP.has(x));
   if(!t.length) t = toks;
   if(t.length > 1 && t[0] === "to") t = t.slice(1);
-  return t.join("");
+  // Not "": "to be at" would key as "beat", another word's meaning.
+  return t.join("\u0001");
 }
 const glossHasContent = s => glossWords(s).some(x => !GLOSS_FUNC.has(x));
 const GLOSS_GROUPS_MAX = 4;
@@ -4902,7 +4927,14 @@ function glossAltVariants(alt){
   const ps = parenPieces(alt), n = Math.min(ps.filter(p => p.g).length, GLOSS_GROUPS_MAX), out = [];
   for(let mask = 0; mask < (1 << n); mask++){
     let gi = 0;
-    out.push(ps.map(p => { if(!p.g) return p.t; const keep = gi >= n || (mask >> gi) & 1; gi++; return keep ? " " + p.t.slice(1, -1) + " " : " "; }).join(""));
+    out.push(ps.map((p, i) => {
+      if(!p.g) return p.t;
+      const keep = gi >= n || (mask >> gi) & 1; gi++;
+      if(!keep) return " ";
+      // time(s) keeps as "times": a group written against its word is part of that word
+      const glued = i > 0 && !/\s$/.test(ps[i - 1].t);
+      return (glued ? "" : " ") + p.t.slice(1, -1) + " ";
+    }).join(""));
   }
   return out;
 }
@@ -4980,13 +5012,34 @@ function pronChoiceOpts(entry, pool, all, mix){
 }
 // One meaning is enough: the whole typed text, or every part of it split like the gloss, must
 // be one of the gloss's alternatives. Rules: docs/PACK_SCHEMA.md "Typed meaning".
+// Spacing-insensitive fallback (docs/PACK_SCHEMA.md "Typed meaning" rule 7): per pack, stripped form -> the
+// distinct separator keys in the pack's glosses that strip to it. Set by setGlossIndex; no index, no fallback.
+const GLOSS_INDEX = new WeakMap();
+const strippedKey = k => k.split("\u0001").join("");
+function setGlossIndex(pack, words){
+  const m = new Map();
+  (words || []).forEach(w => glossAltKeys(w.en || "", pack).forEach(k => {
+    const s = strippedKey(k);
+    if(!m.has(s)) m.set(s, new Set());
+    m.get(s).add(k);
+  }));
+  GLOSS_INDEX.set(pack, m);
+}
+// "hometown" for "home town": accepted when the stripped form names one gloss key in the pack and that
+// key is this entry's; two glosses with the same stripped form ("beat", "to be at") never match.
+function strippedMatch(k, keys, pack){
+  const idx = GLOSS_INDEX.get(pack);
+  const seen = idx && idx.get(strippedKey(k));
+  if(!seen || seen.size !== 1) return false;
+  return [...keys].some(a => strippedKey(a) === strippedKey(k));
+}
 function checkGlossTyped(val, en, pack){
   const keys = glossAltKeys(en, pack), v = String(val == null ? "" : val);
   if(keys.has(glossKey(v))) return true;
   // The whole gloss typed as written is right, reading notes and fragments included.
   if(glossKey(v) && glossKey(v) === glossKey(en)) return true;
   const parts = splitTopLevel(v, [";", ","]).map(glossKey).filter(Boolean);
-  return parts.length > 0 && parts.every(k => keys.has(k));
+  return parts.length > 0 && parts.every(k => keys.has(k) || strippedMatch(k, keys, pack));
 }
 // Gloss style (docs/PACK_SCHEMA.md "glossStyle", engine default since the flag collapse; owner 2026-10-07: 别 shows its most
 // used sense, the others in brackets). Display only; matching keeps the raw gloss.
@@ -5154,7 +5207,7 @@ const API = { shuffle, escapeHtml, gloss, firstTwoWords, normKey,
   READ_UNLOCK, READ_WEIGHT, READ_REREAD_DAYS, readState, readingLevels, updateReadUnlocks, suggestPassage, nextReadItem, readPassMode, passageForPass, listenAudioOnly, passageLength, passageSegments,
   gradeQuestion, passageWeakWords, applyWeakWords, markPassageDone, readingStats, readingSpeed, readTimeKeep, passageUnits, progressMapOn, progressMapGoals, progressPosition, goalPosition, goalPositions, levelPosition, currentGoal, GOAL_DONE, recordProgressMap, sessionsToGo, PM_KEEP, sessionsToGoX, levelOpensIn, etaGain, etaKnown, etaCurveAt, etaPlaced, SETTLED, levelSettled, unitAtTarget, progressTotals, progressVisit, progressDeltas, noteProgressVisit, recentMisses, WEEK_SESSIONS,
   CHARS_PROG_VERSION, CHAR_SET_SIZE, CHAR_MASTERED, CHAR_BARE, REVIEW_SIZE_CHARS, CHAR_KINDS, charsConfig,
-  BARE_PAIR, BARE_BOOST, bareBoost, bareByPairOn, pairBare, pairJudge, defaultCharsProg, validateCharsShape, normalizeCharsProg, ensureChars, charRecs, markChar, answerCharChoice, setCharOrder, seedCharOrder, charOrder, setCharMode, typedBareOn, TYPED_WRITTEN_KINDS, typedUnitWords, markUnitTyped, bareWord, typedUnitDue,
+  BARE_PAIR, BARE_BOOST, bareBoost, bareByPairOn, pairBare, pairJudge, defaultCharsProg, validateCharsShape, normalizeCharsProg, ensureChars, charRecs, markChar, settleUnitProv, answerCharChoice, setCharOrder, seedCharOrder, charOrder, setCharMode, typedBareOn, TYPED_WRITTEN_KINDS, typedUnitWords, markUnitTyped, bareWord, typedUnitDue,
   unitWord, unitReading, unitGloss, unitHints, hintKey, unitByWord, recordedUnits,
   charStageUnits, rampSetOf, levelChunks, charSets, charSetTaught, nextCharSet, charStages, stagePath, nextStage, lagOn, lagUnits, lagStage, pauseOn, setPause, lagCharSet, lagResume, charsWithWords, learnTurnDone, charsUnlocked, charsStarted, showCharChoice,
   charTier, sentenceTokenTier, rubyTiers, pronFirstOn, displayForm, pronClash, sentencePieces, sentenceDisplay, charOpts, recallCharOpts, charSoundOpts, charReadOpts, charItem, mixPick,
@@ -5165,7 +5218,7 @@ const API = { shuffle, escapeHtml, gloss, firstTwoWords, normKey,
   recordedScriptUnits, scriptActive, scriptPool, showScriptChoice, scriptKindShape, scriptKindFits, scriptKindFor, pickScriptKind, scriptFamily, SCRIPT_MIN_OPTIONS, scriptGlyph, scriptGlyphKeys, scriptGlyphIn, scriptWordHas, graphemes, shapingClusters, scriptUnitNote, scriptUnitHeadName, searchFold, scriptSecondRight,
   scriptOpts, scriptRomanOpts, scriptExamples, scriptWordOpts, scriptJoinedForms, scriptItem, learnScriptPlan, scriptReviewScore, scriptTestPlan,
   tonesOn, stripMarks, syllableTone, markSyllable, splitSyllable, splitReading, toneHTML, pronTypingOn, pronKey, numberedForms, checkPronTyped, kanaFold, plainPronKey, affixBare, affixAlts, writtenTypedFold, typeSlotKind, joinReadings,
-  TYPED_FROM_SIDES, typedFromSides, typedFromOn, typedKinds, typedAmbiguity, typedKindOk, typedSlotKind, splitTopLevel, glossSenses, typedSynWords, parenGroups, parenPieces, isPronNote, glossParts, glossKey, glossAltKeys, checkGlossTyped, pronChoiceOpts, optsOneScriptOn, composeSpanReading, spanReadingText,
+  setGlossIndex, TYPED_FROM_SIDES, typedFromSides, typedFromOn, typedKinds, typedAmbiguity, typedKindOk, typedSlotKind, splitTopLevel, glossSenses, typedSynWords, parenGroups, parenPieces, isPronNote, glossParts, glossKey, glossAltKeys, checkGlossTyped, pronChoiceOpts, optsOneScriptOn, composeSpanReading, spanReadingText,
   LEGACY_DROPPED, legacyBackupKey, isLegacyRecord, migrateLegacy };
 if(typeof module!=="undefined" && module.exports) module.exports = API;
 if(root) root.VocabCore = API;
@@ -5200,6 +5253,7 @@ const LEVELS = VC.levelIds(PACK);
 const SIZE = VC.setSizeOf(PACK);
 const BY_LV = VC.wordsByLevel(WORDS, PACK);
 const WORDS_BY_ID = {}; WORDS.forEach(w=>{ WORDS_BY_ID[w.id] = w; });
+VC.setGlossIndex(PACK, WORDS);
 const CHAR_CTX = { units: CHAR_LIST, words: WORDS, byId: WORDS_BY_ID };
 // Every primer surface is gated on HAS_SCRIPT (docs/SCRIPT_PRIMER.md); without it each code
 // path is the pre-primer one and SU stays undefined.
@@ -6384,7 +6438,7 @@ const sessStore = (() => {
 // while the page is still parsing, when boot resumes. A page built without it falls back to
 // the trailing <!--ve-build--> marker, read once parsing is over; dev mode has neither. A pack
 // fingerprint is added either way.
-const VE_BUILD = "3505797806-3042503";
+const VE_BUILD = "3893218507-3045937";
 const SESSION_PACK_FP = VC.sessionHash(JSON.stringify([PACK, WORDS.map(w => w.id), SENTENCES.length, PASSAGE_LIST.map(p => p.id), CHAR_LIST.length, LESSON_LIST.length]));
 let sessBuildMark = /^__VE_/.test(VE_BUILD) ? null : VE_BUILD;
 function sessionBuild(){
@@ -8332,7 +8386,7 @@ function progressWire(xp, cp){
         $("impCancel").onclick = () => { box.style.display = "none"; box.innerHTML = ""; };
         return;
       }
-      const r = VC.applyImport(prog, text, PACK);
+      const r = VC.applyImport(prog, text, PACK, SUNITS);
       if(!r.ok){ showImportError(r.newer ? r.reason : "That doesn't look like valid exported progress for this pack: " + r.reason); return; }
       await applyImported(r.prog);
     }catch(e){
@@ -8584,7 +8638,7 @@ function legacyFailHTML(why){
     storeReadOnly = true;
     legacyFail = lm.fail;
   }
-  const b = VC.bootProg(got.value, PACK, !got.ok);
+  const b = VC.bootProg(got.value, PACK, !got.ok, SUNITS);
   if(b.readOnly){
     storeReadOnly = true;
     storageWarn("Saved progress could not be read (storage error), so this session is read-only: nothing you do now will be saved, and your stored progress is left untouched. Reload to try again.");
@@ -8620,4 +8674,4 @@ function legacyFailHTML(why){
 </script>
 </body>
 </html>
-<!--ve-build:3132591047-3041843-->
+<!--ve-build:1094703715-3045277-->
