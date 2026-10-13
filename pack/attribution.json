@@ -225,5 +225,15 @@
     "licence": "CC-BY-SA-4.0",
     "count": 20,
     "audio": "none (TTS)"
+  },
+  "kanji_dictionary": {
+    "source": "KANJIDIC2 and KRADFILE, Electronic Dictionary Research and Development Group (EDRDG), edrdg.org; used per the EDRDG licence",
+    "licence": "CC-BY-SA-4.0",
+    "url": "https://www.edrdg.org/edrdg/licence.html"
+  },
+  "word_furigana": {
+    "source": "JmdictFurigana (Doublevil) built on JMdict, EDRDG",
+    "licence": "CC-BY-SA-4.0",
+    "url": "https://github.com/Doublevil/JmdictFurigana"
   }
 }
