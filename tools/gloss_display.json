@@ -6,5 +6,13 @@
  "〜秒|counter": "second(s) (of time)",
  "〜名|counter": "people (formal counter)",
  "〜組|counter": "pair, set; class, group",
- "〜点|counter": "points (score); items"
+ "〜点|counter": "points (score); items",
+ "〜回|counter": "times (occurrences)",
+ "〜ページ|counter": "page(s) (counter)",
+ "引く|verb": "to pull; to draw; to subtract; to catch (a cold)",
+ "大変|adv": "very, greatly; tough, serious",
+ "立てる|verb": "to stand up, to set up; to make (a plan)",
+ "止まる|verb": "to stop (by itself)",
+ "大変|adj": "tough, hard, serious",
+ "飼う|verb": "to keep (a pet), to raise (animals)"
 }

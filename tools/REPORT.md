@@ -31,7 +31,7 @@ Candidate pool: 6,567 (lemma, POS) keys in blended-rank order, one POS per lemma
 | fewer than 3 tokens in the tagged corpus | 80 | マン, エロ, シリーズ, 小, ろ, 権, たん, 視聴, ふ, ブラ, 年度, ロ |
 | interjection (not in forced greetings) | 38 | あっ, ああ, う, そういう, ねえ, えっ, うん, 否, ええ, こういう, おい, おめでとう |
 | numeral outside the taught number words | 9 | 数, 三（みっ）, ひと, 億, く, ご, いち, 幾, 零 |
-| second POS entry without a distinct sense | 7 | いろいろ, 十分, いったい, 臭い, ぴったり, まっすぐ, さんざん |
+| second POS entry without a distinct sense | 8 | いろいろ, 十分, いったい, 臭い, わずか, ぴったり, まっすぐ, さんざん |
 | proper noun (corpus PROPN/capitalised majority) | 4 | グレー, 王子, カール, 小川 |
 | English loanword unattested in Japanese corpus | 2 | and, name |
 
@@ -43,6 +43,7 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 1207, 'verb': 372, 'adj
 ## Sentences
 
 - Final sentences: **3,320**, 0 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
+- Sentence ids (`tools/sentence_ids_v1.json`): 3,320 kept, 0 new, 0 retired.
 - Word coverage: 0 = 0, 1 = 0, 2 = 2000.
 - Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 116,458. Rejected for a content lemma outside pack/top-3000: 88,185.
 - Primary word level of each sentence: {'A1': 819, 'B1': 1308, 'A2': 1193}.
@@ -96,24 +97,24 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 1207, 'verb': 372, 'adj
   39 まで [part] (particle) until, as far as
   40 やる [verb] to do; to give
   41 へ [part] (particle) to, towards
-  42 ため [noun] sake, objective
+  42 ため [noun] sake, purpose; because of
   43 わかる [verb] to understand
   44 自分 [noun] oneself
   45 ください [verb] please (give me / do for me)
   46 〜ら [counter] (plural suffix)
   47 あなた [pron] you
-  48 時 [noun] time; when
+  48 時 [noun] time, occasion; when
   49 知る [verb] to know, to be aware of
   50 だけ [part] only, just
   51 今 [noun] now, present
   52 もう [adv] already; (with a negative) no longer; more
   53 〜年 [counter] year(s)
   54 や [part] (particle) and (among others)
-  55 好き [adj] liked, likable
+  55 好き [adj] liked; fond of
   56 家 [noun] house; one's own home
   57 一 [num] one
   58 〜さん [counter] Mr., Ms. (after a name)
-  59 持つ [verb] to have, to possess
+  59 持つ [verb] to have, to hold, to carry
   60 より [part] (particle) than; from
   61 誰 [pron] who
   62 どう [adv] how
@@ -125,33 +126,33 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 1207, 'verb': 372, 'adj
   68 〜たち [counter] (plural for people)
   69 方 [noun] direction, side; (comparing) the one that is more
   70 彼女 [pron] she, her; girlfriend
-  71 聞く [verb] to hear, to listen
-  72 僕 [pron] I
+  71 聞く [verb] to hear, to listen; to ask
+  72 僕 [pron] I (male, casual)
   73 出る [verb] to go out, to leave; to appear
   74 〜日 [counter] day (of the month); days
   75 仕事 [noun] work, job
-  76 君 [pron] second-person personal pronoun: you, thou
+  76 君 [pron] you (casual, to equals or juniors)
   77 本 [noun] book
   78 使う [verb] to use
   79 買う [verb] to buy
-  80 話 [noun] story, tale, narrative
+  80 話 [noun] talk, story; conversation
   81 前 [noun] front; before, ago
   82 〜時 [counter] o'clock
   83 皆 [noun] everyone, all
   84 目 [noun] eye
-  85 時間 [noun] time
+  85 時間 [noun] time (duration); hour
   86 入る [verb] to enter, to go into
   87 得る [verb] to get, to obtain
   88 必要 [adj] necessary, needed
   89 食べる [verb] to eat
   90 今日 [noun] today
-  91 俺 [pron] I, me
+  91 俺 [pron] I, me (male, rough)
   92 日 [noun] day
   93 よく [adv] well; often
   94 まだ [adv] still; (not) yet
   95 ね [part] (sentence-final) isn't it?, right?
   96 あの [det] that ... (over there)
-  97 欲しい [adj] wanted, needed, desired
+  97 欲しい [adj] want; wanted, desired
   98 〜つ [counter] (counter for things)
   99 どこ [pron] where
  100 問題 [noun] problem, question

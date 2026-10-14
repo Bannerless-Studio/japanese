@@ -291,6 +291,18 @@
       "symType": 15
     }
   },
+  "credits": [
+    {
+      "name": "EDRDG (KANJIDIC2, KRADFILE, JMdict)",
+      "licence": "CC BY-SA 4.0",
+      "url": "https://www.edrdg.org/edrdg/licence.html"
+    },
+    {
+      "name": "JmdictFurigana (Doublevil)",
+      "licence": "CC BY-SA 4.0",
+      "url": "https://github.com/Doublevil/JmdictFurigana"
+    }
+  ],
   "typedFrom": [
     "written",
     "pron"
@@ -316,18 +328,6 @@
     "A2": "characters",
     "B1": "characters"
   },
-  "credits": [
-    {
-      "name": "EDRDG (KANJIDIC2, KRADFILE, JMdict)",
-      "licence": "CC BY-SA 4.0",
-      "url": "https://www.edrdg.org/edrdg/licence.html"
-    },
-    {
-      "name": "JmdictFurigana (Doublevil)",
-      "licence": "CC BY-SA 4.0",
-      "url": "https://github.com/Doublevil/JmdictFurigana"
-    }
-  ],
   "eta": {
     "curve": [
       [
