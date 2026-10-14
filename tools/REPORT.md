@@ -42,16 +42,16 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 1207, 'verb': 372, 'adj
 
 ## Sentences
 
-- Final sentences: **3,320**, 0 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
-- Sentence ids (`tools/sentence_ids_v1.json`): 3,320 kept, 0 new, 0 retired.
+- Final sentences: **3,321**, 0 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
+- Sentence ids (`tools/sentence_ids_v1.json`): 3,317 kept, 4 new (s3321, s3322, s3323, s3324), 3 retired.
 - Word coverage: 0 = 0, 1 = 0, 2 = 2000.
-- Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 116,458. Rejected for a content lemma outside pack/top-3000: 88,185.
-- Primary word level of each sentence: {'A1': 819, 'B1': 1308, 'A2': 1193}.
+- Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 116,499. Rejected for a content lemma outside pack/top-3000: 88,144.
+- Primary word level of each sentence: {'A1': 819, 'B1': 1308, 'A2': 1194}.
 - Token-length distribution of the final set:
 
 | tokens | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| sentences | 3 | 17 | 81 | 559 | 334 | 942 | 819 | 290 | 132 | 67 | 55 | 21 |
+| sentences | 3 | 17 | 81 | 561 | 332 | 941 | 820 | 291 | 132 | 67 | 55 | 21 |
 
 ## Top 100 by rank (lemma [pos] gloss)
 
@@ -63,8 +63,8 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 1207, 'verb': 372, 'adj
    5 を [part] (direct object marker)
    6 が [part] (subject marker); but
    7 ない [aux] (negative ending) not
-   8 と [part] (particle) and; with; (quotation marker)
-   9 だ [aux] (copula, plain) is, am, are
+   8 だ [aux] (copula, plain) is, am, are
+   9 と [part] (particle) and; with; (quotation marker)
   10 する [verb] to do
   11 ます [aux] (polite verb ending)
   12 も [part] (particle) also, too; even
@@ -76,8 +76,8 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 1207, 'verb': 372, 'adj
   18 ある [verb] to be, to exist (things); to have
   19 いる [verb] to be, to exist (people, animals)
   20 から [part] (particle) from; because
-  21 いい [adj] good; fine, OK
-  22 私 [pron] I, me
+  21 私 [pron] I, me
+  22 いい [adj] good; fine, OK
   23 言う [verb] to say
   24 この [det] this ...
   25 その [det] that ... (near you)
