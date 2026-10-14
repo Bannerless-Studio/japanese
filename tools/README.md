@@ -25,14 +25,14 @@ counters/suffixes, readings) are code, not data, and live in
 - `generated_sentences.tsv` — **hand-authored input.** Sentences written for this pack
   (word, Japanese, English) where Tatoeba had fewer than two usable sentences; the
   build ships 20 of them, marked `"src": "gen"` in the output.
-- `passages_src.json` — **hand-authored input.** Source text for the 60 reading
+- `passages_src.json` — **hand-authored input.** Source text for the 80 reading
   passages (`pack/passages.json`), rebuilt with `packbuilder passages`.
 - `id_map_v1.json` — **generated, frozen.** `"lemma|pos"` -> word id map; never
   hand-edit or renumber, it's what keeps learner progress across rebuilds.
 - `REPORT.md` — **generated.** Tagging stats, word-selection funnel, level-band counts,
   seeds.
 - `REPORT_passages.md` — **generated.** Per-passage coverage and question counts for
-  the 60 reading passages, including the round-3 linking-rule before/after table
+  the 80 reading passages, including the round-3 linking-rule before/after table
   (Manual QA section).
 
 ## Repo layout

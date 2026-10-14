@@ -2,7 +2,7 @@
 
 A free vocabulary trainer for Japanese, A1 through B1: 2000 words with short
 English glosses and kana readings, example sentences with kana lines, a
-1590-unit kanji stage, and 60 graded reading passages.
+1590-unit kanji stage, and 80 graded reading passages.
 
 **Live:** https://bannerless-studio.github.io/japanese/
 
@@ -39,7 +39,7 @@ speaking practice, which this app does not teach.
   katakana and hiragana count as the same, half-width kana count as full
   width) and "type the characters" (plays the word first, and accepts the
   written form or any of its other accepted spellings).
-- **Reading passages (Read tab, inside Today):** 60 passages, 20 per level,
+- **Reading passages (Read tab, inside Today):** 80 passages (20 A1, 30 A2, 30 B1),
   with tap-to-gloss on every word. A level's passages unlock once you've
   learned 70% of that level's words. Comprehension questions are
   machine-authored and went through two QA rounds, but have not been
@@ -89,7 +89,7 @@ Sexual content and violence are kept out of A1/A2 sentences.
 
 **Alts are spellings; forms are conjugations.** `alt` holds other spellings (the only extra typed answers); `forms` holds conjugations and other linked surfaces, found in text but never typed. Details: [tools/README.md](tools/README.md) "Japanese rules".
 
-The 60 reading passages (`pack/passages.json`) were built from
+The 80 reading passages (`pack/passages.json`) were built from
 `tools/passages_src.json` (see `tools/REPORT_passages.md`); their
 comprehension questions are machine-authored and went through two QA
 rounds, but have not been reviewed by a native Japanese speaker.

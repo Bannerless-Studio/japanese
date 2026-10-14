@@ -10,8 +10,8 @@ words = the builder's word count (the band rule: tokens after segmentation); ws_
 linked words, the count the app shows for an unspaced pack (report only).
 
 - **A1**: 20 passages; words/passage 74-88 (median 82.5); ws_words 72-87; coverage min 1.000, median 1.000 (rule >= 0.95); linked min 1.000; questions mc 58, tf 40
-- **A2**: 20 passages; words/passage 100-113 (median 108.5); ws_words 93-107; coverage min 0.991, median 1.000 (rule >= 0.95); linked min 0.991; questions mc 59, tf 40
-- **B1**: 20 passages; words/passage 112-149 (median 132.5); ws_words 106-136; coverage min 0.983, median 1.000 (rule >= 0.93); linked min 0.983; questions mc 60, tf 40
+- **A2**: 30 passages; words/passage 98-119 (median 109.5); ws_words 91-112; coverage min 0.991, median 1.000 (rule >= 0.95); linked min 0.991; questions mc 89, tf 60
+- **B1**: 30 passages; words/passage 112-150 (median 133.5); ws_words 106-138; coverage min 0.983, median 1.000 (rule >= 0.93); linked min 0.983; questions mc 90, tf 60
 
 | id | lv | title | words | ws_words | coverage | linked | out-of-pack lemmas (reason) | higher-level lemmas |
 |---|---|---|---|---|---|---|---|---|
@@ -75,6 +75,26 @@ linked words, the count the app shows for an unspaced pack (report only).
 | p0058 | B1 | ホストファミリーへの手紙 | 135 | 124 | 1.000 | 1.000 | - | - |
 | p0059 | B1 | 初めてのレース | 132 | 119 | 1.000 | 1.000 | - | - |
 | p0060 | B1 | パンの店を開いた人 | 149 | 136 | 1.000 | 1.000 | - | - |
+| p0061 | A2 | 島への旅 | 115 | 107 | 1.000 | 1.000 | - | - |
+| p0062 | A2 | 雨の日の遅れ | 119 | 109 | 1.000 | 1.000 | - | - |
+| p0063 | A2 | 町の音楽の会のお知らせ | 114 | 112 | 1.000 | 1.000 | - | - |
+| p0064 | A2 | 友だちの怪我 | 102 | 99 | 1.000 | 1.000 | - | - |
+| p0065 | A2 | 川にかかる新しい橋 | 118 | 111 | 1.000 | 1.000 | - | - |
+| p0066 | A2 | 私の趣味は漫画 | 115 | 112 | 1.000 | 1.000 | - | B1: 毎週 |
+| p0067 | A2 | けんかのあと | 118 | 109 | 1.000 | 1.000 | - | - |
+| p0068 | A2 | 海外の友だちへ | 98 | 91 | 1.000 | 1.000 | - | - |
+| p0069 | A2 | 新しいクラブ | 114 | 103 | 1.000 | 1.000 | - | - |
+| p0070 | A2 | 父と直した家 | 115 | 107 | 1.000 | 1.000 | - | - |
+| p0071 | B1 | 祭りの準備 | 150 | 136 | 1.000 | 1.000 | - | - |
+| p0072 | B1 | 小さな劇場の女優 | 147 | 137 | 1.000 | 1.000 | - | - |
+| p0073 | B1 | 初めての営業 | 141 | 131 | 1.000 | 1.000 | - | - |
+| p0074 | B1 | 小さな習慣 | 132 | 125 | 1.000 | 1.000 | - | - |
+| p0075 | B1 | 道に止まる車 | 150 | 138 | 1.000 | 1.000 | - | - |
+| p0076 | B1 | 雪の山の三日間 | 149 | 135 | 1.000 | 1.000 | - | - |
+| p0077 | B1 | 下手なギター | 133 | 125 | 1.000 | 1.000 | - | - |
+| p0078 | B1 | 留学の日記 | 118 | 109 | 1.000 | 1.000 | - | - |
+| p0079 | B1 | 自転車の事故を減らすために | 139 | 133 | 1.000 | 1.000 | - | - |
+| p0080 | B1 | 山で道に迷った日 | 146 | 136 | 1.000 | 1.000 | - | - |
 
 Title words, and question/option words the budget does not count (a numeral-like
 pack word), that are out of the pack or above the passage's level (report only;
@@ -93,6 +113,11 @@ the budget rule above is unchanged):
 - p0043: title '見学': out of pack
 - p0044: title '作り方': out of pack
 - p0058: title 'ホスト': out of pack; title 'ファミリー': out of pack
+- p0062: title '遅れ': out of pack
+- p0063: title 'お知らせ': out of pack
+- p0076: title '日間': out of pack
+- p0078: title '留学': out of pack
+- p0079: title '減らす': out of pack
 
 ## Readings
 
@@ -100,15 +125,15 @@ Reading tokens (`ruby`, langs/ja.py passage_ruby): every kanji of every passage 
 
 | | texts | tokens | wordId null |
 |---|---:|---:|---:|
-| sentences | 570 (566 with a kanji) | 2575 | 134 |
-| titles, questions, options | 60 + 297 + 708 | 2274 | 97 |
+| sentences | 777 (771 with a kanji) | 3604 | 199 |
+| titles, questions, options | 80 + 397 + 948 | 3258 | 147 |
 
 Kanji outside every token: 0.
 Readings not kana: 0.
 Fallback readings (Sudachi's reading of the token's own text, the segment reading failing): 0.
-Kana segments cut at a tap-span edge: 61 (0 by each side's own Sudachi reading, the fallback).
-Readings replaced by the linked word's own (_agree_word): 6: 下 もと→した x1, 外 がい→そと x1, 家 や→いえ x2, 箱 ばこ→はこ x1, 間 かん→あいだ x1.
-Kana rules applied (count over all texts): passage kana: native count before つ (四つ よっつ) x1, passage kana: number + counter read whole (4日 よっか) x1, passage kana: number + counter sound change (一杯 いっぱい) x22, passage kana: 来 / 言 by the kana after it x2, sentence kana: context fixes x59, sentence kana: day counts re-read (みっか, とおか) x20, sentence kana: minutes re-read (ふん / ぷん) x42, sentence kana: number read with its counter (１人 ひとり) x6.
+Kana segments cut at a tap-span edge: 66 (0 by each side's own Sudachi reading, the fallback).
+Readings replaced by the linked word's own (_agree_word): 11: 下 もと→した x1, 他 た→ほか x1, 外 がい→そと x1, 家 や→いえ x2, 方 かた→ほう x2, 祭 さい→まつ x2, 箱 ばこ→はこ x1, 間 かん→あいだ x1.
+Kana rules applied (count over all texts): passage kana: native count before つ (四つ よっつ) x1, passage kana: number + counter read whole (4日 よっか) x1, passage kana: number + counter sound change (一杯 いっぱい) x34, passage kana: 来 / 言 by the kana after it x3, sentence kana: context fixes x79, sentence kana: day counts re-read (みっか, とおか) x22, sentence kana: minutes re-read (ふん / ぷん) x45, sentence kana: number read with its counter (１人 ひとり) x6.
 Sentences in sentences.json get their ruby by the same token rule (sentence_ruby over the sentence's kana line), so both cover every kanji.
 
 <!-- manual section: kept across runs -->
@@ -192,3 +217,25 @@ Sentences in sentences.json get their ruby by the same token rule (sentence_ruby
   next context rebuild. The engine now skips that save while the spec tags
   passages, and a tripwire in Linker.pretag fails on any derived-cache write.
   This build left `ja_groups_t22_fe4f59144e.json.gz` unchanged.
+
+## Manual QA, passages p0061-p0080 (2026-10-14)
+
+- **Added.** 10 A2 (p0061-p0070) and 10 B1 (p0071-p0080) in `tools/passages_src.json`,
+  appended; p0001-p0060 keep their ids, text, questions and word links. Only the
+  display-gloss element of 30 old spans changed, because `pack/passages.json` was last
+  built before the gloss pass (words.json glosses); the rebuild picks it up.
+- **Genres.** A2: message, diary, notice, dialogue, news, interview-style profile,
+  narrative, letter, club diary, home-repair narrative. B1: essay, interview (Q and A),
+  work diary, health essay, neighbourhood problem solved, travel story, hobby essay,
+  study-abroad diary, news report with measures, mountain narrative.
+- **Numbers.** A2 98-119 words, B1 118-150 words (the site's own band, A2 90-120, B1 110-150).
+  All 20 have coverage 1.000, linked 1.000, no out-of-pack lemma and no declared name
+  beyond people and place names. A2 uses at most one B1 lemma per passage.
+  Questions: A2 30 mc + 20 tf, B1 30 mc + 20 tf; each level has 10 true and 10 false;
+  correct mc answers sit at positions 0/1/2/3 as 8/8/7/7 (A2) and 7/7/8/8 (B1); the
+  correct option is the unique longest in 0 of 60 items.
+- **Under-used words.** 154 A2/B1 pack words that no p0001-p0060 sentence linked are now
+  linked in the new passages (75 A2, 85 B1).
+- **Written around.** The pack lacks 音楽会, 毎月, 毎晩, 何人, 一回, 台所, 景色, 拍手,
+  お客さん, 先輩, 住民 and 半年, so the texts use paraphrases (音楽の会, 毎週, 夜,
+  客, 六ヶ月 ...).

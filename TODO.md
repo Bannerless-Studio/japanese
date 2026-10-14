@@ -14,7 +14,7 @@ README.
   `note_words(words)` hook `core/sentences.py` calls before linking, used
   here to find kanji spellings that are another word, 寄る under よる). The
   `PACKBUILDER_PATH=../vocab-engine/tools` workaround is no longer needed.
-- Reading passages: 60 authored (`tools/passages_src.json` -> `pack/passages.json`,
+- Reading passages: 80 authored (p0061-p0080 added 2026-10-14: 10 A2 + 10 B1) (`tools/passages_src.json` -> `pack/passages.json`,
   see `tools/REPORT_passages.md`). The passage hooks are in vocab-engine
   `langs/ja.py`. Round-3 linking rules (2026-09-26, vocab-engine branch
   ja-passage-rules) cover てほしい, quotative という, 前 "ago", 後 read ご,
