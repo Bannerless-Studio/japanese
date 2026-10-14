@@ -10,7 +10,7 @@ words = the builder's word count (the band rule: tokens after segmentation); ws_
 linked words, the count the app shows for an unspaced pack (report only).
 
 - **A1**: 20 passages; words/passage 74-88 (median 82.5); ws_words 72-87; coverage min 1.000, median 1.000 (rule >= 0.95); linked min 1.000; questions mc 58, tf 40
-- **A2**: 30 passages; words/passage 98-119 (median 109.5); ws_words 91-112; coverage min 0.991, median 1.000 (rule >= 0.95); linked min 0.991; questions mc 89, tf 60
+- **A2**: 30 passages; words/passage 100-120 (median 109.5); ws_words 93-112; coverage min 0.991, median 1.000 (rule >= 0.95); linked min 0.991; questions mc 89, tf 60
 - **B1**: 30 passages; words/passage 112-150 (median 133.5); ws_words 106-138; coverage min 0.983, median 1.000 (rule >= 0.93); linked min 0.983; questions mc 90, tf 60
 
 | id | lv | title | words | ws_words | coverage | linked | out-of-pack lemmas (reason) | higher-level lemmas |
@@ -76,13 +76,13 @@ linked words, the count the app shows for an unspaced pack (report only).
 | p0059 | B1 | 初めてのレース | 132 | 119 | 1.000 | 1.000 | - | - |
 | p0060 | B1 | パンの店を開いた人 | 149 | 136 | 1.000 | 1.000 | - | - |
 | p0061 | A2 | 島への旅 | 115 | 107 | 1.000 | 1.000 | - | - |
-| p0062 | A2 | 雨の日の遅れ | 119 | 109 | 1.000 | 1.000 | - | - |
+| p0062 | A2 | 雨の日の遅れ | 118 | 108 | 1.000 | 1.000 | - | - |
 | p0063 | A2 | 町の音楽の会のお知らせ | 114 | 112 | 1.000 | 1.000 | - | - |
 | p0064 | A2 | 友だちの怪我 | 102 | 99 | 1.000 | 1.000 | - | - |
-| p0065 | A2 | 川にかかる新しい橋 | 118 | 111 | 1.000 | 1.000 | - | - |
+| p0065 | A2 | 川にかかる新しい橋 | 120 | 112 | 1.000 | 1.000 | - | B1: 担当 |
 | p0066 | A2 | 私の趣味は漫画 | 115 | 112 | 1.000 | 1.000 | - | B1: 毎週 |
-| p0067 | A2 | けんかのあと | 118 | 109 | 1.000 | 1.000 | - | - |
-| p0068 | A2 | 海外の友だちへ | 98 | 91 | 1.000 | 1.000 | - | - |
+| p0067 | A2 | けんかのあと | 116 | 107 | 1.000 | 1.000 | - | - |
+| p0068 | A2 | 海外の友だちへ | 100 | 93 | 1.000 | 1.000 | - | - |
 | p0069 | A2 | 新しいクラブ | 114 | 103 | 1.000 | 1.000 | - | - |
 | p0070 | A2 | 父と直した家 | 115 | 107 | 1.000 | 1.000 | - | - |
 | p0071 | B1 | 祭りの準備 | 150 | 136 | 1.000 | 1.000 | - | - |
@@ -93,8 +93,8 @@ linked words, the count the app shows for an unspaced pack (report only).
 | p0076 | B1 | 雪の山の三日間 | 149 | 135 | 1.000 | 1.000 | - | - |
 | p0077 | B1 | 下手なギター | 133 | 125 | 1.000 | 1.000 | - | - |
 | p0078 | B1 | 留学の日記 | 118 | 109 | 1.000 | 1.000 | - | - |
-| p0079 | B1 | 自転車の事故を減らすために | 139 | 133 | 1.000 | 1.000 | - | - |
-| p0080 | B1 | 山で道に迷った日 | 146 | 136 | 1.000 | 1.000 | - | - |
+| p0079 | B1 | 自転車の事故を減らすために | 141 | 134 | 1.000 | 1.000 | - | - |
+| p0080 | B1 | 山で道に迷った日 | 145 | 134 | 0.993 | 0.993 | 冷える x1 (to get chilled through (the pack has 寒い and 冷たい but no word for the body cooling down)) | - |
 
 Title words, and question/option words the budget does not count (a numeral-like
 pack word), that are out of the pack or above the passage's level (report only;
@@ -125,15 +125,15 @@ Reading tokens (`ruby`, langs/ja.py passage_ruby): every kanji of every passage 
 
 | | texts | tokens | wordId null |
 |---|---:|---:|---:|
-| sentences | 777 (771 with a kanji) | 3604 | 199 |
-| titles, questions, options | 80 + 397 + 948 | 3258 | 147 |
+| sentences | 777 (772 with a kanji) | 3605 | 200 |
+| titles, questions, options | 80 + 397 + 948 | 3316 | 149 |
 
 Kanji outside every token: 0.
 Readings not kana: 0.
 Fallback readings (Sudachi's reading of the token's own text, the segment reading failing): 0.
 Kana segments cut at a tap-span edge: 66 (0 by each side's own Sudachi reading, the fallback).
 Readings replaced by the linked word's own (_agree_word): 11: 下 もと→した x1, 他 た→ほか x1, 外 がい→そと x1, 家 や→いえ x2, 方 かた→ほう x2, 祭 さい→まつ x2, 箱 ばこ→はこ x1, 間 かん→あいだ x1.
-Kana rules applied (count over all texts): passage kana: native count before つ (四つ よっつ) x1, passage kana: number + counter read whole (4日 よっか) x1, passage kana: number + counter sound change (一杯 いっぱい) x34, passage kana: 来 / 言 by the kana after it x3, sentence kana: context fixes x79, sentence kana: day counts re-read (みっか, とおか) x22, sentence kana: minutes re-read (ふん / ぷん) x45, sentence kana: number read with its counter (１人 ひとり) x6.
+Kana rules applied (count over all texts): passage kana: native count before つ (四つ よっつ) x1, passage kana: number + counter read whole (4日 よっか) x1, passage kana: number + counter sound change (一杯 いっぱい) x35, passage kana: 来 / 言 by the kana after it x3, sentence kana: context fixes x79, sentence kana: day counts re-read (みっか, とおか) x22, sentence kana: minutes re-read (ふん / ぷん) x45, sentence kana: number read with its counter (１人 ひとり) x6.
 Sentences in sentences.json get their ruby by the same token rule (sentence_ruby over the sentence's kana line), so both cover every kanji.
 
 <!-- manual section: kept across runs -->
@@ -229,11 +229,12 @@ Sentences in sentences.json get their ruby by the same token rule (sentence_ruby
   work diary, health essay, neighbourhood problem solved, travel story, hobby essay,
   study-abroad diary, news report with measures, mountain narrative.
 - **Numbers.** A2 98-119 words, B1 118-150 words (the site's own band, A2 90-120, B1 110-150).
-  All 20 have coverage 1.000, linked 1.000, no out-of-pack lemma and no declared name
-  beyond people and place names. A2 uses at most one B1 lemma per passage.
+  All 20 have linked 1.000 and coverage 1.000, except p0080 (0.993: 冷える declared out of
+  pack); the only declared names are people and place names. A2 uses at most one B1 lemma per passage.
   Questions: A2 30 mc + 20 tf, B1 30 mc + 20 tf; each level has 10 true and 10 false;
   correct mc answers sit at positions 0/1/2/3 as 8/8/7/7 (A2) and 7/7/8/8 (B1); the
-  correct option is the unique longest in 0 of 60 items.
+  correct option's length rank (0 = longest or tied longest) is 14/17/16/13 over ranks 0-3;
+  unique longest in 0 of 60 items. Passage QA fixes applied 2026-10-14.
 - **Under-used words.** 154 A2/B1 pack words that no p0001-p0060 sentence linked are now
   linked in the new passages (75 A2, 85 B1).
 - **Written around.** The pack lacks 音楽会, 毎月, 毎晩, 何人, 一回, 台所, 景色, 拍手,

@@ -7388,7 +7388,7 @@
    "sentences": [
     [
      "小林さん、お元気ですか。",
-     "Mr Kobayashi, how are you?"
+     "Kobayashi, how are you?"
     ],
     [
      "来月、友だちと二人で小さい島へ旅に行きます。",
@@ -7396,7 +7396,7 @@
     ],
     [
      "行く日は先週やっと決まりました。",
-     "We finally fixed the day we go last week."
+     "We finally settled the date last week."
     ],
     [
      "朝に空港から飛行機に乗って、昼に島に到着します。",
@@ -7424,7 +7424,7 @@
     ],
     [
      "小林さんも、いつか一緒に旅行しませんか。",
-     "Mr Kobayashi, would you like to travel together some day too?"
+     "Kobayashi, would you like to travel together some day too?"
     ]
    ],
    "questions": [
@@ -7434,9 +7434,9 @@
      "type": "mc",
      "options": [
       "海に近い小さな島",
-      "山の中の町",
+      "高い山の中にある小さな町",
       "雪が多くて寒い山の中の町",
-      "大きな工場の町"
+      "大きな工場がたくさんある町"
      ],
      "answer": 0,
      "words": [
@@ -7487,7 +7487,7 @@
      "en": "What does the speaker like doing?",
      "type": "mc",
      "options": [
-      "海で泳ぐこと",
+      "海で友だちと泳ぐこと",
       "ホテルでゆっくり本を読むこと",
       "鳥を写真に撮ること",
       "森で絵をかくこと"
@@ -7516,8 +7516,8 @@
      "I took my usual train, but it suddenly stopped between two stations."
     ],
     [
-     "電気も少し消えて、とても暗くなりました。",
-     "The lights also went out for a while and it got very dark."
+     "電気も消えて、とても暗くなりました。",
+     "The lights also went out and it got very dark."
     ],
     [
      "三十分後に、やっと動きました。",
@@ -7554,9 +7554,9 @@
      "en": "Where did the train stop?",
      "type": "mc",
      "options": [
-      "駅の中",
-      "駅から少し離れた所",
-      "会社の前",
+      "駅の中の大きな店の前",
+      "家から駅へ行く道の途中",
+      "会社の大きな建物の前",
       "二つの駅の間"
      ],
      "answer": 3,
@@ -7610,7 +7610,7 @@
      "options": [
       "傘を買った",
       "私が来るまで待った",
-      "先に家へ帰った",
+      "先に一人で家へ帰った",
       "電車に乗って迎えに来た"
      ],
      "answer": 1,
@@ -7672,7 +7672,7 @@
     ],
     [
      "町の代表の山口さんは、「たくさんの人に聞いてほしい」と言っています。",
-     "Mr Yamaguchi, the town's representative, says, \"I want many people to listen.\""
+     "Yamaguchi, the town's representative, says, \"I want many people to listen.\""
     ]
    ],
    "questions": [
@@ -7736,7 +7736,7 @@
      "type": "mc",
      "options": [
       "車が止まれる場所",
-      "大きな駅",
+      "電車が来る大きな駅",
       "買い物ができる大きい店",
       "小さい店"
      ],
@@ -7763,7 +7763,7 @@
    "sentences": [
     [
      "田村：佐藤さん、足をどうしたんですか。",
-     "Tamura: Mr Sato, what happened to your leg?"
+     "Tamura: Sato, what happened to your leg?"
     ],
     [
      "佐藤：昨日、サッカーの試合で怪我をしました。",
@@ -7817,7 +7817,7 @@
    "questions": [
     {
      "q": "佐藤さんは、どうして怪我をしましたか。",
-     "en": "How did Mr Sato get hurt?",
+     "en": "How did Sato get hurt?",
      "type": "mc",
      "options": [
       "自転車に乗っている時に",
@@ -7833,7 +7833,7 @@
     },
     {
      "q": "佐藤さんは、医者から薬をもらいました。",
-     "en": "Mr Sato got medicine from the doctor.",
+     "en": "Sato got medicine from the doctor.",
      "type": "tf",
      "options": null,
      "answer": true,
@@ -7844,7 +7844,7 @@
     },
     {
      "q": "佐藤さんは、いつまで走れませんか。",
-     "en": "How long can Mr Sato not run?",
+     "en": "How long can Sato not run?",
      "type": "mc",
      "options": [
       "三日",
@@ -7860,7 +7860,7 @@
     },
     {
      "q": "かばんは、佐藤さんが自分で持ちます。",
-     "en": "Mr Sato will carry the bag himself.",
+     "en": "Sato will carry the bag himself.",
      "type": "tf",
      "options": null,
      "answer": false,
@@ -7871,7 +7871,7 @@
     },
     {
      "q": "田村さんは、来週、佐藤さんに何をしてほしいですか。",
-     "en": "What does Mr Tamura want Mr Sato to do next week?",
+     "en": "What does Tamura want Sato to do next week?",
      "type": "mc",
      "options": [
       "かばんを持つこと",
@@ -7915,8 +7915,8 @@
      "Only people and bicycles can use the bridge. Cars cannot."
     ],
     [
-     "県の人は、「この橋で町の交通が便利になる」と話しています。",
-     "A prefecture official says, \"This bridge will make the town's traffic convenient.\""
+     "県の担当の人は、「この橋で町の交通が便利になる」と話しています。",
+     "A prefecture representative says, \"This bridge will make the town's traffic convenient.\""
     ],
     [
      "橋の上から見る川と空が、とてもきれいで、写真を撮る人も多いです。",
@@ -7938,9 +7938,9 @@
      "type": "mc",
      "options": [
       "この前の日曜日",
-      "今朝",
+      "今日の朝、早い時間",
       "一ヶ月ぐらい前の日曜日",
-      "来月の初め"
+      "ちょうど一ヶ月前のこと"
      ],
      "answer": 0,
      "words": [
@@ -7964,7 +7964,7 @@
      "en": "What can pass over the bridge?",
      "type": "mc",
      "options": [
-      "人と車だけ",
+      "人と自転車とバスだけ",
       "歩く人と自転車だけ",
       "自転車と小さい車だけ",
       "自転車と電車"
@@ -7976,8 +7976,8 @@
      "sentence": 3
     },
     {
-     "q": "県の人は、橋で町の交通がよくなると考えています。",
-     "en": "The prefecture official thinks the bridge will improve the town's traffic.",
+     "q": "県の担当の人は、橋で町の交通がよくなると考えています。",
+     "en": "The prefecture representative thinks the bridge will improve the town's traffic.",
      "type": "tf",
      "options": null,
      "answer": true,
@@ -7991,7 +7991,7 @@
      "en": "What does the city hope for with this bridge?",
      "type": "mc",
      "options": [
-      "車が増えること",
+      "もっと車が走りやすくなること",
       "川がきれいになること",
       "多くの人が来ること",
       "店が新しくなること"
@@ -8017,7 +8017,7 @@
    "sentences": [
     [
      "木村さんは、漫画が大好きな学生です。",
-     "Ms Kimura is a student who loves manga."
+     "Kimura is a student who loves manga."
     ],
     [
      "趣味は、漫画を読むことと、集めることです。",
@@ -8025,46 +8025,46 @@
     ],
     [
      "毎週、雑誌を二冊買います。",
-     "Every week she buys two magazines."
+     "Every week Kimura buys two magazines."
     ],
     [
      "部屋には、いろいろな種類の漫画が百冊以上あります。",
-     "In her room there are more than a hundred manga of many kinds."
+     "In Kimura's room there are more than a hundred manga of many kinds."
     ],
     [
      "特に好きなのは、歴史を描いた物語です。",
-     "What she likes especially are stories about history."
+     "What Kimura likes especially are stories about history."
     ],
     [
      "漫画を読んで、昔の人の生活がよく分かるようになりました。",
-     "By reading manga she came to understand the lives of people in the past well."
+     "By reading manga Kimura came to understand the lives of people in the past well."
     ],
     [
      "最近は、自分でも描きたいと思っています。",
-     "Recently she has started to want to draw some herself."
+     "Recently Kimura has started to want to draw some too."
     ],
     [
      "毎日、夜に、一生懸命練習していますが、絵は得意ではありません。",
-     "She practises hard at night every day, but she is not good at drawing."
+     "Kimura practises hard at night every day, but is not good at drawing."
     ],
     [
      "それでも、将来は漫画を描く仕事をしたいそうです。",
-     "Even so, she says she wants a job drawing manga in the future."
+     "Even so, Kimura says the wish is a job drawing manga in the future."
     ],
     [
      "家族は、木村さんの希望を、いつも聞いてくれます。",
-     "Her family always listens to Ms Kimura's hopes."
+     "Kimura's family always listens to those hopes."
     ]
    ],
    "questions": [
     {
      "q": "木村さんは、毎週、何を買いますか。",
-     "en": "What does Ms Kimura buy every week?",
+     "en": "What does Kimura buy every week?",
      "type": "mc",
      "options": [
-      "新しい靴",
+      "新しい靴と新しい鞄",
       "三冊の古い漫画の本",
-      "古い漫画",
+      "友だちからもらった漫画",
       "二冊の雑誌"
      ],
      "answer": 3,
@@ -8075,7 +8075,7 @@
     },
     {
      "q": "木村さんの部屋には、漫画があまりありません。",
-     "en": "There are not many manga in Ms Kimura's room.",
+     "en": "There are not many manga in Kimura's room.",
      "type": "tf",
      "options": null,
      "answer": false,
@@ -8086,7 +8086,7 @@
     },
     {
      "q": "木村さんが特に好きな漫画は、どんな物語ですか。",
-     "en": "What kind of story does Ms Kimura like best?",
+     "en": "What kind of story does Kimura like best?",
      "type": "mc",
      "options": [
       "昔の人の話",
@@ -8102,7 +8102,7 @@
     },
     {
      "q": "木村さんは、絵が得意です。",
-     "en": "Ms Kimura is good at drawing.",
+     "en": "Kimura is good at drawing.",
      "type": "tf",
      "options": null,
      "answer": false,
@@ -8113,7 +8113,7 @@
     },
     {
      "q": "木村さんは、将来、どんな仕事をしたいですか。",
-     "en": "What job does Ms Kimura want in the future?",
+     "en": "What job does Kimura want in the future?",
      "type": "mc",
      "options": [
       "本を売る仕事",
@@ -8144,15 +8144,15 @@
    "sentences": [
     [
      "ゆきは、昨日、友だちのまみと喧嘩をしました。",
-     "Yesterday Yuki had a fight with her friend Mami."
+     "Yesterday Yuki had a fight with a friend, Mami."
     ],
     [
      "まみが、ゆきの大切な本を、返すのを忘れていたからです。",
      "It was because Mami had forgotten to return Yuki's precious book."
     ],
     [
-     "ゆきは怒って、冗談のつもりで「もう友だちじゃない」と言いました。",
-     "Yuki got angry and, meaning it as a joke, said, \"We are not friends any more.\""
+     "ゆきは冗談のつもりで「もう友だちじゃない」と言いました。",
+     "Meaning it as a joke, Yuki said, \"We are not friends any more.\""
     ],
     [
      "まみは何も言わないで、黙って帰りました。",
@@ -8190,7 +8190,7 @@
      "type": "mc",
      "options": [
       "まみが約束の時間に遅れてきたから",
-      "テストの点が悪かったから",
+      "テストの点がとても悪かったから",
       "借りた本を返さなかったから",
       "ゆきの鞄をなくしたから"
      ],
@@ -8201,8 +8201,8 @@
      "sentence": 0
     },
     {
-     "q": "ゆきは、まみに本当に怒って「もう友だちじゃない」と言いました。",
-     "en": "Yuki really meant it when she told Mami they were not friends.",
+     "q": "ゆきは、まみに本気で「もう友だちじゃない」と言いました。",
+     "en": "Yuki said it seriously when telling Mami they were not friends.",
      "type": "tf",
      "options": null,
      "answer": false,
@@ -8244,8 +8244,8 @@
      "type": "mc",
      "options": [
       "学校の近く",
-      "まみの家",
-      "駅",
+      "まみの家の近くの公園",
+      "駅の前の大きな店",
       "まみの家の近くの店"
      ],
      "answer": 0,
@@ -8312,8 +8312,8 @@
      "I am waiting for your reply, along with photos."
     ],
     [
-     "さようなら。",
-     "Goodbye."
+     "また書きます。",
+     "I will write again."
     ]
    ],
    "questions": [
@@ -8322,9 +8322,9 @@
      "en": "What is the writer studying at school now?",
      "type": "mc",
      "options": [
-      "数学",
+      "数学と英語の難しい勉強",
       "フランスの言葉",
-      "音楽",
+      "毎日の音楽の練習",
       "日本の歴史と文化"
      ],
      "answer": 1,
@@ -8372,8 +8372,8 @@
      "sentence": 6
     },
     {
-     "q": "私は、エマさんに何を待っていますか。",
-     "en": "What is the writer waiting for from Emma?",
+     "q": "私は、エマさんから何が来るのを待っていますか。",
+     "en": "What is the writer waiting to come from Emma?",
      "type": "mc",
      "options": [
       "電話",
@@ -8466,7 +8466,7 @@
      "en": "Why did the writer first want to go home?",
      "type": "mc",
      "options": [
-      "試合に負けたから",
+      "先生が毎日厳しかったから",
       "走るだけで疲れたから",
       "友だちがいなかったから",
       "勉強が難しかったから"
@@ -8542,8 +8542,8 @@
      "By night the house had become very clean."
     ],
     [
-     "母は、新しい鍵を三つ作って、家族にくれました。",
-     "My mother made three new keys and gave them to the family."
+     "母は、新しい鍵を三つ買って、家族にくれました。",
+     "My mother bought three new keys and gave them to the family."
     ],
     [
      "次の週末は、庭のテーブルを直す予定です。",
@@ -8584,8 +8584,8 @@
      "type": "mc",
      "options": [
       "新しいものに変えた",
-      "きれいに洗った",
-      "白い色にした",
+      "きれいな水で、長い時間洗った",
+      "古い物を全部庭に出して捨てた",
       "そのまま使い続けることにした"
      ],
      "answer": 0,
@@ -8736,7 +8736,7 @@
      "type": "mc",
      "options": [
       "うれしい気持ち",
-      "悲しい気持ち",
+      "とても悲しい気持ち",
       "何もしたくない気持ち",
       "怒った気持ち"
      ],
@@ -8818,7 +8818,7 @@
      "en": "What led Ms Yamashita to become an actress?",
      "type": "mc",
      "options": [
-      "有名な映画を見たこと",
+      "有名な映画を毎日見たこと",
       "高校で舞台に立ったこと",
       "母に勧められて習い始めたこと",
       "仕事を探していたこと"
@@ -8906,7 +8906,7 @@
     ],
     [
      "最初の日、同じ会社の高橋さんが、私に言った。",
-     "On the first day Mr Takahashi from the same company told me."
+     "On the first day Takahashi from the same company told me."
     ],
     [
      "「営業で一番大切なのは、客の話をよく聞くことだ」",
@@ -8922,7 +8922,7 @@
     ],
     [
      "悲しかったが、高橋さんは「最初はみんなそうだ」と笑ってくれた。",
-     "I was sad, but Mr Takahashi laughed and said, \"Everyone is like that at first.\""
+     "I was sad, but Takahashi laughed and said, \"Everyone is like that at first.\""
     ],
     [
      "それから、笑顔で話す練習を、夜、鏡の前でするようになった。",
@@ -8944,7 +8944,7 @@
      "type": "mc",
      "options": [
       "店に商品を紹介すること",
-      "店で商品を売ること",
+      "店の客を会社に呼ぶこと",
       "会社で電話に答えること",
       "商品を作ること"
      ],
@@ -8956,7 +8956,7 @@
     },
     {
      "q": "高橋さんは、話すより聞くことが大切だと考えている。",
-     "en": "Mr Takahashi thinks listening matters more than talking.",
+     "en": "Takahashi thinks listening matters more than talking.",
      "type": "tf",
      "options": null,
      "answer": true,
@@ -8970,7 +8970,7 @@
      "en": "What was the writer told on the third day?",
      "type": "mc",
      "options": [
-      "声が小さいと",
+      "声が小さくて聞こえないと",
       "冷たい感じだと",
       "話すのが少し速すぎると",
       "商品が高いと"
@@ -9064,9 +9064,9 @@
      "en": "What did the doctor recommend?",
      "type": "mc",
      "options": [
-      "もっと運動すること",
+      "毎日一時間以上運動すること",
       "朝、薬をきちんと飲むこと",
-      "会社を休むこと",
+      "仕事をしばらく休んで家にいること",
       "毎日の習慣を変えること"
      ],
      "answer": 3,
@@ -9148,7 +9148,7 @@
     ],
     [
      "近所の人の迷惑になるので、建物の世話をしている田口さんは、いつも困っていた。",
-     "It bothered the neighbours, so Mr Taguchi, who looks after the building, was always troubled."
+     "It bothered the neighbours, so Taguchi, who looks after the building, was always troubled."
     ],
     [
      "ある日、道に車が止まって、病院へ急ぐ車が通れなくなった。",
@@ -9186,13 +9186,13 @@
    "questions": [
     {
      "q": "田口さんは、どうして困っていましたか。",
-     "en": "Why was Mr Taguchi troubled?",
+     "en": "Why was Taguchi troubled?",
      "type": "mc",
      "options": [
       "車が動かなかったから",
       "道が狭くて、大きな車が通れなかったから",
       "車が近所の迷惑になっていたから",
-      "道が狭かったから"
+      "建物が古くなってきたから"
      ],
      "answer": 2,
      "words": [
@@ -9218,7 +9218,7 @@
      "options": [
       "すぐに決まった",
       "誰も来なかった",
-      "最初からみんなが賛成して決まった",
+      "みんなが怒って、先に帰ってしまった",
       "お互いに文句を言うだけだった"
      ],
      "answer": 3,
@@ -9229,7 +9229,7 @@
     },
     {
      "q": "紙を作ろうと言ったのは、田口さんだ。",
-     "en": "It was Mr Taguchi who proposed making the sign.",
+     "en": "It was Taguchi who proposed making the sign.",
      "type": "tf",
      "options": null,
      "answer": false,
@@ -9244,9 +9244,9 @@
      "type": "mc",
      "options": [
       "止まる車がほとんどなくなった",
-      "もっと車が増えた",
-      "道に新しい店がたくさんできて、人が増えた",
-      "田口さんが道を直した"
+      "止まる車が前よりもっと増えてしまった",
+      "道が新しくなって、とてもきれいになった",
+      "田口さんが一人で道をきれいに直した"
      ],
      "answer": 0,
      "words": [
@@ -9310,7 +9310,7 @@
      "en": "How did the writer go from the station to the hotel?",
      "type": "mc",
      "options": [
-      "バスに乗って",
+      "バスと電車に乗って",
       "タクシーに乗って",
       "歩いて",
       "ホテルの人の車に乗って"
@@ -9337,10 +9337,10 @@
      "en": "What was the writer doing on the second day?",
      "type": "mc",
      "options": [
-      "山に登っていた",
+      "山に登る準備をしていた",
       "雪の中を歩いて山へ向かっていた",
       "部屋から雪を見ていた",
-      "写真を撮っていた"
+      "ホテルの人と話をしていた"
      ],
      "answer": 2,
      "words": [
@@ -9576,8 +9576,8 @@
      "sentence": 0
     },
     {
-     "q": "私は、授業で分からない言葉を、辞書で調べている。",
-     "en": "The writer looks up unknown words in a dictionary.",
+     "q": "私は、授業で分からない言葉を、紙の辞書で調べている。",
+     "en": "The writer looks up unknown words in a paper dictionary.",
      "type": "tf",
      "options": null,
      "answer": false,
@@ -9679,8 +9679,8 @@
      "The third is to ask citizens to ride with lights on at night."
     ],
     [
-     "市の人は、「事故が少なくなるように、みんなが気をつけてほしい」と話している。",
-     "A city official says, \"So that accidents decrease, we want everyone to be careful.\""
+     "市の担当の人は、「事故が少なくなるように、みんなが気をつけてほしい」と話している。",
+     "A city representative says, \"So that accidents decrease, we want everyone to be careful.\""
     ]
    ],
    "questions": [
@@ -9690,7 +9690,7 @@
      "type": "mc",
      "options": [
       "五年前と同じだった",
-      "去年より少なかった",
+      "五年前の約半分になった",
       "五年前の約二倍になった",
       "五年前より少し増えただけだった"
      ],
@@ -9716,7 +9716,7 @@
      "en": "Where are accidents many?",
      "type": "mc",
      "options": [
-      "駅の前",
+      "駅の前のとても広い道の上",
       "店がたくさん並んだ長い道",
       "学校の中",
       "信号が付いていない角"
@@ -9760,7 +9760,9 @@
    "id": "p0080",
    "lv": "B1",
    "title": "山で道に迷った日",
-   "oop": {},
+   "oop": {
+    "冷える": "to get chilled through (the pack has 寒い and 冷たい but no word for the body cooling down)"
+   },
    "names": [],
    "sentences": [
     [
@@ -9776,7 +9778,7 @@
      "Before long the sky darkened, clouds spread and it even began to rain."
     ],
     [
-     "私たちは、汗と雨で、体がすっかり寒くなっていた。",
+     "私たちは、汗と雨で、体がすっかり冷えていた。",
      "Our bodies were thoroughly chilled by sweat and rain."
     ],
     [
@@ -9814,10 +9816,10 @@
      "en": "Why were they in trouble?",
      "type": "mc",
      "options": [
-      "地図をなくしたから",
+      "地図が雨で見えなくなったから",
       "道が分からなくなったから",
       "友人が先に一人で山を下りたから",
-      "食べ物がなくなったから"
+      "食べ物も飲み物もなくなったから"
      ],
      "answer": 1,
      "words": [
@@ -9842,7 +9844,7 @@
      "type": "mc",
      "options": [
       "そこで待とう",
-      "先へ進もう",
+      "もう少し先まで進もう",
       "もと来た道を帰ろう",
       "大きな声で助けを呼びに行こう"
      ],
