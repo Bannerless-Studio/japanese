@@ -11,8 +11,19 @@
  "〜ページ|counter": "page(s) (counter)",
  "引く|verb": "to pull; to draw; to subtract; to catch (a cold)",
  "大変|adv": "very, greatly; tough, serious",
- "立てる|verb": "to stand up, to set up; to make (a plan)",
+ "立てる|verb": "to set up, to stand (something) up; to make (a plan)",
  "止まる|verb": "to stop (by itself)",
  "大変|adj": "tough, hard, serious",
- "飼う|verb": "to keep (a pet), to raise (animals)"
+ "飼う|verb": "to keep (a pet), to raise (animals)",
+ "やる|verb": "to do (casual); to give",
+ "通る|verb": "to pass through",
+ "たたく|verb": "to hit, to beat",
+ "横|noun": "side (lateral); beside, sideways",
+ "詳細|adj": "details; detailed",
+ "用意|noun": "preparation, getting (something) ready",
+ "びっくり|adv": "surprised, startled; surprise",
+ "玉|noun": "ball, sphere; bead, jewel",
+ "差|noun": "difference, gap (in amount)",
+ "隣|noun": "neighbour; next door",
+ "大好き|adj": "love, be very fond of"
 }
